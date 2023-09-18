@@ -1,0 +1,316 @@
+$theme-config: (
+  default: (
+    class: 'default',
+    GradientBg: $defaultGradient,
+    loginCard: $defaultGradient,
+    mainBg: $defaultGradientBg,
+    // mainBg: url('@/assets/default_indexBg.jpg') no-repeat bottom center,
+    theadColor: $defaultTheadColor,
+    tbodyColor: $defaultTbodyColor,
+    messageColor: $defaultLight,
+    //////////////////////////////
+    primary: $defaultPrimary,
+    light: $defaultLight,
+    secondary: $defaultSecondary,
+    third: $defaultThird,
+  ),
+  green: (
+    class: 'green',
+    GradientBg: $greenGradient,
+    loginCard: $greenGradient,
+    mainBg: $greenGradientBg,
+    theadColor: $greenTheadColor,
+    tbodyColor: $greenTbodyColor,
+    messageColor: $greenLight,
+    //////////////////////////////
+    primary: $greenPrimary,
+    light: $greenLight,
+    secondary: $greenSecondary,
+    third: $greenThird,
+  ),
+  blue: (
+    class: 'blue',
+    GradientBg: $blueGradient,
+    loginCard: $blueGradient,
+    mainBg: $blueGradientBg,
+    theadColor: $blueTheadColor,
+    tbodyColor: $blueTbodyColor,
+    messageColor: $blueLight,
+    //////////////////////////////
+    primary: $bluePrimary,
+    light: $blueLight,
+    secondary: $blueSecondary,
+    third: $blueThird,
+  ),
+
+  red: (
+    class: 'red',
+    GradientBg: $redGradient,
+    loginCard: linear-gradient(to bottom, #bf4571 0%, #8e2a4d 100%),
+    mainBg: $redGradientBg,
+    theadColor: $redTheadColor,
+    tbodyColor: $redTbodyColor,
+    messageColor: $redLight,
+    //////////////////////////////
+    primary: $redPrimary,
+    light: $redLight,
+    secondary: $redSecondary,
+    third: $redThird,
+  ),
+  dark: (
+    class: 'dark',
+    GradientBg: #000,
+    loginCard: rgb(35, 35, 35),
+    mainBg: #000,
+    iconColor: #8c8c8c,
+    infoColor: $defaultLight,
+  ),
+);
+
+@each $name, $value in $theme-config {
+  $class: map-get($value, class);
+  $GradientBg: map-get($value, GradientBg);
+  $mainBg: map-get($value, mainBg);
+  $loginCard: map-get($value, loginCard);
+  $messageColor: map-get($value, messageColor);
+  $theadColor: map-get($value, theadColor);
+  $tbodyColor: map-get($value, tbodyColor);
+  $primary: map-get($value, primary);
+  $light: map-get($value, light);
+  $secondary: map-get($value, secondary);
+  $third: map-get($value, third);
+  .v-theme--#{$class} {
+    .content {
+      background: $mainBg;
+    }
+    .navDrawer {
+      > .v-navigation-drawer__content {
+        .v-list-item {
+          &:hover,
+          &.active {
+            background: $GradientBg;
+            color: #fff;
+            img {
+              filter: invert(1);
+            }
+          }
+          .v-list-item__overlay {
+            background: $secondary;
+          }
+        }
+        .v-list-group {
+          > .v-list-item {
+            &.v-list-item--active {
+              background: $GradientBg;
+              color: #fff;
+              img {
+                filter: invert(1);
+              }
+            }
+          }
+        }
+      }
+    }
+    .userInfo {
+      background: $GradientBg;
+      &:hover {
+        button {
+          background: #fff;
+          transition: 0.5s all;
+          span {
+            color: $secondary;
+          }
+        }
+      }
+    }
+    .navDrawer.hidden {
+      .userInfo {
+        background: unset;
+        button {
+          background-color: unset;
+          span {
+            color: $secondary;
+          }
+        }
+      }
+    }
+    .navTitle {
+      .userLoginCard {
+        .card {
+          background: $loginCard;
+        }
+        .userLoginCardBtn {
+          background-color: $defaultBg;
+
+          .material-icons-round {
+            color: $third;
+            background-color: $defaultBg;
+          }
+          span {
+            color: $primary;
+          }
+        }
+      }
+    }
+    .fontBtnContainer {
+      button {
+        background: $GradientBg;
+        color: #fff;
+      }
+    }
+    .infoBtnContainer {
+      li {
+        div {
+          &::before {
+            background: $messageColor;
+          }
+        }
+      }
+    }
+    .page {
+      .searchGrp {
+        .searchMoreBtn {
+          background: $GradientBg;
+        }
+      }
+      .filterList {
+        .formContent {
+          .item {
+            border-right: 1px solid $third;
+          }
+          .functionBtnGrp > span {
+            border-right: 1px solid $third;
+          }
+        }
+      }
+    }
+
+    //table style
+    .v-table {
+      .v-table__wrapper {
+        > table {
+          > thead {
+            background: $theadColor;
+            > tr > th {
+              color: #fff;
+              font-size: em(18);
+            }
+          }
+          tbody {
+            tr {
+              &:not(:last-child) {
+                td {
+                  border-bottom: unset;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: $tbodyColor;
+        }
+        &:not(:last-child) {
+          td {
+            border-bottom: unset;
+          }
+        }
+      }
+    }
+    .v-data-table {
+      .v-table__wrapper {
+        > table {
+          > thead > tr th {
+            background: $theadColor;
+          }
+          tbody {
+            tr {
+              &:nth-child(even) {
+                td {
+                  background-color: $tbodyColor;
+                }
+              }
+              &:not(:last-child) {
+                td {
+                  border-bottom: unset;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .v-tabs {
+      .v-btn__content {
+        color: $primary;
+      }
+      .v-tab__slider {
+        color: $light;
+      }
+    }
+  }
+}
+//main
+
+///dark Style-------
+.v-theme--dark {
+  .navDrawer {
+    .drawerBtn {
+      background-color: rgb(35 35 35);
+      span {
+        color: #fff;
+      }
+    }
+    .v-navigation-drawer__content {
+      .v-list-group {
+        > .v-list-item {
+          &:hover,
+          &.v-list-item--active {
+            background: #ccc;
+            color: #000;
+            img {
+              filter: unset;
+            }
+          }
+        }
+      }
+      .logoImg {
+        .logo {
+          + img {
+            filter: invert(1);
+          }
+        }
+      }
+    }
+    &.v-theme--dark {
+      background: rgb(35 35 35);
+      .v-list-item__content {
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+  .functionList {
+    .icon,
+    button {
+      background: rgb(35, 35, 35);
+      &:after {
+        background: rgb(35, 35, 35);
+      }
+    }
+  }
+  .webSearch .v-field__append-inner .v-icon {
+    color: #fff;
+  }
+  .infoBtnContainer {
+    li {
+      div {
+        color: #fff;
+      }
+    }
+  }
+}

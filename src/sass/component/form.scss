@@ -1,0 +1,67 @@
+.formGrp {
+  label {
+    color: $defaultPrimary;
+    font-weight: 500;
+    margin: 0 0.5rem;
+  }
+  input,
+  select {
+    padding: 0 0.25rem;
+  }
+  .v-field__input {
+    height: rem(44);
+  }
+}
+input:-internal-autofill-selected {
+  background: #fff !important;
+}
+
+.formContainer {
+  max-width: unset !important;
+  label {
+    max-width: 150px;
+    flex: 0 0 150px;
+    abbr {
+      color: $defaultLight;
+      text-decoration: none;
+    }
+  }
+  .checkGrp {
+    display: flex;
+    flex-wrap: wrap;
+    @include screen('tablet') {
+      display: block;
+    }
+  }
+  .formGrp {
+    margin-bottom: 1rem;
+    padding-top: 0.25rem;
+    .tilde {
+      margin: 0.5rem;
+    }
+    .formGrpTitle {
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+      border-radius: 0.5rem;
+    }
+    &:has(.v-input .v-input__details) {
+      margin-bottom: 0rem;
+    }
+    .v-checkbox-btn {
+      label {
+        max-width: calc(100% - 2rem);
+        flex-basis: fit-content;
+      }
+    }
+
+    @include screen('tablet') {
+      flex-wrap: wrap;
+      .formTitle {
+        width: 100%;
+        max-width: unset;
+        flex-basis: auto;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

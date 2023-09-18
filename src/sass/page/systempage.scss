@@ -1,0 +1,337 @@
+.btnGroup {
+  display: flex;
+  button {
+    margin-left: 0.5rem;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &.left {
+    justify-content: flex-end;
+  }
+  &.center {
+    justify-content: center;
+  }
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  .pageContent {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .scrollContent {
+      width: 100%;
+      flex-grow: 1;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border-radius: 1.5rem !important;
+    }
+    h3 {
+      font-size: 1.5em;
+      margin: 0.25rem 0;
+      line-height: 1.2em;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 1rem;
+      text-shadow: $text-shadow;
+      @include screen('tablet') {
+        font-size: 1.5em;
+      }
+    }
+  }
+  .title {
+    font-size: 1.5em;
+    margin: 0.25rem 0;
+    line-height: 1.2em;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: $text-shadow;
+    display: none;
+    @include screen('tablet') {
+      display: block;
+      margin-top: 1rem;
+    }
+  }
+
+  .pageLinkBtn {
+    margin: 0.5rem 0 1.5rem 0;
+    border: 2px solid #fff;
+    border-right: 0;
+    border-left: 0;
+
+    .v-card {
+      background: unset;
+      box-shadow: unset;
+    }
+    button {
+      border: 0px;
+      border-radius: 0 !important;
+      &:after {
+        border: none;
+      }
+    }
+    .v-tab--selected {
+      background-color: #fff;
+
+      .v-btn__content {
+        color: $defaultPrimary;
+        border: 0px;
+        &::after {
+          border: 0px;
+        }
+        text-shadow: unset;
+      }
+    }
+    .v-btn__content {
+      font-size: em(16);
+      color: #fff;
+      text-shadow: $text-shadow;
+    }
+    .v-tabs {
+      border-radius: 0px;
+      .v-tab__slider {
+        display: none;
+      }
+    }
+  }
+  .functionGrp {
+    .v-expansion-panels {
+      box-shadow: unset;
+    }
+    .v-container {
+      max-width: 100%;
+      width: 100%;
+      position: relative;
+      padding: 0.5rem;
+      @include screen('tablet') {
+        padding: 0.5rem 0;
+      }
+    }
+    .btnList {
+      button {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  .searchGrp {
+    position: relative;
+    .searchList {
+      .v-expansion-panel {
+        background-color: $defaultBg;
+        border-radius: rem(40);
+        box-shadow: $boxShadow;
+
+        margin-bottom: 0.5rem;
+      }
+      .v-expansion-panel-title__overlay {
+        opacity: 0;
+      }
+      .v-expansion-panel-title {
+        padding: 1rem 1.5rem;
+        font-size: 1em;
+        .formGrp {
+          margin-bottom: 0rem;
+        }
+      }
+
+      .v-expansion-panel-title--active {
+        .btnList {
+          display: none !important;
+        }
+      }
+      .v-expansion-panel-text {
+        .btnList {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .formTitle {
+        max-width: rem(90);
+        padding: 0.3em 0.5em;
+        padding-left: 0;
+        white-space: nowrap;
+        @media (max-width: 960px) {
+          width: rem(90);
+        }
+      }
+      .formGrp {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+
+        .v-field__input {
+          height: rem(40);
+          input {
+            margin: 0;
+          }
+        }
+        .v-label--clickable {
+          margin: 0;
+        }
+      }
+      .tilde {
+        margin: 0.5rem;
+      }
+      .btnGrp {
+        margin-left: auto;
+        margin-right: 0;
+      }
+      .v-field__input {
+        height: rem(44);
+        input {
+          margin-top: 0;
+        }
+      }
+      @include screen('tablet') {
+        padding: 0.25rem;
+        .formGrp {
+          width: 100%;
+          flex-wrap: wrap;
+          label {
+            width: 100%;
+            margin-bottom: 0.25rem;
+            max-width: unset;
+          }
+          .group {
+            margin-left: 0.25rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 0.25rem;
+            select,
+            input {
+              width: 100%;
+            }
+          }
+        }
+        .btnGrp {
+          width: 100%;
+        }
+      }
+    }
+    // .searchBar {
+    //   &.hide {
+    //     display: none;
+    //   }
+    // }
+  }
+  // .filterList {
+  //   display: flex;
+  //   align-items: center;
+  //   max-height: rem(56);
+  //   width: max-content;
+  //   margin-left: auto;
+  //   .formInline {
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     width: unset;
+  //   }
+  //   @include screen('tablet') {
+  //     max-height: unset;
+  //   }
+  //   .formContent {
+  //     .item {
+  //       position: relative;
+  //       margin: 0.25rem 0;
+  //       padding: 0 0.25rem;
+  //       align-items: center;
+  //       span[class~='material-icons-round'] {
+  //         position: absolute;
+  //         left: 0.5rem;
+  //         top: 0.25rem;
+  //       }
+  //       display: flex;
+  //       select {
+  //         cursor: pointer;
+  //         padding-left: 2.5rem;
+  //         max-width: rem(140);
+  //         position: relative;
+  //         padding-right: 2rem;
+  //       }
+  //       // &::after {
+  //       //   position: absolute;
+  //       //   content: '';
+  //       //   right: 0;
+  //       //   width: 2rem;
+  //       //   height: 2rem;
+
+  //       //   background: url('@/assets/icon/select_arrow_drop_down.svg') no-repeat center center;
+  //       // }
+  //     }
+  //     .functionBtnGrp {
+  //       display: flex;
+  //       align-items: center;
+  //       > span {
+  //         display: block;
+  //         margin: 0.25rem 0;
+  //         padding-right: 0.5rem;
+  //       }
+  //       > button {
+  //         margin: 0 0.5rem;
+  //       }
+  //       .cardDirection {
+  //         padding: 0 0.5rem;
+  //       }
+  //     }
+  //   }
+  // }
+  .closeSearchMoreBtn {
+    border-radius: 0.75rem 0.75rem 0 0 !important;
+    width: rem(96);
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+  }
+  .searchMoreContent {
+    .formTitle {
+      max-width: 100px;
+      flex: 0 0 100px;
+      align-self: flex-start;
+      padding: 0.3em 0.5em;
+      padding-left: 0;
+    }
+    .formGrp {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      span.tilde {
+        margin: 0 0.5rem;
+      }
+      .v-field__input {
+        height: rem(40);
+        input {
+          margin: 0;
+        }
+      }
+      .v-label--clickable {
+        margin: 0;
+      }
+    }
+  }
+  .functionBtnGrp {
+    display: flex;
+    .v-btn-group {
+      height: rem(36);
+      .v-btn {
+        border-radius: 50%;
+        background: unset;
+      }
+    }
+    button {
+      width: rem(36);
+      height: rem(36);
+      min-width: unset;
+    }
+  }
+}
+.pagination {
+  select {
+    box-shadow: $boxShadow;
+    width: 50px;
+    text-align: center;
+  }
+}
