@@ -10,7 +10,7 @@
           />
         </h3>
         <v-btn color="secondary"
-          ><a href="https://github.com/HywebU00/2023_CIP">檔案下載</a></v-btn
+          ><a href="https://github.com/HywebU00/2023_CIP_">檔案下載</a></v-btn
         >
       </div>
 
@@ -59,12 +59,12 @@ export default {
         },
         {
           name: "功能頁",
-          link: "https://hywebu00.github.io/2023_CIP/#/ui/index",
+          link: "https://hywebu00.github.io/2023_CIP_/#/ui/index",
           note: "",
         },
         {
           name: "新增頁",
-          link: "https://hywebu00.github.io/2023_CIP/#/ui/form",
+          link: "https://hywebu00.github.io/2023_CIP_/#/ui/form",
           note: "",
         },
         {

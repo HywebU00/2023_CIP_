@@ -56,7 +56,7 @@ $remFontSize: 16;
 $primary: #045fa9;
 $primaryActive: #1976d21f;
 $primaryDark: #17214c;
-$secondary: #46b9e7;
+// $secondary: #46b9e7;
 
 $primaryLight: #5ad6f3;
 $primaryDate: #2979ff;
@@ -94,6 +94,7 @@ $text-shadow: #000000a1 0.1em 0.1em 0.2em;
 // rem基本尺寸
 $remFontSize: 16;
 
+$secondaryColor: #91746c;
 //側欄背景色
 $defaultBg: #f6f1ef;
 $defaultPrimary: #331919;
@@ -107,7 +108,7 @@ $defaultTbodyColor: #f7f7f5;
 
 //側欄背景色__綠色
 $greenGradient: linear-gradient(to bottom, #289d97 0%, #184f42 100%);
-$greenGradientBg: linear-gradient(to bottom, #54b38c, #2daca1, #1ea2b0, #3b96b6, #5a89b1, #6382ae, #6d7aa8, #7672a1, #766da2, #7868a3, #7a63a3, #7d5da3);
+$greenGradientBg: linear-gradient(to bottom, #2d9bb8, #35a0b3, #42a5ae, #51aaa8, #61aea3, #6ab2a0, #74b59c, #7fb899, #87bc96, #91c093, #9bc38f, #a6c68c);
 
 $greenPrimary: #331919;
 $greenLight: #36e79e;
@@ -118,7 +119,7 @@ $greenTbodyColor: #f7f7f5;
 
 //側欄背景色__藍色
 $blueGradient: linear-gradient(to bottom, #0e4c80 0%, #087ea6 100%);
-$blueGradientBg: linear-gradient(to bottom, #439bbb, #47a2b4, #54a8ad, #66ada5, #79b19e, #82b69a, #8ebb96, #9bbf91, #a7c689, #b6cc7f, #c9d175, #dfd46c);
+$blueGradientBg: linear-gradient(to bottom, #60a691, #60a394, #61a096, #639d98, #669a98, #64979a, #63949c, #64909d, #638ba0, #6686a2, #6d80a1, #767a9e);
 
 $bluePrimary: #331919;
 $blueLight: #00f0ff;
@@ -129,7 +130,7 @@ $blueTbodyColor: #f7f7f5;
 
 //側欄背景色__紅色
 $redGradient: linear-gradient(to bottom, #8e2a4d 0%, #bf4571 100%);
-$redGradientBg: linear-gradient(to bottom, #c7507c, #c65a7e, #c66380, #c46c83, #c37486, #c77c80, #c8857d, #c88f7c, #c39e79, #b9ae7f, #abbd8f, #9ccaa8);
+$redGradientBg: linear-gradient(to bottom, #cc6782, #cd6d80, #ce737f, #ce797e, #ce7f7e, #ce857b, #cd8c7a, #cc927a, #c99a79, #c4a27b, #beaa7f, #b8b286);
 $redPrimary: #331919;
 $redLight: #ff378c;
 $redSecondary: #852648;

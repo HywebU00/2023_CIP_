@@ -18,8 +18,8 @@
         <td class="text-end">{{ item.columns.protein }}</td>
         <td class="d-flex justify-end align-center">
           <div class="btnGroup">
-            <v-btn elevation="0" color="secondary" size="small">刪除</v-btn>
-            <v-btn elevation="0" size="small">新增</v-btn>
+            <v-btn elevation="0" color="cancel" size="small">刪除</v-btn>
+            <v-btn elevation="0" color="submit" size="small">新增</v-btn>
           </div>
         </td>
       </tr>

@@ -77,7 +77,7 @@
                           md="3"
                           class="d-flex justify-md-end justify-center align-center btnList"
                         >
-                          <v-btn>查詢</v-btn>
+                          <v-btn class="submit">查詢</v-btn>
                           <v-btn class="searchMoreBtn" @click="expand"
                             >進階搜尋</v-btn
                           >
@@ -172,7 +172,7 @@
                         </v-col>
                         <v-col cols="12" class="pt-0">
                           <div class="d-flex btnList justify-center">
-                            <v-btn>查詢</v-btn>
+                            <v-btn class="submit">查詢</v-btn>
                             <v-btn class="searchMoreBtn" @click="expand"
                               >進階搜尋</v-btn
                             >
@@ -213,11 +213,12 @@
             <v-window v-model="tab">
               <v-window-item value="one">
                 <div class="btnGroup left mb-2">
-                  <v-btn elevation="0">匯出報表</v-btn>
-                  <v-btn elevation="0">修改狀態</v-btn>
-                  <v-btn elevation="0">修改填報期限</v-btn>
-                  <v-btn elevation="0">刪除</v-btn>
-                  <v-btn elevation="0">新增</v-btn>
+                  <v-btn color="export" elevation="0">匯出報表</v-btn>
+                  <v-btn color="import" elevation="0">匯入報表</v-btn>
+                  <!-- <v-btn elevation="0">修改狀態</v-btn> -->
+                  <!-- <v-btn elevation="0">修改填報期限</v-btn> -->
+                  <v-btn color="cancel" elevation="0">刪除</v-btn>
+                  <v-btn color="submit" elevation="0">新增</v-btn>
                 </div>
                 <v-table>
                   <thead>
@@ -241,10 +242,12 @@
                       <td>{{ item.status }}</td>
                       <td>
                         <div class="btnGroup">
-                          <v-btn elevation="0" color="secondary" size="small"
+                          <v-btn color="cancel" elevation="0" size="small"
                             >刪除</v-btn
                           >
-                          <v-btn elevation="0" size="small">新增</v-btn>
+                          <v-btn color="submit" elevation="0" size="small"
+                            >新增</v-btn
+                          >
                         </div>
                       </td>
                     </tr>

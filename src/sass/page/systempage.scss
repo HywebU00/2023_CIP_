@@ -116,6 +116,11 @@
         margin-left: 0.5rem;
       }
     }
+    .v-btn {
+      &.submit {
+        background: linear-gradient(to bottom, #371b1a 0%, #663838 100%);
+      }
+    }
   }
 
   .searchGrp {
@@ -285,6 +290,7 @@
     width: rem(96);
     margin-top: 1rem;
     margin-bottom: -1rem;
+    background-color: $secondaryColor !important;
   }
   .searchMoreContent {
     .formTitle {

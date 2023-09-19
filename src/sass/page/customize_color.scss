@@ -253,7 +253,7 @@ $theme-config: (
     }
   }
 }
-//main
+//btn
 
 ///dark Style-------
 .v-theme--dark {
@@ -298,6 +298,7 @@ $theme-config: (
     .icon,
     button {
       background: rgb(35, 35, 35);
+      color: #fff;
       &:after {
         background: rgb(35, 35, 35);
       }
