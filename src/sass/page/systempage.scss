@@ -25,10 +25,11 @@
 
     .scrollContent {
       width: 100%;
+      min-height: 100%;
       flex-grow: 1;
       margin-bottom: 1.5rem;
       padding: 1rem;
-      border-radius: 1.5rem !important;
+      border-radius: 1rem !important;
     }
     h3 {
       font-size: 1.5em;
@@ -160,9 +161,9 @@
         padding: 0.3em 0.5em;
         padding-left: 0;
         white-space: nowrap;
-        @media (max-width: 960px) {
-          width: rem(90);
-        }
+        // @media (max-width: 960px) {
+        //   width: rem(90);
+        // }
       }
       .formGrp {
         margin-bottom: 1rem;
@@ -339,5 +340,45 @@
     box-shadow: $boxShadow;
     width: 50px;
     text-align: center;
+  }
+}
+.widgetContent {
+  &.v-card {
+    border-radius: 1rem !important;
+    min-height: 50%;
+  }
+
+  @media only screen and (max-width: 960px) {
+    &.v-card {
+      min-height: auto;
+    }
+  }
+}
+.treeviewBlock {
+  > li {
+    padding-left: 0.5rem;
+  }
+  ul {
+    padding-left: 1rem;
+  }
+  .item {
+    cursor: pointer;
+    > div {
+      padding: 0.25rem;
+    }
+    > ul > div {
+      line-height: 1.5rem;
+    }
+  }
+  .bold {
+    font-weight: bold;
+    color: $defaultPrimary;
+    + ul {
+      > li :not(.bold + ul) {
+        &:hover {
+          color: $secondaryColor;
+        }
+      }
+    }
   }
 }

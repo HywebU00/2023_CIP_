@@ -44,6 +44,14 @@ const routes = [
         path: "/ui/form",
         component: () => import("@/views/admin/formComponent.vue"),
       },
+      {
+        path: "/ui/mp",
+        component: () => import("@/views/admin/homeComponent.vue"),
+      },
+      {
+        path: "/ui/tree",
+        component: () => import("@/views/admin/treeComponent.vue"),
+      },
     ],
   },
   {

@@ -56,6 +56,7 @@ export default {
           name: "首頁",
           link: "",
           note: "",
+          // https://hywebu00.github.io/2023_CIP_/#/ui/mp
         },
         {
           name: "功能頁",
@@ -81,6 +82,7 @@ export default {
           name: "樹狀分類＋功能頁",
           link: "",
           note: "",
+          // https://hywebu00.github.io/2023_CIP_/#/ui/tree
         },
       ],
     };

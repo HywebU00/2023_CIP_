@@ -32,7 +32,7 @@
               <v-form class="searchList">
                 <v-expansion-panels v-model="panel">
                   <v-expansion-panel>
-                    <v-expansion-panel-title hide-actions="true">
+                    <v-expansion-panel-title hide-actions>
                       <v-row>
                         <v-col cols="12" md="">
                           <div class="d-flex formGrp">

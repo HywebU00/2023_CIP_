@@ -32,7 +32,7 @@
               <v-form class="searchList">
                 <v-expansion-panels v-model="panel">
                   <v-expansion-panel>
-                    <v-expansion-panel-title hide-actions="true">
+                    <v-expansion-panel-title hide-actions>
                       <v-row>
                         <v-col cols="12" md="">
                           <div class="d-flex formGrp">
@@ -511,8 +511,8 @@
             </v-form>
           </v-container>
           <div class="btnGroup center mb-2">
-            <v-btn elevation="0">送出</v-btn>
-            <v-btn elevation="0" color="secondary">取消</v-btn>
+            <v-btn elevation="0" color="submit">送出</v-btn>
+            <v-btn elevation="0" color="cancel">取消</v-btn>
           </div>
         </div>
       </v-card>
