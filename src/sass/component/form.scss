@@ -17,7 +17,7 @@ input:-internal-autofill-selected {
 }
 
 .formContainer {
-  max-width: unset !important;
+  // max-width: unset !important;
   label {
     max-width: 150px;
     flex: 0 0 150px;
@@ -36,6 +36,29 @@ input:-internal-autofill-selected {
   .formGrp {
     margin-bottom: 1rem;
     padding-top: 0.25rem;
+    .v-row {
+      margin-top: -13px;
+      margin-bottom: -13px;
+      .v-col {
+        .formGrp {
+          margin-bottom: 0;
+        }
+      }
+    }
+    // .v-row {
+    //   margin: 0;
+    //   div[class^='v-col'] {
+    //     padding-top: 0;
+    //     padding-bottom: 0;
+    //   }
+    //   .formGrp {
+    //     margin-bottom: 0;
+    //   }
+    //   .v-col {
+    //     padding: 0;
+
+    //   }
+    // }
     .tilde {
       margin: 0.5rem;
     }

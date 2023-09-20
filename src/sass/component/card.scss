@@ -1,0 +1,77 @@
+.albumCard {
+  height: 100%;
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .v-img {
+    margin: 0.75rem;
+    border-radius: rem(8);
+    height: rem(200);
+    max-height: rem(200);
+  }
+  .v-card-item {
+    display: flex;
+    align-items: flex-start;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .v-card-item__content {
+    .v-card-subtitle {
+      font-weight: 700;
+      font-size: em(14);
+    }
+    p {
+      font-size: em(14);
+    }
+  }
+  .v-card-text {
+    align-items: self-end;
+    display: flex;
+  }
+
+  .iconList {
+    color: $grayText;
+    font-weight: 700;
+    .v-col {
+      display: flex;
+      align-items: center;
+    }
+    i {
+      color: $grayText;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+.albumCardList {
+  &.list {
+    display: block;
+    > div {
+      max-width: unset;
+    }
+    .cardContainer {
+      flex-direction: row;
+    }
+    .v-img {
+      max-width: rem(200);
+      height: 150px;
+      width: rem(200);
+    }
+    .v-card {
+      display: block;
+    }
+    .albumCard {
+      .iconList {
+        justify-content: end;
+        .v-col {
+          flex-grow: unset;
+        }
+      }
+    }
+  }
+}

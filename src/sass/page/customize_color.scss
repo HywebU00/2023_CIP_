@@ -193,7 +193,7 @@ $theme-config: (
             background: $theadColor;
             > tr > th {
               color: #fff;
-              font-size: em(18);
+              font-size: rem(16);
             }
           }
           tbody {

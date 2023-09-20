@@ -252,6 +252,7 @@
                       color="secondary"
                       variant="solo"
                       single-line
+                      hide-details
                       density="compact"
                       :items="['布農族', '阿美族', '卑南族']"
                     ></v-autocomplete>
@@ -328,8 +329,21 @@
                     ></v-text-field>
                   </div>
                   <div class="d-flex formGrp">
+                    <label class="formTitle" for="">文字輸入 </label>
+                    <v-textarea
+                      placeholder="請輸入文字"
+                      variant="solo"
+                      hide-details
+                      density="compact"
+                      auto-grow
+                      rows="6"
+                      row-height="30"
+                      shaped
+                    ></v-textarea>
+                  </div>
+                  <div class="d-flex formGrp">
                     <label class="formTitle" for="">單選 </label>
-                    <v-radio-group inline color="secondary">
+                    <v-radio-group inline hide-details color="secondary">
                       <v-radio label="是" value="true"></v-radio>
                       <v-radio label="否" value="false"></v-radio>
                     </v-radio-group>
@@ -419,29 +433,27 @@
                     <label class="formTitle" for="">日期</label>
                     <v-row>
                       <v-col cols="12" md="6" class="d-flex">
-                        <v-autocomplete
+                        <v-text-field
                           variant="solo"
                           single-line
                           hide-details
-                          density="compact"
                           type="date"
-                          :items="['1990', '1991', '1992']"
-                        ></v-autocomplete>
+                          density="compact"
+                        ></v-text-field>
                         <span class="tilde">~</span>
-                        <v-autocomplete
+                        <v-text-field
                           variant="solo"
-                          density="compact"
                           single-line
                           hide-details
                           type="date"
-                          :items="['1990', '1991', '1992']"
-                        ></v-autocomplete>
+                          density="compact"
+                        ></v-text-field>
                       </v-col>
                     </v-row>
                   </div>
                   <!-- 二欄樣式 end -->
                   <!-- 左右欄位 start -->
-                  <div class="d-flex formGrp formGrp_2">
+                  <div class="d-flex formGrp formGrp_2 mt-6">
                     <v-row>
                       <v-col cols="12" md="6">
                         <div class="formGrp bg-thead formGrpTitle">應領數</div>

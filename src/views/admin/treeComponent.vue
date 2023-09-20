@@ -25,7 +25,6 @@
     <div class="pageContent">
       <h3>新增申請</h3>
       <!-- 搜尋列表 start -->
-
       <div class="functionGrp">
         <v-container>
           <v-row>
@@ -196,9 +195,9 @@
         </v-container>
       </div>
       <!-- 搜尋列表 end -->
-      <v-row>
-        <v-col class="pr-md-0 pr-3" sm="12" md="4" lg="3">
-          <v-card class="widgetContent">
+      <v-row class="d-md-flex d-block">
+        <v-col class="pr-md-0 pr-3 widgetContent">
+          <v-card class="">
             <v-container>
               <v-row>
                 <v-col>
@@ -212,7 +211,7 @@
             </v-container>
           </v-card>
         </v-col>
-        <v-col cols="12" sm="12" md="8" lg="9">
+        <v-col>
           <v-card class="scrollContent">
             <div class="">
               <v-container class="formContainer">
@@ -343,7 +342,7 @@
                       </div>
                       <div class="d-flex formGrp">
                         <label class="formTitle" for="">單選 </label>
-                        <v-radio-group inline color="secondary">
+                        <v-radio-group hide-details inline color="secondary">
                           <v-radio label="是" value="true"></v-radio>
                           <v-radio label="否" value="false"></v-radio>
                         </v-radio-group>
@@ -432,30 +431,28 @@
                       <div class="d-flex formGrp">
                         <label class="formTitle" for="">日期</label>
                         <v-row>
-                          <v-col cols="6" md="12" class="d-flex">
-                            <v-autocomplete
+                          <v-col md="12" class="d-flex">
+                            <v-text-field
                               variant="solo"
                               single-line
                               hide-details
-                              density="compact"
                               type="date"
-                              :items="['1990', '1991', '1992']"
-                            ></v-autocomplete>
+                              density="compact"
+                            ></v-text-field>
                             <span class="tilde">~</span>
-                            <v-autocomplete
+                            <v-text-field
                               variant="solo"
-                              density="compact"
                               single-line
                               hide-details
                               type="date"
-                              :items="['1990', '1991', '1992']"
-                            ></v-autocomplete>
+                              density="compact"
+                            ></v-text-field>
                           </v-col>
                         </v-row>
                       </div>
                       <!-- 二欄樣式 end -->
                       <!-- 左右欄位 start -->
-                      <div class="d-flex formGrp formGrp_2">
+                      <div class="d-flex formGrp formGrp_2 mt-6">
                         <v-row>
                           <v-col cols="12" lg="6">
                             <div class="formGrp bg-thead formGrpTitle">
@@ -527,6 +524,8 @@
                     </v-col>
                   </v-row>
                 </v-form>
+                <DataTable />
+                <!-- <DataTableHasPagination /> -->
               </v-container>
               <div class="btnGroup center mb-2">
                 <v-btn elevation="0" color="submit">送出</v-btn>
@@ -543,6 +542,8 @@
 <script>
 import { maskStore, pageStting } from "@/stores/storage.js";
 import TreeItem from "@/components/TreeItem.vue";
+import DataTable from "@/components/dataTableComponent.vue";
+
 const ps = pageStting();
 const treeData = {
   name: "分類Ａ",
@@ -585,6 +586,7 @@ export default {
   },
   components: {
     TreeItem,
+    DataTable,
   },
 };
 </script>
