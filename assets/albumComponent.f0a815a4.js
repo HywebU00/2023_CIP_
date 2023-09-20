@@ -1,1 +1,0 @@
-import{_ as e,L as a,N as t,G as o,Q as n,X as c,T as r,O as s,U as l}from"./index.708494a7.js";const _={},m=s("p",null,"albumComponent",-1);function d(p,u){return a(),t(r,null,[m,o(c,{color:"primary"},{default:n(()=>[l("changeTheme")]),_:1})],64)}const i=e(_,[["render",d]]);export{i as default};
