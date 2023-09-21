@@ -1,0 +1,1 @@
+import{_ as e,L as t,N as o,G as a,Q as c,X as n,T as r,O as s,U as _}from"./index.2dcdad0d.js";const l={},p=s("p",null,"projectComponent",-1);function m(d,f){return t(),o(r,null,[p,a(n,{color:"primary"},{default:c(()=>[_("changeTheme")]),_:1})],64)}const u=e(l,[["render",m]]);export{u as default};
