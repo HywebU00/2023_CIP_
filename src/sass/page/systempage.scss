@@ -365,24 +365,38 @@
 }
 .treeviewBlock {
   margin-top: 1rem;
-  > li {
-    padding-left: 0.5rem;
-  }
+
   ul {
     padding-left: 1rem;
   }
+  .treeTitle {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: $defaultPrimary;
+    button {
+      margin-left: auto;
+    }
+  }
   .item {
     cursor: pointer;
+    width: 100%;
     > div {
-      padding: 0.25rem;
+      &:hover {
+        background: lighten($secondaryColor, 45);
+        border-radius: 0.5rem;
+      }
+      padding: 0.5rem 0.25rem;
     }
     > ul > div {
       line-height: 1.5rem;
+      width: 100%;
     }
   }
   .bold {
-    font-weight: bold;
+    position: relative;
     color: $defaultPrimary;
+
     + ul {
       > li :not(.bold + ul) {
         &:hover {

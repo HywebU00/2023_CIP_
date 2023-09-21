@@ -1,17 +1,43 @@
 <template>
   <li>
     <div :class="{ bold: isFolder }" @click="toggle" @dblclick="changeType">
-      {{ model.name }}
-      <span v-if="isFolder">[{{ isOpen ? "-" : "+" }}]</span>
+      <div class="d-flex treeTitle">
+        <template v-if="isFolder">
+          <span class="iconList">
+            <template v-if="isOpen">
+              <v-icon class="mr-2" icon="mdi-folder-open" color="import" />
+            </template>
+            <template v-else>
+              <v-icon class="mr-2" icon="mdi-folder" color="import" />
+            </template>
+          </span>
+        </template>
+        <template v-else>
+          <v-icon class="mr-2" icon="mdi-file-document" color="export" />
+        </template>
+        {{ model.name }}
+        <template v-if="isFolder">
+          <template v-if="isOpen">
+            <v-btn
+              density="compact"
+              variant="text"
+              icon="mdi-chevron-up"
+            ></v-btn>
+          </template>
+          <template v-else>
+            <v-btn
+              density="compact"
+              variant="text"
+              icon="mdi-chevron-down"
+            ></v-btn>
+          </template>
+        </template>
+      </div>
     </div>
     <ul v-show="isOpen" v-if="isFolder">
-      <tree-item
-        :key="model"
-        class="item"
-        v-for="model in model.children"
-        :model="model"
-      >
-      </tree-item>
+      <div class="d-flex" v-for="model in model.children" :key="model">
+        <tree-item class="item" :model="model"> </tree-item>
+      </div>
       <!-- <li class="add" @click="addChild">+</li> -->
     </ul>
   </li>
@@ -54,5 +80,4 @@ export default {
   },
 };
 </script>
-
 <style></style>
