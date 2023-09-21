@@ -52,6 +52,10 @@ const routes = [
         path: "/ui/tree",
         component: () => import("@/views/admin/treeComponent.vue"),
       },
+      {
+        path: "/ui/photo",
+        component: () => import("@/views/admin/photoComponent.vue"),
+      },
     ],
   },
   {

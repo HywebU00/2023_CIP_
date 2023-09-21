@@ -1,29 +1,8 @@
 <template>
   <div class="page">
     <h2 class="title">案件管理</h2>
-    <!-- <div class="d-flex pageLinkBtn">
-      <v-card>
-        <v-tabs show-arrows>
-          <v-tab :ripple="false" key="1案件類別管理" value="1案件類別管理">
-            帳號管理
-          </v-tab>
-          <v-tab :ripple="false" key="2案件管理" value="2案件管理">
-            部門管理
-          </v-tab>
-          <v-tab :ripple="false" key="3案件填報" value="3案件填報">
-            專案群組管理
-          </v-tab>
-          <v-tab :ripple="false" key="3案件填報" value="3案件填報">
-            角色級職管理
-          </v-tab>
-          <v-tab :ripple="false" v-for="i in 12" :key="i" :value="'tab-' + i">
-            案件管理{{ i }}
-          </v-tab>
-        </v-tabs>
-      </v-card>
-    </div> -->
     <div class="pageContent">
-      <h3>線上相簿管理</h3>
+      <h3>線上相片管理</h3>
       <div class="functionGrp">
         <v-container>
           <v-row>
