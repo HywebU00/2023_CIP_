@@ -80,7 +80,7 @@ export default {
         },
         {
           name: "樹狀分類＋功能頁",
-          link: "",
+          link: "https://hywebu00.github.io/2023_CIP_/#/ui/tree",
           note: "",
           // https://hywebu00.github.io/2023_CIP_/#/ui/tree
         },
