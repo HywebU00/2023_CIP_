@@ -12,7 +12,7 @@
                   <v-expansion-panel>
                     <v-expansion-panel-title
                       hide-actions
-                      @click.stop="this.panel = 1"
+                      @click.stop="panelsHandle"
                     >
                       <v-row>
                         <v-col cols="12" md="">
@@ -73,6 +73,7 @@
                           <div class="d-flex formGrp">
                             <label class="formTitle" for="">類別 :</label>
                             <v-autocomplete
+                              @click.stop
                               variant="solo"
                               single-line
                               density="compact"
@@ -723,7 +724,7 @@ export default {
     functionGroupToggle: 0,
     page: 1,
     panel: 1,
-    // panel: [],
+
     //  dialog data
     dialog: false,
     listStyle: false,
@@ -734,6 +735,13 @@ export default {
     ps.setTopNavPageTiltle("帳號管理");
   },
   methods: {
+    panelsHandle() {
+      if (this.panel == 0) {
+        this.panel = 1;
+      } else {
+        this.panel = 0;
+      }
+    },
     open() {
       this.panel = 1;
     },

@@ -32,7 +32,10 @@
               <v-form class="searchList">
                 <v-expansion-panels v-model="panel">
                   <v-expansion-panel>
-                    <v-expansion-panel-title hide-actions>
+                    <v-expansion-panel-title
+                      @click.stop="panelsHandle"
+                      hide-actions
+                    >
                       <v-row>
                         <v-col cols="12" md="">
                           <div class="d-flex formGrp">
@@ -78,7 +81,11 @@
                           class="d-flex justify-md-end justify-center align-center btnList"
                         >
                           <v-btn>查詢</v-btn>
-                          <v-btn class="searchMoreBtn">進階搜尋</v-btn>
+                          <v-btn
+                            class="searchMoreBtn"
+                            @click.stop="this.panel = 0"
+                            >進階搜尋</v-btn
+                          >
                         </v-col>
                       </v-row>
                     </v-expansion-panel-title>
@@ -594,12 +601,19 @@ export default {
     functionGroupToggle: null,
     page: 1,
     treeData,
-    panel: [],
+    panel: 1,
   }),
   created() {
     ps.setTopNavPageTiltle("帳號管理");
   },
   methods: {
+    panelsHandle() {
+      if (this.panel == 0) {
+        this.panel = 1;
+      } else {
+        this.panel = 0;
+      }
+    },
     open() {
       this.panel = 1;
     },

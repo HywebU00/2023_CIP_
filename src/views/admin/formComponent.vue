@@ -34,7 +34,7 @@
                   <v-expansion-panel>
                     <v-expansion-panel-title
                       hide-actions
-                      @click.stop="this.panel = 1"
+                      @click.stop="panelsHandle"
                     >
                       <v-row>
                         <v-col cols="12" md="">
@@ -546,12 +546,19 @@ export default {
     toggle: null,
     functionGroupToggle: null,
     page: 1,
-    panel: [],
+    panel: 1,
   }),
   created() {
     ps.setTopNavPageTiltle("帳號管理");
   },
   methods: {
+    panelsHandle() {
+      if (this.panel == 0) {
+        this.panel = 1;
+      } else {
+        this.panel = 0;
+      }
+    },
     open() {
       this.panel = 1;
     },
