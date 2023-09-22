@@ -1,29 +1,8 @@
 <template>
   <div class="page">
     <h2 class="title">案件管理</h2>
-    <!-- <div class="d-flex pageLinkBtn">
-      <v-card>
-        <v-tabs show-arrows>
-          <v-tab :ripple="false" key="1案件類別管理" value="1案件類別管理">
-            帳號管理
-          </v-tab>
-          <v-tab :ripple="false" key="2案件管理" value="2案件管理">
-            部門管理
-          </v-tab>
-          <v-tab :ripple="false" key="3案件填報" value="3案件填報">
-            專案群組管理
-          </v-tab>
-          <v-tab :ripple="false" key="3案件填報" value="3案件填報">
-            角色級職管理
-          </v-tab>
-          <v-tab :ripple="false" v-for="i in 12" :key="i" :value="'tab-' + i">
-            案件管理{{ i }}
-          </v-tab>
-        </v-tabs>
-      </v-card>
-    </div> -->
     <div class="pageContent">
-      <h3>線上相簿管理</h3>
+      <h3>線上相片管理</h3>
       <div class="functionGrp">
         <v-container>
           <v-row>
@@ -203,119 +182,7 @@
       <v-card class="scrollContent">
         <div class="">
           <v-container>
-            <!-- 排序方式 start -->
-            <v-row>
-              <v-col class="d-flex justify-end pr-0">
-                <div class="filterList">
-                  <v-row class="d-flex">
-                    <v-col>
-                      <div class="selectItem">
-                        <v-img
-                          class="iconImg"
-                          src="~@/assets/icon/filter_01.svg"
-                        >
-                        </v-img>
-                        <v-select
-                          variant="solo"
-                          placeholder="排序方式"
-                          single-line
-                          hide-details
-                          density="compact"
-                          :items="['搜尋條件1', '搜尋條件2', '搜尋條件3']"
-                        ></v-select>
-                      </div>
-                    </v-col>
-                    <v-col class="pl-0">
-                      <v-btn-toggle
-                        v-model="functionGroupToggle"
-                        color="primary"
-                        mandatory
-                      >
-                        <v-btn elevation="0" @click="listStyle = false">
-                          <template v-if="functionGroupToggle === 0">
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_white_02.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                          <template v-else>
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_02.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                        </v-btn>
-                        <v-btn elevation="0" @click="listStyle = true">
-                          <template v-if="functionGroupToggle === 1">
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_white_03.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                          <template v-else>
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_03.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                        </v-btn>
-                      </v-btn-toggle>
-                    </v-col>
-                  </v-row>
-                </div>
-              </v-col>
-            </v-row>
-            <!-- 排序方式 end-->
-            <v-row :class="['albumCardList', { list: listStyle }]">
-              <v-col
-                v-for="item in 10"
-                :key="item"
-                cols="12"
-                sm="6"
-                md="4"
-                lg="3"
-              >
-                <v-card class="albumCard">
-                  <div class="cardContainer">
-                    <v-img
-                      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                      cover
-                    ></v-img>
-                    <div class="info">
-                      <v-card-item>
-                        <v-card-title>排灣族聚餐</v-card-title>
-                        <v-card-subtitle>莊大安/事務科</v-card-subtitle>
-                        <p>正副首長主持或參加重要會議及每月大事紀</p>
-                      </v-card-item>
-                      <v-card-text>
-                        <v-row class="iconList">
-                          <v-col>
-                            <v-icon icon="mdi:mdi-clock" />
-                            <span>112/03/27</span></v-col
-                          >
-                          <v-col class="d-flex justify-end">
-                            <v-icon icon="mdi:mdi-eye" />
-                            <span>112</span></v-col
-                          >
-                        </v-row>
-                      </v-card-text>
-                    </div>
-                  </div>
-                </v-card>
-              </v-col>
-            </v-row>
+            <PeopleFinder />
           </v-container>
           <!-- Pagination start -->
           <div class="text-center">
@@ -334,6 +201,7 @@
 </template>
 
 <script>
+import PeopleFinder from "@/components/PeopleFinder.vue";
 import { maskStore, pageStting } from "@/stores/storage.js";
 const ps = pageStting();
 export default {
@@ -345,27 +213,11 @@ export default {
     functionGroupToggle: 0,
     page: 1,
     panel: [],
-    //table data
-    data: [
-      {
-        id: "varvar",
-        name: "陳肉肉",
-        class: "事務科",
-        title: "事務員",
-        password: "2wsx@@(OL>",
-        status: "待審",
-      },
-      {
-        id: "varvar",
-        name: "陳肉肉",
-        class: "事務科",
-        title: "事務員",
-        password: "2wsx@@(OL>",
-        status: "待審",
-      },
-    ],
+    //  dialog data
+    dialog: false,
     listStyle: false,
-    //table serve
+    //checkbox
+    selected: ["John"],
   }),
   created() {
     ps.setTopNavPageTiltle("帳號管理");
@@ -374,6 +226,9 @@ export default {
     open() {
       this.panel = 1;
     },
+  },
+  components: {
+    PeopleFinder,
   },
 };
 </script>

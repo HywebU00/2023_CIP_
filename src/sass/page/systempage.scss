@@ -31,6 +31,9 @@
       padding: 1rem;
       border-radius: 1rem !important;
       // background: rgb(255 255 255 / 95%);
+      @include screen('tablet') {
+        padding: 0;
+      }
     }
     h3 {
       font-size: 1.5em;
@@ -336,16 +339,17 @@
   }
 }
 .widgetContent {
-  width: rem(250) !important;
-  max-width: rem(250) !important;
+  $widgetContentWidth: 280;
+  width: rem($widgetContentWidth) !important;
+  max-width: rem($widgetContentWidth) !important;
   .v-card {
     border-radius: 1rem !important;
     min-height: 50%;
   }
   + .v-col {
-    width: calc(100% - 250px);
+    width: calc(100% - #{$widgetContentWidth}px);
   }
-  @media only screen and (max-width: 960px) {
+  @media only screen and (max-width: 767px) {
     width: auto !important;
     max-width: unset !important;
     .v-card {

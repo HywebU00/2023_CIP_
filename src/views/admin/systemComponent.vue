@@ -27,12 +27,14 @@
       <div class="functionGrp">
         <v-container>
           <v-row>
-            <!--v-model="expand" -->
             <v-col class="searchGrp">
               <v-form class="searchList">
                 <v-expansion-panels v-model="panel">
                   <v-expansion-panel>
-                    <v-expansion-panel-title hide-actions>
+                    <v-expansion-panel-title
+                      hide-actions
+                      @click.stop="this.panel = 1"
+                    >
                       <v-row>
                         <v-col cols="12" md="">
                           <div class="d-flex formGrp">
@@ -78,7 +80,9 @@
                           class="d-flex justify-md-end justify-center align-center btnList"
                         >
                           <v-btn class="submit">查詢</v-btn>
-                          <v-btn class="searchMoreBtn" @click="expand"
+                          <v-btn
+                            class="searchMoreBtn"
+                            @click.stop="this.panel = 0"
                             >進階搜尋</v-btn
                           >
                         </v-col>
@@ -173,9 +177,7 @@
                         <v-col cols="12" class="pt-0">
                           <div class="d-flex btnList justify-center">
                             <v-btn class="submit">查詢</v-btn>
-                            <v-btn class="searchMoreBtn" @click="expand"
-                              >進階搜尋</v-btn
-                            >
+                            <v-btn class="searchMoreBtn">進階搜尋</v-btn>
                           </div>
                           <div class="d-flex justify-center">
                             <v-btn
@@ -319,7 +321,7 @@ export default {
   },
   methods: {
     open() {
-      this.panel = ["expand"];
+      this.panel = 1;
     },
   },
   components: {

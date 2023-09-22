@@ -195,7 +195,7 @@
         </v-container>
       </div>
       <!-- 搜尋列表 end -->
-      <v-row class="d-md-flex d-block">
+      <v-row class="d-sm-flex d-block">
         <v-col class="pr-md-0 pr-3 widgetContent">
           <v-card class="">
             <v-container>
@@ -548,7 +548,7 @@ const ps = pageStting();
 const treeData = {
   name: "分類Ａ",
   children: [
-    { name: "分類Ａ-1", icon: "123" },
+    { name: "分類Ａ-1" },
     { name: "分類Ａ-2" },
     {
       name: "分類Ａ-3",
@@ -560,6 +560,26 @@ const treeData = {
         { name: "分類Ａ-3.3" },
         {
           name: "分類Ａ-3.4",
+          children: [
+            {
+              name: "分類Ａ-3.4.1",
+            },
+            { name: "分類Ａ-3.4.1" },
+            { name: "分類Ａ-3.4.1" },
+            {
+              name: "分類Ａ-3.4.1",
+              children: [
+                {
+                  name: "分類Ａ-3.1",
+                },
+                { name: "分類Ａ-3.2" },
+                { name: "分類Ａ-3.3" },
+                {
+                  name: "分類Ａ-3.4",
+                },
+              ],
+            },
+          ],
         },
       ],
     },
@@ -581,7 +601,7 @@ export default {
   },
   methods: {
     open() {
-      this.panel = ["expand"];
+      this.panel = 1;
     },
   },
   components: {

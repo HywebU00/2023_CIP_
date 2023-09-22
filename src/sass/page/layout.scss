@@ -72,6 +72,11 @@
       margin: 0;
       padding: 0.5rem 0;
     }
+    @include screen('tablet') {
+      .main {
+        padding: 1rem;
+      }
+    }
   }
   .webSearch {
     display: none;
@@ -517,7 +522,7 @@ main {
 .content {
   display: flex;
   flex-direction: column;
-
+  overflow: hidden;
   .header,
   .main {
     margin-left: rem(252);
@@ -536,7 +541,7 @@ main {
   .main {
     padding: 0 2rem;
     flex-grow: 1;
-    overflow-x: scroll;
+    // overflow-x: scroll;
   }
   height: 100vh;
   width: 100vw;
