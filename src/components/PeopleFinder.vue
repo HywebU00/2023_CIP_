@@ -281,10 +281,10 @@ export default {
           </v-container>
         </v-card-text>
         <v-card-actions class="justify-center">
-          <v-btn color="primary" variant="outlined" @click="dialog = !dialog">
+          <v-btn color="submit" variant="flat" @click="dialog = !dialog">
             送出
           </v-btn>
-          <v-btn color="warning" variant="outlined" @click="dialog = !dialog">
+          <v-btn color="cancel" variant="flat" @click="dialog = !dialog">
             取消
           </v-btn>
         </v-card-actions>

@@ -251,6 +251,23 @@ $theme-config: (
         color: $light;
       }
     }
+
+    //v-dialog Btn style
+    &.dialogCard {
+      .v-btn {
+        // min-width: rem(200);
+        margin: 2rem 1rem;
+        @include screen('tablet') {
+          min-width: 78px;
+        }
+        &.submit {
+          background: $GradientBg !important;
+        }
+        &.cancel {
+          background: linear-gradient(to bottom, #6a6a6a 0%, #9a9a9a 100%) !important;
+        }
+      }
+    }
   }
 }
 //btn

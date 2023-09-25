@@ -186,175 +186,101 @@
             <!-- 排序方式 start -->
             <v-row class="d-flex justify-between">
               <v-col>
-                <div class="btnGroup mb-2">
-                  <v-btn color="export" elevation="0">匯出報表</v-btn>
-                  <v-btn color="import" elevation="0">匯入報表</v-btn>
-                  <v-btn color="cancel" elevation="0">刪除</v-btn>
-                  <v-btn color="submit" elevation="0">新增</v-btn>
-                </div>
-              </v-col>
-              <v-col class="d-flex justify-end pr-0">
-                <div class="filterList">
-                  <v-row class="d-flex">
-                    <v-col>
-                      <div class="selectItem">
-                        <v-img
-                          class="iconImg"
-                          src="~@/assets/icon/filter_01.svg"
-                        >
-                        </v-img>
-                        <v-select
-                          variant="solo"
-                          placeholder="排序方式"
-                          single-line
-                          hide-details
-                          density="compact"
-                          :items="['搜尋條件1', '搜尋條件2', '搜尋條件3']"
-                        ></v-select>
-                      </div>
-                    </v-col>
-                    <v-col class="pl-0">
-                      <v-btn-toggle
-                        v-model="functionGroupToggle"
-                        color="primary"
-                        mandatory
-                      >
-                        <v-btn elevation="0" @click="listStyle = false">
-                          <template v-if="functionGroupToggle === 0">
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_white_02.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                          <template v-else>
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_02.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                        </v-btn>
-                        <v-btn elevation="0" @click="listStyle = true">
-                          <template v-if="functionGroupToggle === 1">
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_white_03.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                          <template v-else>
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_03.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                        </v-btn>
-                      </v-btn-toggle>
-                    </v-col>
-                  </v-row>
-                </div>
-              </v-col>
-            </v-row>
-            <!-- <v-row>
-              <v-col class="d-flex justify-end pr-0">
-                <div class="filterList">
-                  <v-row class="d-flex">
-                    <v-col>
-                      <div class="selectItem">
-                        <v-img
-                          class="iconImg"
-                          src="~@/assets/icon/filter_01.svg"
-                        >
-                        </v-img>
-                        <v-select
-                          variant="solo"
-                          placeholder="排序方式"
-                          single-line
-                          hide-details
-                          density="compact"
-                          :items="['搜尋條件1', '搜尋條件2', '搜尋條件3']"
-                        ></v-select>
-                      </div>
-                    </v-col>
-                    <v-col class="pl-0">
-                      <v-btn-toggle
-                        v-model="functionGroupToggle"
-                        color="primary"
-                        mandatory
-                      >
-                        <v-btn elevation="0" @click="listStyle = false">
-                          <template v-if="functionGroupToggle === 0">
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_white_02.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                          <template v-else>
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_02.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                        </v-btn>
-                        <v-btn elevation="0" @click="listStyle = true">
-                          <template v-if="functionGroupToggle === 1">
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_white_03.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                          <template v-else>
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_03.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                        </v-btn>
-                      </v-btn-toggle>
-                    </v-col>
-                  </v-row>
-                </div>
-                </v-col>
-            </v-row> -->
-            <!-- <v-row>
-              <v-col>
                 <div class="btnGroup left mb-2">
                   <v-btn color="export" elevation="0">匯出報表</v-btn>
                   <v-btn color="import" elevation="0">匯入報表</v-btn>
                   <v-btn color="cancel" elevation="0">刪除</v-btn>
                   <v-btn color="submit" elevation="0">新增</v-btn>
-                </div></v-col
-              >
-            </v-row> -->
+                </div>
+              </v-col>
+              <!-- 搜尋列 start -->
+              <!-- <v-col class="d-flex justify-end pr-0">
+                <div class="filterList">
+                  <v-row class="d-flex">
+                    <v-col>
+                      <div class="selectItem">
+                        <v-img
+                          class="iconImg"
+                          src="~@/assets/icon/filter_01.svg"
+                        >
+                        </v-img>
+                        <v-select
+                          variant="solo"
+                          placeholder="排序方式"
+                          single-line
+                          hide-details
+                          density="compact"
+                          :items="['搜尋條件1', '搜尋條件2', '搜尋條件3']"
+                        ></v-select>
+                      </div>
+                    </v-col>
+                    <v-col class="pl-0">
+                      <v-btn-toggle
+                        v-model="functionGroupToggle"
+                        color="primary"
+                        mandatory
+                      >
+                        <v-btn elevation="0" @click="listStyle = false">
+                          <template v-if="functionGroupToggle === 0">
+                            <span>
+                              <v-img
+                                class="iconImg"
+                                src="~@/assets/icon/filter_white_02.svg"
+                              >
+                              </v-img>
+                            </span>
+                          </template>
+                          <template v-else>
+                            <span>
+                              <v-img
+                                class="iconImg"
+                                src="~@/assets/icon/filter_02.svg"
+                              >
+                              </v-img>
+                            </span>
+                          </template>
+                        </v-btn>
+                        <v-btn elevation="0" @click="listStyle = true">
+                          <template v-if="functionGroupToggle === 1">
+                            <span>
+                              <v-img
+                                class="iconImg"
+                                src="~@/assets/icon/filter_white_03.svg"
+                              >
+                              </v-img>
+                            </span>
+                          </template>
+                          <template v-else>
+                            <span>
+                              <v-img
+                                class="iconImg"
+                                src="~@/assets/icon/filter_03.svg"
+                              >
+                              </v-img>
+                            </span>
+                          </template>
+                        </v-btn>
+                      </v-btn-toggle>
+                    </v-col>
+                  </v-row>
+                </div>
+              </v-col> -->
+              <!-- 搜尋列 end -->
+            </v-row>
             <!-- 排序方式 end-->
+            <!-- 卡片樣式/有checkbox start-->
+            <!-- persistent -->
             <v-row>
-              <v-dialog v-model="dialog" persistent width="1024">
+              <v-dialog
+                class="dialogCard"
+                v-model="dialog"
+                scrollable
+                width="auto"
+              >
                 <template v-slot:activator="{ props }">
                   <v-col
                     class="px-1"
-                    v-for="item in 34"
+                    v-for="item in 12"
                     :key="item"
                     cols="3"
                     sm="3"
@@ -362,21 +288,27 @@
                   >
                     <v-card class="photoCard">
                       <div class="cardContainer">
-                        <v-checkbox
-                          v-ripple.stop
-                          label=""
-                          class="checkbox"
-                          v-model="selected"
-                          :value="item"
-                        ></v-checkbox>
-                        <v-img
-                          src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                          cover
-                        ></v-img>
+                        <div class="img">
+                          <v-label :for="item"></v-label>
+                          <v-checkbox
+                            v-ripple.stop
+                            class="checkbox"
+                            color="light"
+                            hide-details
+                            :id="item"
+                            v-model="selected"
+                            :value="item"
+                          ></v-checkbox>
+                          <v-img
+                            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+                            cover
+                          ></v-img>
+                        </div>
                         <div class="info" v-bind="props">
                           <v-card-item>
-                            <v-card-title>排灣族聚餐</v-card-title>
-                            <v-card-subtitle>莊大安/事務科</v-card-subtitle>
+                            <v-card-title
+                              >檔案名稱檔案名稱檔案名稱</v-card-title
+                            >
                           </v-card-item>
                         </div>
                       </div>
@@ -384,9 +316,11 @@
                   </v-col>
                 </template>
                 <!-- 輸入資訊視窗 start -->
-                <v-card>
+                <v-card class="">
                   <v-card-title>
-                    <span class="text-h5 text-primary">照片編輯</span>
+                    <v-container>
+                      <span class="text-primary">照片編輯</span>
+                    </v-container>
                   </v-card-title>
                   <v-card-text>
                     <v-container class="formContainer">
@@ -403,6 +337,7 @@
                                 ></label
                               >
                               <v-text-field
+                                class=""
                                 variant="solo"
                                 single-line
                                 hide-details
@@ -420,6 +355,7 @@
                                 ></label
                               >
                               <v-text-field
+                                class=""
                                 variant="solo"
                                 single-line
                                 hide-details
@@ -436,6 +372,7 @@
                                 ></label
                               >
                               <v-autocomplete
+                                class=""
                                 id="type"
                                 color="secondary"
                                 variant="solo"
@@ -456,6 +393,7 @@
                               >
                               <v-text-field
                                 variant="solo"
+                                class=""
                                 single-line
                                 hide-details
                                 type="email"
@@ -473,6 +411,7 @@
                                 ></label
                               >
                               <v-text-field
+                                class=""
                                 variant="solo"
                                 single-line
                                 hide-details
@@ -510,6 +449,7 @@
                             <div class="d-flex formGrp">
                               <label class="formTitle" for="">交辦事項 </label>
                               <v-text-field
+                                class=""
                                 variant="solo"
                                 single-line
                                 hide-details
@@ -519,6 +459,7 @@
                             <div class="d-flex formGrp">
                               <label class="formTitle" for="">文字輸入 </label>
                               <v-textarea
+                                class=""
                                 placeholder="請輸入文字"
                                 variant="solo"
                                 hide-details
@@ -532,6 +473,7 @@
                             <div class="d-flex formGrp">
                               <label class="formTitle" for="">單選 </label>
                               <v-radio-group
+                                class=""
                                 inline
                                 hide-details
                                 color="secondary"
@@ -546,7 +488,7 @@
                                 <v-col>
                                   <div class="d-flex formGrp">
                                     <label class="formTitle" for="">住址</label>
-                                    <v-row>
+                                    <v-row class="">
                                       <v-col cols="6" md="3">
                                         <v-autocomplete
                                           id="type"
@@ -665,36 +607,82 @@
                           </v-col>
                         </v-row>
                       </v-form>
+                      <v-row class="infoGrid">
+                        <v-col cols="12">
+                          <div class="d-flex infoGrp">
+                            <span class="infoTitle">交辦事項</span>
+                            <div class="infoText">
+                              112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。
+                            </div>
+                          </div>
+                          <div class="d-flex infoGrp">
+                            <span class="infoTitle">承辦人</span>
+                            <div class="infoText">周小瑜</div>
+                          </div>
+                          <div class="d-flex infoGrp">
+                            <span class="infoTitle">填報日期</span>
+                            <div class="infoText">112/03/11</div>
+                          </div>
+                        </v-col>
+                      </v-row>
                     </v-container>
                   </v-card-text>
-                  <v-card-text>
-                    <v-row>
-                      <v-col>
-                        <div class="btnGroup center">
-                          <v-btn
-                            elevation="0"
-                            color="submit"
-                            @click="dialog = false"
-                            rounded="lg"
-                            size="x-large"
-                            >送出</v-btn
-                          >
-                          <v-btn
-                            elevation="0"
-                            rounded="lg"
-                            size="x-large"
-                            color="cancel"
-                            @click="dialog = false"
-                            >取消</v-btn
-                          >
-                        </div>
-                      </v-col>
-                    </v-row>
-                  </v-card-text>
+                  <v-card-actions class="d-flex justify-center">
+                    <div class="btnGroup center">
+                      <v-btn
+                        class="submit"
+                        elevation="0"
+                        variant="flat"
+                        @click="dialog = false"
+                        rounded="lg"
+                        size="large"
+                        >送出</v-btn
+                      >
+                      <v-btn
+                        elevation="0"
+                        rounded="lg"
+                        variant="flat"
+                        size="large"
+                        color="cancel"
+                        class="cancel"
+                        @click="dialog = false"
+                        >取消</v-btn
+                      >
+                    </div>
+                  </v-card-actions>
                 </v-card>
                 <!-- 輸入資訊視窗 end -->
               </v-dialog>
             </v-row>
+            <!-- 卡片樣式/有checkbox end-->
+            <!-- 卡片樣式 start-->
+            <v-row>
+              <v-col
+                class="px-1"
+                v-for="item in 5"
+                :key="item"
+                cols="3"
+                sm="3"
+                lg="2"
+              >
+                <v-card class="photoCard">
+                  <div class="cardContainer">
+                    <div class="img">
+                      <v-img
+                        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+                        cover
+                      ></v-img>
+                    </div>
+                    <div class="info" v-bind="props">
+                      <v-card-item>
+                        <v-card-title>OOO照片說明</v-card-title>
+                      </v-card-item>
+                    </div>
+                  </div>
+                </v-card>
+              </v-col>
+            </v-row>
+            <!-- 卡片樣式 end-->
           </v-container>
           <!-- Pagination start -->
           <div class="text-center">
@@ -736,7 +724,7 @@ export default {
   },
   methods: {
     panelsHandle() {
-      if (this.panel == 0) {
+      if (this.panel === 0) {
         this.panel = 1;
       } else {
         this.panel = 0;

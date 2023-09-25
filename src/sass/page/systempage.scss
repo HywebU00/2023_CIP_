@@ -226,16 +226,17 @@
     }
   }
   .filterList {
-    // background-color: $defaultBg;
-    // border-radius: rem(40);
-    // box-shadow: $boxShadow;
-
     display: flex;
     align-items: center;
     // padding: 0.35rem 1rem;
     .v-col {
       display: flex;
       align-items: center;
+      &:last-child {
+        .selectItem {
+          border-right: 0;
+        }
+      }
     }
     .selectItem {
       display: flex;
