@@ -683,6 +683,13 @@
               </v-col>
             </v-row>
             <!-- 卡片樣式 end-->
+            <!-- slider start -->
+            <v-row>
+              <v-col class="justify-center px-2 px-sm-0">
+                <carouselComponent />
+              </v-col>
+            </v-row>
+            <!-- slider end -->
           </v-container>
           <!-- Pagination start -->
           <div class="text-center">
@@ -702,6 +709,7 @@
 
 <script>
 import { maskStore, pageStting } from "@/stores/storage.js";
+import carouselComponent from "@/components/carouselComponent.vue";
 const ps = pageStting();
 export default {
   data: () => ({
@@ -733,6 +741,9 @@ export default {
     open() {
       this.panel = 1;
     },
+  },
+  components: {
+    carouselComponent,
   },
 };
 </script>
