@@ -10,7 +10,12 @@ export default {
 
 <template>
   <v-row class="finder">
-    <v-dialog v-model="dialog" scrollable transition="dialog-bottom-transition">
+    <v-dialog
+      class="dialogCard"
+      v-model="dialog"
+      scrollable
+      transition="dialog-bottom-transition"
+    >
       <!-- Demo 專用用按鈕 start -->
       <template v-slot:activator="{ props }">
         <v-btn color="primary" v-bind="props"> Open Dialog </v-btn>

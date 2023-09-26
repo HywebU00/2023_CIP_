@@ -90,7 +90,7 @@
                     </v-expansion-panel-title>
                     <v-expansion-panel-text>
                       <v-row>
-                        <v-col cols="12" md="6">
+                        <v-col cols="12" md="6" class="py-0 py-md-3">
                           <div class="d-flex formGrp">
                             <label class="formTitle" for="">類別 :</label>
                             <v-autocomplete
@@ -129,7 +129,7 @@
                             ></v-text-field>
                           </div>
                         </v-col>
-                        <v-col cols="12" md="6">
+                        <v-col cols="12" md="6" class="py-0 py-md-3">
                           <div class="d-flex formGrp">
                             <label class="formTitle" for=""> 控管編號 :</label>
                             <v-text-field
@@ -205,7 +205,7 @@
           <v-container>
             <!-- 排序方式 start -->
             <v-row>
-              <v-col class="d-flex justify-end pr-0">
+              <v-col class="d-flex justify-end py-0">
                 <div class="filterList">
                   <v-row class="d-flex">
                     <v-col>

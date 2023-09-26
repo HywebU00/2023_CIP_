@@ -36,10 +36,10 @@ const routes = [
         path: "/ui/album",
         component: () => import("@/views/admin/albumComponent.vue"),
       },
-      {
-        path: "/ui/project",
-        component: () => import("@/views/admin/projectComponent.vue"),
-      },
+      // {
+      //   path: "/ui/project",
+      //   component: () => import("@/views/admin/projectComponent.vue"),
+      // },
       {
         path: "/ui/form",
         component: () => import("@/views/admin/formComponent.vue"),

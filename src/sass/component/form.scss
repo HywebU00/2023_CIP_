@@ -15,7 +15,9 @@
 input:-internal-autofill-selected {
   background: #fff !important;
 }
-
+.v-form .formGrp_2 {
+  margin-top: 1rem;
+}
 .formContainer {
   // max-width: unset !important;
   label {
@@ -34,7 +36,7 @@ input:-internal-autofill-selected {
     }
   }
   .formGrp {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     padding-top: 0.25rem;
     .v-row {
       margin-top: -13px;
@@ -45,26 +47,15 @@ input:-internal-autofill-selected {
         }
       }
     }
-    // .v-row {
-    //   margin: 0;
-    //   div[class^='v-col'] {
-    //     padding-top: 0;
-    //     padding-bottom: 0;
-    //   }
-    //   .formGrp {
-    //     margin-bottom: 0;
-    //   }
-    //   .v-col {
-    //     padding: 0;
 
-    //   }
-    // }
     .tilde {
       margin: 0.5rem;
     }
     .formGrpTitle {
       text-align: center;
       padding: 0.75rem 0.5rem;
+      @include screen('tablet') {
+      }
     }
     &:has(.v-input .v-input__details) {
       margin-bottom: 0rem;

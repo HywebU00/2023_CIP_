@@ -142,7 +142,6 @@
       width: 100%;
       height: 100%;
       z-index: 1;
-      cursor: pointer;
     }
     .v-selection-control__wrapper {
       top: -0.5rem;
@@ -180,18 +179,26 @@
 
   .v-card {
     .infoTitle {
-      padding-right: 1rem;
+      padding-right: 1.5rem;
       max-width: 150px;
       flex: 0 0 150px;
       color: $defaultPrimary;
       font-weight: 500;
       margin: 0 0.5rem;
+
       color: $dark;
       @include screen('tablet') {
         width: 100%;
         max-width: unset;
         flex-basis: auto;
         margin-bottom: 0.5rem;
+        padding-right: 0rem;
+      }
+    }
+    .infoText {
+      margin: 0 0.75rem;
+      @include screen('tablet') {
+        margin: 0;
       }
     }
     .infoGrp,
@@ -265,7 +272,7 @@
       }
     }
     .formGrp_2 {
-      // border: none;
+      margin-top: 1rem;
       &::after {
         display: none;
       }

@@ -69,7 +69,7 @@
                     </v-expansion-panel-title>
                     <v-expansion-panel-text>
                       <v-row>
-                        <v-col cols="12" md="6">
+                        <v-col cols="12" md="6" class="py-0 py-md-3">
                           <div class="d-flex formGrp">
                             <label class="formTitle" for="">類別 :</label>
                             <v-autocomplete
@@ -109,7 +109,7 @@
                             ></v-text-field>
                           </div>
                         </v-col>
-                        <v-col cols="12" md="6">
+                        <v-col cols="12" md="6" class="py-0 py-md-3">
                           <div class="d-flex formGrp">
                             <label class="formTitle" for=""> 控管編號 :</label>
                             <v-text-field
@@ -184,8 +184,9 @@
         <div class="">
           <v-container>
             <!-- 排序方式 start -->
-            <v-row class="d-flex justify-between">
-              <v-col>
+            <v-row class="">
+              <!-- 搜尋列 start -->
+              <v-col class="d-flex justify-end py-0">
                 <div class="btnGroup left mb-2">
                   <v-btn color="export" elevation="0">匯出報表</v-btn>
                   <v-btn color="import" elevation="0">匯入報表</v-btn>
@@ -193,78 +194,6 @@
                   <v-btn color="submit" elevation="0">新增</v-btn>
                 </div>
               </v-col>
-              <!-- 搜尋列 start -->
-              <!-- <v-col class="d-flex justify-end pr-0">
-                <div class="filterList">
-                  <v-row class="d-flex">
-                    <v-col>
-                      <div class="selectItem">
-                        <v-img
-                          class="iconImg"
-                          src="~@/assets/icon/filter_01.svg"
-                        >
-                        </v-img>
-                        <v-select
-                          variant="solo"
-                          placeholder="排序方式"
-                          single-line
-                          hide-details
-                          density="compact"
-                          :items="['搜尋條件1', '搜尋條件2', '搜尋條件3']"
-                        ></v-select>
-                      </div>
-                    </v-col>
-                    <v-col class="pl-0">
-                      <v-btn-toggle
-                        v-model="functionGroupToggle"
-                        color="primary"
-                        mandatory
-                      >
-                        <v-btn elevation="0" @click="listStyle = false">
-                          <template v-if="functionGroupToggle === 0">
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_white_02.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                          <template v-else>
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_02.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                        </v-btn>
-                        <v-btn elevation="0" @click="listStyle = true">
-                          <template v-if="functionGroupToggle === 1">
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_white_03.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                          <template v-else>
-                            <span>
-                              <v-img
-                                class="iconImg"
-                                src="~@/assets/icon/filter_03.svg"
-                              >
-                              </v-img>
-                            </span>
-                          </template>
-                        </v-btn>
-                      </v-btn-toggle>
-                    </v-col>
-                  </v-row>
-                </div>
-              </v-col> -->
               <!-- 搜尋列 end -->
             </v-row>
             <!-- 排序方式 end-->
@@ -289,14 +218,14 @@
                     <v-card class="photoCard">
                       <div class="cardContainer">
                         <div class="img">
-                          <v-label :for="item"></v-label>
+                          <v-label :for="item.toString()"></v-label>
                           <v-checkbox
                             v-ripple.stop
                             class="checkbox"
                             color="light"
                             hide-details
-                            :id="item"
                             v-model="selected"
+                            :id="item.toString()"
                             :value="item"
                           ></v-checkbox>
                           <v-img
@@ -326,8 +255,8 @@
                     <v-container class="formContainer">
                       <v-form>
                         <v-row class="formGrid">
-                          <v-col cols="12">
-                            <div class="d-flex formGrp">
+                          <v-col>
+                            <v-col cols="12" class="d-flex formGrp">
                               <label class="formTitle" for="type"
                                 >生日
                                 <abbr
@@ -336,16 +265,20 @@
                                   >*</abbr
                                 ></label
                               >
-                              <v-text-field
-                                class=""
-                                variant="solo"
-                                single-line
-                                hide-details
-                                type="date"
-                                density="compact"
-                              ></v-text-field>
-                            </div>
-                            <div class="d-flex formGrp">
+                              <v-row>
+                                <v-col>
+                                  <v-text-field
+                                    class=""
+                                    variant="solo"
+                                    single-line
+                                    hide-details
+                                    type="date"
+                                    density="compact"
+                                  ></v-text-field>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="12" class="d-flex formGrp">
                               <label class="formTitle" for="type"
                                 >族名
                                 <abbr
@@ -354,15 +287,19 @@
                                   >*</abbr
                                 ></label
                               >
-                              <v-text-field
-                                class=""
-                                variant="solo"
-                                single-line
-                                hide-details
-                                density="compact"
-                              ></v-text-field>
-                            </div>
-                            <div class="d-flex formGrp">
+                              <v-row>
+                                <v-col>
+                                  <v-text-field
+                                    class=""
+                                    variant="solo"
+                                    single-line
+                                    hide-details
+                                    density="compact"
+                                  ></v-text-field>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="12" class="d-flex formGrp">
                               <label class="formTitle" for="type"
                                 >族別
                                 <abbr
@@ -371,18 +308,22 @@
                                   >*</abbr
                                 ></label
                               >
-                              <v-autocomplete
-                                class=""
-                                id="type"
-                                color="secondary"
-                                variant="solo"
-                                single-line
-                                hide-details
-                                density="compact"
-                                :items="['布農族', '阿美族', '卑南族']"
-                              ></v-autocomplete>
-                            </div>
-                            <div class="d-flex formGrp">
+                              <v-row>
+                                <v-col>
+                                  <v-autocomplete
+                                    class=""
+                                    id="type"
+                                    color="secondary"
+                                    variant="solo"
+                                    single-line
+                                    hide-details
+                                    density="compact"
+                                    :items="['布農族', '阿美族', '卑南族']"
+                                  ></v-autocomplete>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="12" class="d-flex formGrp">
                               <label class="formTitle" for="mail"
                                 >Email
                                 <abbr
@@ -391,17 +332,21 @@
                                   >*</abbr
                                 ></label
                               >
-                              <v-text-field
-                                variant="solo"
-                                class=""
-                                single-line
-                                hide-details
-                                type="email"
-                                id="mail"
-                                density="compact"
-                              ></v-text-field>
-                            </div>
-                            <div class="d-flex formGrp">
+                              <v-row>
+                                <v-col>
+                                  <v-text-field
+                                    variant="solo"
+                                    class=""
+                                    single-line
+                                    hide-details
+                                    type="email"
+                                    id="mail"
+                                    density="compact"
+                                  ></v-text-field>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="12" class="d-flex formGrp">
                               <label class="formTitle" for="type"
                                 >行動電話
                                 <abbr
@@ -410,16 +355,20 @@
                                   >*</abbr
                                 ></label
                               >
-                              <v-text-field
-                                class=""
-                                variant="solo"
-                                single-line
-                                hide-details
-                                density="compact"
-                                type="phone"
-                              ></v-text-field>
-                            </div>
-                            <div class="d-flex formGrp">
+                              <v-row>
+                                <v-col>
+                                  <v-text-field
+                                    class=""
+                                    variant="solo"
+                                    single-line
+                                    hide-details
+                                    density="compact"
+                                    type="phone"
+                                  ></v-text-field>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="12" class="d-flex formGrp">
                               <label class="formTitle" for="list"
                                 >多選選單
                                 <abbr
@@ -428,62 +377,76 @@
                                   >*</abbr
                                 ></label
                               >
-                              <div class="checkGrp" id="list">
-                                <v-checkbox
-                                  density="compact"
-                                  hide-details
-                                  label="中文"
-                                ></v-checkbox>
-                                <v-checkbox
-                                  density="compact"
-                                  hide-details
-                                  label="英文"
-                                ></v-checkbox>
-                                <v-checkbox
-                                  density="compact"
-                                  hide-details
-                                  label="日文"
-                                ></v-checkbox>
-                              </div>
-                            </div>
-                            <div class="d-flex formGrp">
+                              <v-row>
+                                <v-col class="checkGrp" id="list">
+                                  <v-checkbox
+                                    density="compact"
+                                    hide-details
+                                    label="中文"
+                                  ></v-checkbox>
+                                  <v-checkbox
+                                    density="compact"
+                                    hide-details
+                                    label="英文"
+                                  ></v-checkbox>
+                                  <v-checkbox
+                                    density="compact"
+                                    hide-details
+                                    label="日文"
+                                  ></v-checkbox>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="12" class="d-flex formGrp">
                               <label class="formTitle" for="">交辦事項 </label>
-                              <v-text-field
-                                class=""
-                                variant="solo"
-                                single-line
-                                hide-details
-                                density="compact"
-                              ></v-text-field>
-                            </div>
-                            <div class="d-flex formGrp">
+                              <v-row>
+                                <v-col>
+                                  <v-text-field
+                                    class=""
+                                    variant="solo"
+                                    single-line
+                                    hide-details
+                                    density="compact"
+                                  ></v-text-field>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="12" class="d-flex formGrp">
                               <label class="formTitle" for="">文字輸入 </label>
-                              <v-textarea
-                                class=""
-                                placeholder="請輸入文字"
-                                variant="solo"
-                                hide-details
-                                density="compact"
-                                auto-grow
-                                rows="6"
-                                row-height="30"
-                                shaped
-                              ></v-textarea>
-                            </div>
-                            <div class="d-flex formGrp">
+                              <v-row>
+                                <v-col>
+                                  <v-textarea
+                                    class=""
+                                    placeholder="請輸入文字"
+                                    variant="solo"
+                                    hide-details
+                                    density="compact"
+                                    auto-grow
+                                    rows="6"
+                                    row-height="30"
+                                    shaped
+                                  ></v-textarea>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="12" class="d-flex formGrp">
                               <label class="formTitle" for="">單選 </label>
-                              <v-radio-group
-                                class=""
-                                inline
-                                hide-details
-                                color="secondary"
-                              >
-                                <v-radio label="是" value="true"></v-radio>
-                                <v-radio label="否" value="false"></v-radio>
-                              </v-radio-group>
-                            </div>
+                              <v-row>
+                                <v-col>
+                                  <v-radio-group
+                                    class=""
+                                    inline
+                                    hide-details
+                                    color="secondary"
+                                  >
+                                    <v-radio label="是" value="true"></v-radio>
+                                    <v-radio label="否" value="false"></v-radio>
+                                  </v-radio-group>
+                                </v-col>
+                              </v-row>
+                            </v-col>
                             <!-- 三欄樣式 start -->
-                            <div class="d-flex formGrp">
+                            <v-col cols="12" class="d-flex formGrp">
                               <v-row>
                                 <v-col>
                                   <div class="d-flex formGrp">
@@ -533,10 +496,10 @@
                                   </div>
                                 </v-col>
                               </v-row>
-                            </div>
+                            </v-col>
                             <!-- 三欄樣式 end -->
                             <!-- 二欄樣式 end -->
-                            <div class="d-flex formGrp">
+                            <v-col cols="12" class="d-flex formGrp">
                               <v-row>
                                 <v-col>
                                   <div class="d-flex formGrp">
@@ -580,51 +543,40 @@
                                   </div>
                                 </v-col>
                               </v-row>
-                            </div>
-                            <div class="d-flex formGrp">
-                              <label class="formTitle" for="">日期</label>
-                              <v-row>
-                                <v-col cols="12" md="6" class="d-flex">
-                                  <v-text-field
-                                    variant="solo"
-                                    single-line
-                                    hide-details
-                                    type="date"
-                                    density="compact"
-                                  ></v-text-field>
-                                  <span class="tilde">~</span>
-                                  <v-text-field
-                                    variant="solo"
-                                    single-line
-                                    hide-details
-                                    type="date"
-                                    density="compact"
-                                  ></v-text-field>
-                                </v-col>
-                              </v-row>
-                            </div>
+                            </v-col>
+
                             <!-- 二欄樣式 end -->
                           </v-col>
                         </v-row>
                       </v-form>
-                      <v-row class="infoGrid">
-                        <v-col cols="12">
-                          <div class="d-flex infoGrp">
+                      <v-container>
+                        <v-row class="infoGrid">
+                          <v-col cols="12" class="d-flex infoGrp">
                             <span class="infoTitle">交辦事項</span>
-                            <div class="infoText">
-                              112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。
-                            </div>
-                          </div>
-                          <div class="d-flex infoGrp">
+                            <v-row>
+                              <v-col>
+                                <p class="infoText">
+                                  112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。
+                                </p>
+                              </v-col>
+                            </v-row>
+                          </v-col>
+                          <v-col cols="12" class="d-flex infoGrp">
                             <span class="infoTitle">承辦人</span>
-                            <div class="infoText">周小瑜</div>
-                          </div>
-                          <div class="d-flex infoGrp">
+                            <v-row>
+                              <v-col> <p class="infoText">周小瑜</p></v-col>
+                            </v-row>
+                          </v-col>
+                          <v-col cols="12" class="d-flex infoGrp">
                             <span class="infoTitle">填報日期</span>
-                            <div class="infoText">112/03/11</div>
-                          </div>
-                        </v-col>
-                      </v-row>
+                            <v-row>
+                              <v-col>
+                                <p class="infoText">112/03/11</p>
+                              </v-col>
+                            </v-row>
+                          </v-col>
+                        </v-row>
+                      </v-container>
                     </v-container>
                   </v-card-text>
                   <v-card-actions class="d-flex justify-center">
@@ -673,7 +625,7 @@
                         cover
                       ></v-img>
                     </div>
-                    <div class="info" v-bind="props">
+                    <div class="info">
                       <v-card-item>
                         <v-card-title>OOO照片說明</v-card-title>
                       </v-card-item>
@@ -725,7 +677,7 @@ export default {
     dialog: false,
     listStyle: false,
     //checkbox
-    selected: ["John"],
+    selected: [],
   }),
   created() {
     ps.setTopNavPageTiltle("帳號管理");
