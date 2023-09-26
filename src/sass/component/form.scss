@@ -20,6 +20,7 @@ input:-internal-autofill-selected {
 }
 .formContainer {
   // max-width: unset !important;
+  margin-top: 1rem;
   label {
     max-width: 150px;
     flex: 0 0 150px;
@@ -31,6 +32,9 @@ input:-internal-autofill-selected {
   .checkGrp {
     display: flex;
     flex-wrap: wrap;
+    .v-input {
+      display: contents;
+    }
     @include screen('tablet') {
       display: block;
     }
