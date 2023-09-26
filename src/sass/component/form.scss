@@ -15,15 +15,16 @@
 input:-internal-autofill-selected {
   background: #fff !important;
 }
-.v-form .formGrp_2 {
-  margin-top: 1rem;
-}
+
 .formContainer {
+  margin-bottom: 1rem;
   // max-width: unset !important;
   margin-top: 1rem;
-  label {
+  .formTitle {
     max-width: 150px;
     flex: 0 0 150px;
+  }
+  label {
     abbr {
       color: $defaultLight;
       text-decoration: none;
@@ -40,8 +41,6 @@ input:-internal-autofill-selected {
     }
   }
   .formGrp {
-    margin-bottom: 0.75rem;
-    padding-top: 0.25rem;
     .v-row {
       margin-top: -13px;
       margin-bottom: -13px;
@@ -56,8 +55,11 @@ input:-internal-autofill-selected {
       margin: 0.5rem;
     }
     .formGrpTitle {
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      font-weight: 700;
       padding: 0.75rem 0.5rem;
+      margin-top: 0.5rem;
       @include screen('tablet') {
       }
     }
@@ -77,8 +79,11 @@ input:-internal-autofill-selected {
         width: 100%;
         max-width: unset;
         flex-basis: auto;
-        margin-bottom: 0.5rem;
+        margin-bottom: -0.75rem;
       }
     }
+  }
+  .formGrp.formGrp_2 {
+    margin-top: 2rem;
   }
 }

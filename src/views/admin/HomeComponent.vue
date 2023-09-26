@@ -262,36 +262,48 @@
                 </v-container>
               </v-card>
             </v-col>
-            <v-col>
+            <!-- 經費填報系統 start -->
+            <v-col cols="12">
               <v-row>
-                <v-col>
-                  <v-card class="languageCard">
-                    <v-container>
-                      <v-row>
-                        <v-col>
-                          <h3>每日族語</h3>
-                          <v-list>
-                            <v-list-item>
-                              <v-list-item-content>
-                                <!-- 列表项的文本内容 -->
-                                <v-list-item-title
-                                  class="d-flex justify-space-between"
-                                >
-                                  <p>代辦</p>
-                                  <span>15</span>
-                                </v-list-item-title>
-                              </v-list-item-content>
-                            </v-list-item>
-                          </v-list>
-                        </v-col>
-                      </v-row>
-                    </v-container>
+                <v-col v-for="item in 3" :key="item">
+                  <v-card class="systemCard">
+                    <h3>經費結報系統</h3>
+                    <v-list>
+                      <v-list-item v-for="i in 3" :key="i">
+                        <v-list-item-content>
+                          <!-- 列表项的文本内容 -->
+                          <v-list-item-title
+                            class="d-flex justify-space-between"
+                          >
+                            <p>代辦代辦代辦</p>
+                            <span>15</span>
+                          </v-list-item-title>
+                        </v-list-item-content>
+                      </v-list-item>
+                    </v-list>
                   </v-card>
                 </v-col>
-                <v-col>1</v-col>
-                <v-col>1</v-col>
               </v-row>
             </v-col>
+            <!-- 經費填報系統 end-->
+            <!-- 案件填報 start -->
+            <v-col cols="12">
+              <v-card class="systemCard">
+                <h3>案件填報</h3>
+                <v-list class="d-flex">
+                  <v-list-item v-for="i in 3" :key="i">
+                    <v-list-item-content>
+                      <!-- 列表项的文本内容 -->
+                      <v-list-item-title class="d-flex justify-space-between">
+                        <p>代辦代辦代辦</p>
+                        <span>15</span>
+                      </v-list-item-title>
+                    </v-list-item-content>
+                  </v-list-item>
+                </v-list>
+              </v-card>
+            </v-col>
+            <!-- 案件填報 end -->
           </v-row>
 
           <!-- Pagination start -->

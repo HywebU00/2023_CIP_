@@ -205,16 +205,267 @@
       <v-card class="scrollContent">
         <div class="">
           <v-container class="formContainer">
-            <v-form>
-              <v-row class="formGrid">
-                <v-col class="d-flex formGrp" cols="12">
-                  <label class="formTitle" for="type"
+            <v-form class="formGrid">
+              <v-row class="d-flex formGrp">
+                <v-col class="formTitle">
+                  <label for="type"
                     >族名
                     <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
                       >*</abbr
                     ></label
                   >
+                </v-col>
+                <v-col>
+                  <v-text-field
+                    variant="solo"
+                    single-line
+                    hide-details
+                    density="compact"
+                  ></v-text-field
+                ></v-col>
+              </v-row>
+              <v-row class="d-flex formGrp">
+                <v-col class="formTitle">
+                  <label for="type"
+                    >族別
+                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                      >*</abbr
+                    ></label
+                  >
+                </v-col>
+                <v-col>
+                  <v-autocomplete
+                    id="type"
+                    color="secondary"
+                    variant="solo"
+                    single-line
+                    hide-details
+                    density="compact"
+                    :items="['布農族', '阿美族', '卑南族']"
+                  ></v-autocomplete>
+                </v-col>
+              </v-row>
+              <v-row class="d-flex formGrp">
+                <v-col class="formTitle">
+                  <label for="type"
+                    >族別
+                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                      >*</abbr
+                    ></label
+                  >
+                </v-col>
+                <v-col>
+                  <v-autocomplete
+                    id="type"
+                    color="secondary"
+                    variant="solo"
+                    single-line
+                    hide-details
+                    density="compact"
+                    :items="['布農族', '阿美族', '卑南族']"
+                  ></v-autocomplete>
+                </v-col>
+              </v-row>
+              <v-row class="d-flex formGrp">
+                <v-col class="formTitle">
+                  <label for="mail"
+                    >Email
+                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                      >*</abbr
+                    ></label
+                  >
+                </v-col>
+                <v-col>
+                  <v-text-field
+                    variant="solo"
+                    single-line
+                    hide-details
+                    type="email"
+                    id="mail"
+                    density="compact"
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row class="d-flex formGrp">
+                <v-col class="formTitle">
+                  <label for="type"
+                    >行動電話
+                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                      >*</abbr
+                    ></label
+                  >
+                </v-col>
+                <v-col>
+                  <v-text-field
+                    variant="solo"
+                    single-line
+                    hide-details
+                    density="compact"
+                    type="phone"
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row class="d-flex formGrp">
+                <v-col class="formTitle">
+                  <label for="list"
+                    >多選選單
+                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                      >*</abbr
+                    ></label
+                  >
+                </v-col>
+                <v-col class="checkGrp" id="list">
+                  <v-checkbox
+                    density="compact"
+                    hide-details
+                    label="中文"
+                  ></v-checkbox>
+                  <v-checkbox
+                    density="compact"
+                    hide-details
+                    label="英文"
+                  ></v-checkbox>
+                  <v-checkbox
+                    density="compact"
+                    hide-details
+                    label="日文"
+                  ></v-checkbox>
+                </v-col>
+              </v-row>
+              <v-row class="d-flex formGrp">
+                <v-col class="formTitle">
+                  <label for="">交辦事項 </label>
+                </v-col>
+                <v-col>
+                  <v-text-field
+                    variant="solo"
+                    single-line
+                    hide-details
+                    density="compact"
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row class="d-flex formGrp">
+                <v-col class="formTitle">
+                  <label for="">文字輸入 </label>
+                </v-col>
+                <v-col>
+                  <v-textarea
+                    placeholder="請輸入文字"
+                    variant="solo"
+                    hide-details
+                    density="compact"
+                    auto-grow
+                    rows="6"
+                    row-height="30"
+                    shaped
+                  ></v-textarea>
+                </v-col>
+              </v-row>
+              <v-row class="d-flex formGrp">
+                <v-col class="formTitle">
+                  <label for="">單選 </label>
+                </v-col>
+                <v-col>
+                  <v-radio-group inline hide-details color="secondary">
+                    <v-radio label="是" value="true"></v-radio>
+                    <v-radio label="否" value="false"></v-radio>
+                  </v-radio-group>
+                </v-col>
+              </v-row>
+              <v-row class="d-flex formGrp">
+                <v-col class="formTitle">
+                  <label for="">住址</label>
+                </v-col>
+                <v-col>
                   <v-row>
+                    <v-col cols="6" md="3">
+                      <v-autocomplete
+                        id="type"
+                        color="secondary"
+                        variant="solo"
+                        single-line
+                        density="compact"
+                        placeholder="輸入地址"
+                        hide-details
+                        :items="['台北市', '新北市', '基隆市']"
+                      ></v-autocomplete>
+                    </v-col>
+                    <v-col cols="6" md="3">
+                      <v-autocomplete
+                        id="type"
+                        variant="solo"
+                        single-line
+                        color="secondary"
+                        density="compact"
+                        placeholder="輸入地址"
+                        hide-details
+                        :items="['台北市', '新北市', '基隆市']"
+                      ></v-autocomplete>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                      <v-text-field
+                        variant="solo"
+                        single-line
+                        hide-details
+                        density="compact"
+                      ></v-text-field>
+                    </v-col>
+                  </v-row>
+                </v-col>
+              </v-row>
+              <v-row class="d-flex formGrp">
+                <v-col class="formTitle">
+                  <label for="">兩欄欄位</label>
+                </v-col>
+                <v-col>
+                  <v-row>
+                    <v-col cols="12" md="6">
+                      <v-autocomplete
+                        id="type"
+                        color="secondary"
+                        variant="solo"
+                        single-line
+                        density="compact"
+                        placeholder="輸入地址"
+                        hide-details
+                        :items="['台北市', '新北市', '基隆市']"
+                      ></v-autocomplete>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                      <v-autocomplete
+                        id="type"
+                        variant="solo"
+                        single-line
+                        color="secondary"
+                        density="compact"
+                        placeholder="輸入地址"
+                        hide-details
+                        :items="['台北市', '新北市', '基隆市']"
+                      ></v-autocomplete>
+                    </v-col>
+                  </v-row>
+                </v-col>
+              </v-row>
+              <!-- 左右兩欄 start -->
+              <v-row class="d-flex formGrp formGrp_2">
+                <v-col cols="12" md="6">
+                  <v-row>
+                    <v-col class="bg-thead formGrpTitle mb-5 mx-3"
+                      >應領數</v-col
+                    >
+                  </v-row>
+                  <v-row class="d-flex formGrp" v-for="i in 3" :key="i">
+                    <v-col class="formTitle">
+                      <label for="type"
+                        >欄位一
+                        <abbr
+                          class="necessary"
+                          title="為必填(選)欄位,不能為空白。"
+                          >*</abbr
+                        ></label
+                      >
+                    </v-col>
                     <v-col>
                       <v-text-field
                         variant="solo"
@@ -225,304 +476,35 @@
                     ></v-col>
                   </v-row>
                 </v-col>
-                <v-col class="d-flex formGrp" cols="12">
-                  <label class="formTitle" for="type"
-                    >族別
-                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
-                      >*</abbr
-                    ></label
-                  >
+                <v-col cols="12" md="6">
                   <v-row>
-                    <v-col>
-                      <v-autocomplete
-                        id="type"
-                        color="secondary"
-                        variant="solo"
-                        single-line
-                        hide-details
-                        density="compact"
-                        :items="['布農族', '阿美族', '卑南族']"
-                      ></v-autocomplete>
-                    </v-col>
+                    <v-col class="bg-thead formGrpTitle mb-5 mx-3"
+                      >扣領數</v-col
+                    >
                   </v-row>
-                </v-col>
-                <v-col class="d-flex formGrp" cols="12">
-                  <label class="formTitle" for="type"
-                    >族別
-                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
-                      >*</abbr
-                    ></label
-                  >
-                  <v-row>
-                    <v-col>
-                      <v-autocomplete
-                        id="type"
-                        color="secondary"
-                        variant="solo"
-                        single-line
-                        hide-details
-                        density="compact"
-                        :items="['布農族', '阿美族', '卑南族']"
-                      ></v-autocomplete>
+                  <v-row class="d-flex formGrp" v-for="i in 3" :key="i">
+                    <v-col class="formTitle">
+                      <label for="type"
+                        >欄位一
+                        <abbr
+                          class="necessary"
+                          title="為必填(選)欄位,不能為空白。"
+                          >*</abbr
+                        ></label
+                      >
                     </v-col>
-                  </v-row>
-                </v-col>
-                <v-col class="d-flex formGrp" cols="12">
-                  <label class="formTitle" for="mail"
-                    >Email
-                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
-                      >*</abbr
-                    ></label
-                  >
-                  <v-row>
-                    <v-col>
-                      <v-text-field
-                        variant="solo"
-                        single-line
-                        hide-details
-                        type="email"
-                        id="mail"
-                        density="compact"
-                      ></v-text-field>
-                    </v-col>
-                  </v-row>
-                </v-col>
-                <v-col class="d-flex formGrp" cols="12">
-                  <label class="formTitle" for="type"
-                    >行動電話
-                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
-                      >*</abbr
-                    ></label
-                  >
-                  <v-row>
                     <v-col>
                       <v-text-field
                         variant="solo"
                         single-line
                         hide-details
                         density="compact"
-                        type="phone"
-                      ></v-text-field>
-                    </v-col>
+                      ></v-text-field
+                    ></v-col>
                   </v-row>
                 </v-col>
-                <v-col class="d-flex formGrp" cols="12">
-                  <label class="formTitle" for="list"
-                    >多選選單
-                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
-                      >*</abbr
-                    ></label
-                  >
-                  <v-row>
-                    <v-col class="checkGrp" id="list">
-                      <v-checkbox
-                        density="compact"
-                        hide-details
-                        label="中文"
-                      ></v-checkbox>
-                      <v-checkbox
-                        density="compact"
-                        hide-details
-                        label="英文"
-                      ></v-checkbox>
-                      <v-checkbox
-                        density="compact"
-                        hide-details
-                        label="日文"
-                      ></v-checkbox>
-                    </v-col>
-                  </v-row>
-                </v-col>
-                <v-col class="d-flex formGrp" cols="12">
-                  <label class="formTitle" for="">交辦事項 </label>
-                  <v-text-field
-                    variant="solo"
-                    single-line
-                    hide-details
-                    density="compact"
-                  ></v-text-field>
-                </v-col>
-                <v-col class="d-flex formGrp" cols="12">
-                  <label class="formTitle" for="">文字輸入 </label>
-                  <v-row>
-                    <v-col>
-                      <v-textarea
-                        placeholder="請輸入文字"
-                        variant="solo"
-                        hide-details
-                        density="compact"
-                        auto-grow
-                        rows="6"
-                        row-height="30"
-                        shaped
-                      ></v-textarea>
-                    </v-col>
-                  </v-row>
-                </v-col>
-                <v-col class="d-flex formGrp" cols="12">
-                  <label class="formTitle" for="">單選 </label>
-                  <v-row>
-                    <v-col>
-                      <v-radio-group inline hide-details color="secondary">
-                        <v-radio label="是" value="true"></v-radio>
-                        <v-radio label="否" value="false"></v-radio>
-                      </v-radio-group>
-                    </v-col>
-                  </v-row>
-                </v-col>
-                <v-col class="d-flex formGrp" cols="12">
-                  <v-row>
-                    <v-col>
-                      <div class="d-flex formGrp">
-                        <label class="formTitle" for="">住址</label>
-                        <v-row>
-                          <v-col cols="6" md="3">
-                            <v-autocomplete
-                              id="type"
-                              color="secondary"
-                              variant="solo"
-                              single-line
-                              density="compact"
-                              placeholder="輸入地址"
-                              hide-details
-                              :items="['台北市', '新北市', '基隆市']"
-                            ></v-autocomplete>
-                          </v-col>
-                          <v-col cols="6" md="3">
-                            <v-autocomplete
-                              id="type"
-                              variant="solo"
-                              single-line
-                              color="secondary"
-                              density="compact"
-                              placeholder="輸入地址"
-                              hide-details
-                              :items="['台北市', '新北市', '基隆市']"
-                            ></v-autocomplete>
-                          </v-col>
-                          <v-col cols="12" md="6">
-                            <v-text-field
-                              variant="solo"
-                              single-line
-                              hide-details
-                              density="compact"
-                            ></v-text-field>
-                          </v-col>
-                        </v-row>
-                      </div>
-                    </v-col>
-                  </v-row>
-                </v-col>
-                <v-col class="d-flex formGrp" cols="12">
-                  <v-row>
-                    <v-col>
-                      <div class="d-flex formGrp">
-                        <label class="formTitle" for="">兩欄欄位</label>
-                        <v-row>
-                          <v-col cols="6" md="3">
-                            <v-autocomplete
-                              id="type"
-                              variant="solo"
-                              single-line
-                              color="secondary"
-                              density="compact"
-                              placeholder="輸入地址"
-                              hide-details
-                              :items="['台北市', '台北市', '台北市']"
-                            ></v-autocomplete>
-                          </v-col>
-                          <v-col cols="6" md="3">
-                            <v-autocomplete
-                              id="type"
-                              variant="solo"
-                              single-line
-                              density="compact"
-                              color="secondary"
-                              placeholder="輸入地址"
-                              hide-details
-                              :items="['台北市', '台北市', '台北市']"
-                            ></v-autocomplete>
-                          </v-col>
-                        </v-row>
-                      </div>
-                    </v-col>
-                  </v-row>
-                </v-col>
-                <!-- 左右兩欄 start -->
-                <v-col class="d-flex formGrp formGrp_2" cols="12">
-                  <v-row>
-                    <v-col cols="12" md="6">
-                      <v-row class="pa-2">
-                        <v-col cols="12">
-                          <div class="bg-thead formGrpTitle mb-5">應領數</div>
-                        </v-col>
-                        <v-col class="d-flex formGrp" cols="12">
-                          <label class="formTitle" for="">欄位一</label>
-                          <v-text-field
-                            variant="solo"
-                            single-line
-                            hide-details
-                            density="compact"
-                          ></v-text-field>
-                        </v-col>
-                        <v-col class="d-flex formGrp" cols="12">
-                          <label class="formTitle" for="">欄位一</label>
-                          <v-text-field
-                            variant="solo"
-                            single-line
-                            hide-details
-                            density="compact"
-                          ></v-text-field>
-                        </v-col>
-                        <v-col class="d-flex formGrp" cols="12">
-                          <label class="formTitle" for="">欄位一</label>
-                          <v-text-field
-                            variant="solo"
-                            single-line
-                            hide-details
-                            density="compact"
-                          ></v-text-field>
-                        </v-col>
-                      </v-row>
-                    </v-col>
-                    <v-col cols="12" md="6">
-                      <v-row class="pa-2">
-                        <v-col cols="12">
-                          <div class="bg-thead formGrpTitle mb-5">應扣數</div>
-                        </v-col>
-                        <v-col class="d-flex formGrp" cols="12">
-                          <label class="formTitle" for="">欄位一</label>
-                          <v-text-field
-                            variant="solo"
-                            single-line
-                            hide-details
-                            density="compact"
-                          ></v-text-field>
-                        </v-col>
-                        <v-col class="d-flex formGrp" cols="12">
-                          <label class="formTitle" for="">欄位一</label>
-                          <v-text-field
-                            variant="solo"
-                            single-line
-                            hide-details
-                            density="compact"
-                          ></v-text-field>
-                        </v-col>
-                        <v-col class="d-flex formGrp" cols="12">
-                          <label class="formTitle" for="">欄位一</label>
-                          <v-text-field
-                            variant="solo"
-                            single-line
-                            hide-details
-                            density="compact"
-                          ></v-text-field>
-                        </v-col>
-                      </v-row>
-                    </v-col>
-                  </v-row>
-                </v-col>
-                <!-- 左右兩欄 end -->
               </v-row>
+              <!-- 左右兩欄 end -->
             </v-form>
           </v-container>
           <v-row>
