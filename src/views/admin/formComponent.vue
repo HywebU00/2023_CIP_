@@ -359,6 +359,7 @@
                     rows="6"
                     row-height="30"
                     shaped
+                    class="mb-2"
                   ></v-textarea>
                 </v-col>
               </v-row>

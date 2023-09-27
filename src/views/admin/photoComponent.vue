@@ -541,28 +541,26 @@
                       </div>
                     </v-container>
                   </v-card-text>
-                  <v-card-actions class="d-flex justify-center">
-                    <div class="btnGroup center">
-                      <v-btn
-                        class="submit"
-                        elevation="0"
-                        variant="flat"
-                        @click="dialog = false"
-                        rounded="lg"
-                        size="large"
-                        >送出</v-btn
-                      >
-                      <v-btn
-                        elevation="0"
-                        rounded="lg"
-                        variant="flat"
-                        size="large"
-                        color="cancel"
-                        class="cancel"
-                        @click="dialog = false"
-                        >取消</v-btn
-                      >
-                    </div>
+                  <v-card-actions class="justify-center">
+                    <v-btn
+                      class="submit"
+                      elevation="0"
+                      variant="flat"
+                      @click="dialog = false"
+                      rounded="lg"
+                      size="large"
+                      >送出</v-btn
+                    >
+                    <v-btn
+                      elevation="0"
+                      rounded="lg"
+                      variant="flat"
+                      size="large"
+                      color="cancel"
+                      class="cancel"
+                      @click="dialog = false"
+                      >取消</v-btn
+                    >
                   </v-card-actions>
                 </v-card>
                 <!-- 輸入資訊視窗 end -->

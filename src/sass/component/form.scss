@@ -10,6 +10,9 @@
   }
   .v-field__input {
     height: rem(44);
+    input {
+      padding-bottom: 0.25rem;
+    }
   }
 }
 input:-internal-autofill-selected {

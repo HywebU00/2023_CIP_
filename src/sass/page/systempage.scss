@@ -340,29 +340,29 @@
   }
 }
 .widgetContent {
-  $widgetContentWidth: 280;
-  width: rem($widgetContentWidth) !important;
-  max-width: rem($widgetContentWidth) !important;
+  // $widgetContentWidth: 280;
+  // width: rem($widgetContentWidth) !important;
+  // max-width: rem($widgetContentWidth) !important;
   .v-card {
     border-radius: 1rem !important;
     min-height: 50%;
   }
-  + .v-col {
-    width: calc(100% - #{$widgetContentWidth}px);
-  }
-  @media only screen and (max-width: 767px) {
-    width: auto !important;
-    max-width: unset !important;
-    .v-card {
-      min-height: auto;
-    }
-    + .v-col {
-      width: 100%;
-    }
-    .treeviewBlock {
-      margin-top: 0;
-    }
-  }
+  // + .v-col {
+  //   width: calc(100% - #{$widgetContentWidth}px);
+  // }
+  // @media only screen and (max-width: 767px) {
+  //   width: auto !important;
+  //   max-width: unset !important;
+  //   .v-card {
+  //     min-height: auto;
+  //   }
+  //   + .v-col {
+  //     width: 100%;
+  //   }
+  //   .treeviewBlock {
+  //     margin-top: 0;
+  //   }
+  // }
 }
 .treeviewBlock {
   margin-top: 1rem;
