@@ -177,7 +177,17 @@ export default {
                 </v-col>
               </v-row>
               <!-- 左右兩欄 end -->
-
+              <v-row class="d-flex formGrp">
+                <v-col cols="12" md="2" class="formTitle">
+                  <label for="type">資訊單位/審核人員 </label>
+                </v-col>
+                <v-col>
+                  <v-radio-group inline hide-details color="secondary">
+                    <v-radio label="許小傑" value="true"></v-radio>
+                    <v-radio label="邱大發" value="false"></v-radio>
+                  </v-radio-group>
+                </v-col>
+              </v-row>
               <v-row class="d-flex formGrp">
                 <v-col cols="12" class="multipleContent">
                   <v-row>
@@ -198,17 +208,6 @@ export default {
                       </select>
                     </v-col>
                   </v-row>
-                </v-col>
-              </v-row>
-              <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="formTitle">
-                  <label for="type">資訊單位/審核人員 </label>
-                </v-col>
-                <v-col>
-                  <v-radio-group inline hide-details color="secondary">
-                    <v-radio label="許小傑" value="true"></v-radio>
-                    <v-radio label="邱大發" value="false"></v-radio>
-                  </v-radio-group>
                 </v-col>
               </v-row>
             </v-form>

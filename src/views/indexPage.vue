@@ -75,13 +75,13 @@ export default {
         },
         {
           name: "相簿頁",
-          link: " https://hywebu00.github.io/2023_CIP_/#/ui/album",
+          link: "",
           note: "",
           // https://hywebu00.github.io/2023_CIP_/#/ui/album
         },
         {
           name: "相片頁",
-          link: "https://hywebu00.github.io/2023_CIP_/#/ui/photo",
+          link: "",
           note: "",
           // https://hywebu00.github.io/2023_CIP_/#/ui/photo
         },

@@ -205,7 +205,7 @@
           <v-container>
             <!-- 排序方式 start -->
             <v-row>
-              <v-col class="d-flex justify-end py-0">
+              <v-col class="d-flex justify-end">
                 <div class="filterList">
                   <v-row class="d-flex">
                     <v-col>
