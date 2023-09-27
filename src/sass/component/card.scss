@@ -178,12 +178,12 @@
   }
   .v-card {
     .infoTitle {
-      padding-right: 1.5rem;
-      max-width: 150px;
-      flex: 0 0 150px;
+      padding-right: 1.25rem;
+      max-width: 200px;
+      flex: 0 0 200px;
       color: $defaultPrimary;
       font-weight: 500;
-      margin: 0 0.5rem;
+      margin-left: -0.5rem;
       display: flex;
       justify-content: flex-end;
       color: $dark;
@@ -191,8 +191,7 @@
         width: 100%;
         max-width: unset;
         flex-basis: auto;
-        padding-left: 0;
-        padding-right: 0rem;
+        padding-left: 1.25rem;
         justify-content: flex-start;
         padding-bottom: 0;
       }
@@ -233,7 +232,7 @@
         background-color: $secondaryColor;
         height: 2px;
         bottom: -2px;
-        width: 150px;
+        width: 200px;
       }
       @include screen('tablet') {
         &:after {
@@ -286,9 +285,6 @@
       }
     }
   }
-  option:checked {
-    box-shadow: 0 0 10px 100px $gray inset;
-  }
 }
 .peopleFinderCard {
   .formGrp {
@@ -316,5 +312,8 @@
     i {
       font-size: 1.75rem;
     }
+  }
+  option:checked {
+    box-shadow: 0 0 10px 100px $gray inset;
   }
 }

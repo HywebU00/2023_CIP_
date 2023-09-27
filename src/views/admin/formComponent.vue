@@ -207,7 +207,7 @@
           <v-container class="formContainer">
             <v-form class="formGrid">
               <v-row class="d-flex formGrp">
-                <v-col class="formTitle">
+                <v-col cols="12" md="2" class="formTitle">
                   <label for="type"
                     >族名
                     <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
@@ -225,7 +225,7 @@
                 ></v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col class="formTitle">
+                <v-col cols="12" md="2" class="formTitle">
                   <label for="type"
                     >族別
                     <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
@@ -267,7 +267,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col class="formTitle">
+                <v-col cols="12" md="2" class="formTitle">
                   <label for="mail"
                     >Email
                     <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
@@ -287,7 +287,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col class="formTitle">
+                <v-col cols="12" md="2" class="formTitle">
                   <label for="type"
                     >行動電話
                     <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
@@ -306,7 +306,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col class="formTitle">
+                <v-col cols="12" md="2" class="formTitle">
                   <label for="list"
                     >多選選單
                     <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
@@ -333,7 +333,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col class="formTitle">
+                <v-col cols="12" md="2" class="formTitle">
                   <label for="">交辦事項 </label>
                 </v-col>
                 <v-col>
@@ -346,7 +346,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col class="formTitle">
+                <v-col cols="12" md="2" class="formTitle">
                   <label for="">文字輸入 </label>
                 </v-col>
                 <v-col>
@@ -364,7 +364,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col class="formTitle">
+                <v-col cols="12" md="2" class="formTitle">
                   <label for="">單選 </label>
                 </v-col>
                 <v-col>
@@ -375,7 +375,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col class="formTitle">
+                <v-col cols="12" md="2" class="formTitle">
                   <label for="">住址</label>
                 </v-col>
                 <v-col>
@@ -416,7 +416,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col class="formTitle">
+                <v-col cols="12" md="2" class="formTitle">
                   <label for="">兩欄欄位</label>
                 </v-col>
                 <v-col>
@@ -457,7 +457,7 @@
                     >
                   </v-row>
                   <v-row class="d-flex formGrp" v-for="i in 3" :key="i">
-                    <v-col class="formTitle">
+                    <v-col cols="12" md="2" class="formTitle">
                       <label for="type"
                         >欄位一
                         <abbr
@@ -484,7 +484,7 @@
                     >
                   </v-row>
                   <v-row class="d-flex formGrp" v-for="i in 3" :key="i">
-                    <v-col class="formTitle">
+                    <v-col cols="12" md="2" class="formTitle">
                       <label for="type"
                         >欄位一
                         <abbr

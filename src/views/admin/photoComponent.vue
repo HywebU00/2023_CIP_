@@ -204,7 +204,7 @@
                 class="dialogCard"
                 v-model="dialog"
                 scrollable
-                width="auto"
+                max-width="1200"
               >
                 <template v-slot:activator="{ props }">
                   <v-col
@@ -255,7 +255,7 @@
                     <v-container class="formContainer">
                       <v-form class="formGrid">
                         <v-row class="d-flex formGrp">
-                          <v-col class="formTitle">
+                          <v-col cols="12" md="2" class="formTitle">
                             <label for="type"
                               >族名
                               <abbr
@@ -275,7 +275,7 @@
                           ></v-col>
                         </v-row>
                         <v-row class="d-flex formGrp">
-                          <v-col class="formTitle">
+                          <v-col cols="12" md="2" class="formTitle">
                             <label for="type"
                               >族別
                               <abbr
@@ -298,7 +298,7 @@
                           </v-col>
                         </v-row>
                         <v-row class="d-flex formGrp">
-                          <v-col class="formTitle">
+                          <v-col cols="12" md="2" class="formTitle">
                             <label for="type"
                               >族別
                               <abbr
@@ -321,7 +321,7 @@
                           </v-col>
                         </v-row>
                         <v-row class="d-flex formGrp">
-                          <v-col class="formTitle">
+                          <v-col cols="12" md="2" class="formTitle">
                             <label for="mail"
                               >Email
                               <abbr
@@ -343,7 +343,7 @@
                           </v-col>
                         </v-row>
                         <v-row class="d-flex formGrp">
-                          <v-col class="formTitle">
+                          <v-col cols="12" md="2" class="formTitle">
                             <label for="type"
                               >行動電話
                               <abbr
@@ -364,7 +364,7 @@
                           </v-col>
                         </v-row>
                         <v-row class="d-flex formGrp">
-                          <v-col class="formTitle">
+                          <v-col cols="12" md="2" class="formTitle">
                             <label for="list"
                               >多選選單
                               <abbr
@@ -393,7 +393,7 @@
                           </v-col>
                         </v-row>
                         <v-row class="d-flex formGrp">
-                          <v-col class="formTitle">
+                          <v-col cols="12" md="2" class="formTitle">
                             <label for="">交辦事項 </label>
                           </v-col>
                           <v-col>
@@ -406,7 +406,7 @@
                           </v-col>
                         </v-row>
                         <v-row class="d-flex formGrp">
-                          <v-col class="formTitle">
+                          <v-col cols="12" md="2" class="formTitle">
                             <label for="">文字輸入 </label>
                           </v-col>
                           <v-col>
@@ -423,7 +423,7 @@
                           </v-col>
                         </v-row>
                         <v-row class="d-flex formGrp">
-                          <v-col class="formTitle">
+                          <v-col cols="12" md="2" class="formTitle">
                             <label for="">單選 </label>
                           </v-col>
                           <v-col>
@@ -438,7 +438,7 @@
                           </v-col>
                         </v-row>
                         <v-row class="d-flex formGrp">
-                          <v-col class="formTitle">
+                          <v-col cols="12" md="2" class="formTitle">
                             <label for="">住址</label>
                           </v-col>
                           <v-col>
@@ -479,7 +479,7 @@
                           </v-col>
                         </v-row>
                         <v-row class="d-flex formGrp">
-                          <v-col class="formTitle">
+                          <v-col cols="12" md="2" class="formTitle">
                             <label for="">兩欄欄位</label>
                           </v-col>
                           <v-col>
@@ -515,7 +515,7 @@
 
                       <div class="infoGrid">
                         <v-row class="infoGrp">
-                          <v-col class="d-flex infoTitle">
+                          <v-col cols="12" md="2" class="d-flex infoTitle">
                             <span class="">交辦事項</span>
                           </v-col>
                           <v-col>
@@ -525,13 +525,13 @@
                           </v-col>
                         </v-row>
                         <v-row class="infoGrp">
-                          <v-col class="d-flex infoTitle">
+                          <v-col cols="12" md="2" class="d-flex infoTitle">
                             <span class="">承辦人</span>
                           </v-col>
                           <v-col> <p class="infoText">周小瑜</p></v-col>
                         </v-row>
                         <v-row class="infoGrp">
-                          <v-col class="d-flex infoTitle">
+                          <v-col cols="12" md="2" class="d-flex infoTitle">
                             <span class="">填報日期</span>
                           </v-col>
                           <v-col>
