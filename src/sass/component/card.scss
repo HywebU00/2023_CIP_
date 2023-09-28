@@ -172,29 +172,51 @@
   }
 }
 .dialogCard {
-  .v-card-title {
-    .v-container {
-      padding-bottom: 0;
-    }
+  .formContainer {
+    margin-top: 0;
   }
+
   .v-card {
+    .v-card-title {
+      .v-container {
+        padding-bottom: 0;
+      }
+    }
+    .v-card-text {
+      padding-top: 0.25rem;
+      .v-container {
+        padding-top: 0;
+      }
+    }
     .infoTitle {
       padding-right: 1.25rem;
-      max-width: 200px;
-      flex: 0 0 200px;
       color: $defaultPrimary;
       font-weight: 500;
       margin-left: -0.5rem;
       display: flex;
       justify-content: flex-end;
       color: $dark;
-      @include screen('tablet') {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        left: 12px;
+        background-color: $secondaryColor;
+        height: 2px;
+        bottom: -2px;
+        width: calc(100% - 24px);
+      }
+      @include screen('notebook') {
         width: 100%;
         max-width: unset;
         flex-basis: auto;
         padding-left: 1.25rem;
         justify-content: flex-start;
         padding-bottom: 0;
+        &::after {
+          display: none;
+        }
       }
     }
     .infoText {
@@ -203,12 +225,13 @@
         margin: 0;
       }
     }
+
     .infoGrp,
     .formGrp {
       @include screen('tablet') {
         flex-wrap: wrap;
       }
-      .formTitle > label,
+      label,
       .infoTitle > span {
         color: $dark;
         margin-right: 0;
@@ -222,30 +245,14 @@
       position: relative;
       margin-bottom: 0.25rem;
       margin-top: 0.2rem;
-      // padding-bottom: 0.75rem;
+
       &:last-child {
         margin-bottom: 0;
       }
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        background-color: $secondaryColor;
-        height: 2px;
-        bottom: -2px;
-        width: 200px;
-      }
+
       @include screen('tablet') {
         &:after {
           display: none;
-        }
-      }
-      > .formTitle {
-        // padding-right: 1rem;
-        display: flex;
-        justify-content: flex-end;
-        @include screen('tablet') {
-          justify-content: flex-start;
         }
       }
 
@@ -288,8 +295,6 @@
   }
 }
 .peopleFinderCard {
-  .formGrp {
-  }
   .multipleContent {
     select {
       border: 1px solid lighten($gray3, 20);
@@ -299,9 +304,12 @@
         align-items: center;
 
         &:hover,
+        &:active,
         &:target,
+        &:focus,
         &:checked {
           background: $gray;
+          color: $defaultPrimary;
         }
       }
     }
@@ -316,5 +324,6 @@
   }
   option:checked {
     box-shadow: 0 0 10px 100px $gray inset;
+    color: $defaultPrimary;
   }
 }

@@ -325,6 +325,37 @@
     }
   }
 }
+button.navBtn {
+  margin-left: 0.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .icon {
+    height: rem(35);
+    width: rem(35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #331919;
+    border-radius: 50%;
+    font-weight: 500;
+    z-index: 1;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    height: rem(40);
+    width: rem(40);
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 1%, rgba(228, 180, 148, 1) 100%);
+  }
+  .v-badge__badge {
+    z-index: 1;
+  }
+}
 .functionList {
   margin-right: 0;
   margin-left: 1rem;

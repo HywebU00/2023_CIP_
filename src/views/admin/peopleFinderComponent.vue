@@ -17,7 +17,9 @@
                       <v-row>
                         <v-col cols="12" md="">
                           <div class="d-flex formGrp">
-                            <label class="formTitle" for="">年度 :</label>
+                            <label class="formTitle" for=""
+                              >多字多字多字查詢:</label
+                            >
                             <v-autocomplete
                               variant="solo"
                               single-line

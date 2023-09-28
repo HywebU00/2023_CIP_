@@ -4,6 +4,7 @@
     font-weight: 500;
     margin: 0 0.5rem;
   }
+
   input,
   select {
     padding: 0 0.25rem;
@@ -15,13 +16,19 @@
     }
   }
 }
+.infoGrp {
+  span {
+    font-weight: 500;
+    margin: 0 0.5rem;
+    color: $defaultPrimary;
+  }
+}
 input:-internal-autofill-selected {
   background: #fff !important;
 }
 
 .formContainer {
   margin-bottom: 1rem;
-  // max-width: unset !important;
   margin-top: 1rem;
   .formTitle {
     max-width: 200px;

@@ -102,12 +102,20 @@
   <!-- 手機版 end-->
   <!-- 桌機版 start-->
   <template v-else>
-    <div class="title">
+    <div class="title d-flex align-center">
       {{ ps.topNavPageTitle }}
       <!-- 單一遷入系統暨會內入口網 -->
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" icon="mdi-open-in-new" size="small"></v-btn>
+          <!-- <v-btn
+            color="bright"
+            v-bind="props"
+            icon="mdi-open-in-new"
+            size="small"
+          ></v-btn> -->
+          <button class="navBtn" v-bind="props">
+            <span class="material-icons-round icon"> launch </span>
+          </button>
         </template>
         <v-list>
           <v-list-item title="1案件類別管理" variant="text" to="/my-index" />

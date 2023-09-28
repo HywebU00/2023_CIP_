@@ -253,10 +253,10 @@ $theme-config: (
     }
 
     //v-dialog Btn style
-    &.dialogCard {
+    &.v-dialog {
       .v-card-actions {
         .v-btn {
-          margin: 2rem 1rem;
+          margin: 1rem;
           @include screen('tablet') {
             min-width: 78px;
           }
@@ -320,6 +320,15 @@ $theme-config: (
       &:after {
         background: rgb(35, 35, 35);
       }
+    }
+  }
+  button.navBtn {
+    .icon {
+      background: rgb(35, 35, 35);
+      color: #fff;
+    }
+    &:after {
+      background: rgb(35, 35, 35);
     }
   }
   .webSearch .v-field__append-inner .v-icon {
