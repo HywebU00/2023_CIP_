@@ -11,6 +11,7 @@
   }
   .v-field__input {
     height: rem(44);
+    position: relative;
     input {
       height: auto;
     }
@@ -21,11 +22,12 @@
   .v-input__details {
     min-height: unset;
   }
-  &:has(.v-col) {
-    > div {
-      padding-top: 6px;
-      padding-bottom: 6px;
-    }
+  .v-input {
+    position: relative;
+  }
+  .v-messages {
+    position: absolute;
+    bottom: -12px;
   }
 }
 .infoGrp {
@@ -94,7 +96,9 @@ input:-internal-autofill-selected {
         flex-basis: fit-content;
       }
     }
-
+    .info {
+      margin-bottom: rem(20);
+    }
     @include screen('tablet') {
       flex-wrap: wrap;
       .formTitle {
@@ -109,6 +113,6 @@ input:-internal-autofill-selected {
     margin-top: 2rem;
   }
   .formGrp.v-row {
-    margin-top: 0;
+    margin-top: 0.25rem;
   }
 }

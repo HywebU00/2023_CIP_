@@ -27,7 +27,6 @@ export default {
       <template v-slot:activator="{ props }">
         <v-btn color="primary" v-bind="props"> peopleDemo範例元件 按鈕</v-btn>
       </template>
-      ㄈ
       <!-- Demo 專用用按鈕 end -->
       <v-card>
         <v-card-title>

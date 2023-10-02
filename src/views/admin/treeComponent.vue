@@ -142,7 +142,7 @@
                               variant="solo"
                               single-line
                               density="compact"
-                              error-messages="11111"
+                              error-messages=""
                             ></v-text-field>
                           </div>
                           <div class="d-flex formGrp">

@@ -147,12 +147,12 @@
         .formGrp {
           margin-bottom: 0rem;
         }
-        .v-messages {
-          min-height: unset;
-          position: absolute;
-          bottom: -1px;
-          margin-bottom: 0.2rem;
-        }
+        // .v-messages {
+        //   min-height: unset;
+        //   position: absolute;
+        //   bottom: -1px;
+        //   margin-bottom: 0.2rem;
+        // }
       }
 
       .v-expansion-panel-title--active {
@@ -178,7 +178,7 @@
       .formGrp {
         display: flex;
         align-items: center;
-        margin-bottom: 0.25rem;
+        margin-bottom: 1.25rem;
         .v-field__input {
           height: rem(44);
           input {
