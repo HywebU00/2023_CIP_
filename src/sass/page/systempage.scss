@@ -147,6 +147,12 @@
         .formGrp {
           margin-bottom: 0rem;
         }
+        .v-messages {
+          min-height: unset;
+          position: absolute;
+          bottom: -1px;
+          margin-bottom: 0.2rem;
+        }
       }
 
       .v-expansion-panel-title--active {
@@ -158,6 +164,9 @@
         .btnList {
           margin-bottom: 0.5rem;
         }
+        .formGrp {
+          align-items: flex-start;
+        }
       }
 
       .formTitle {
@@ -165,23 +174,22 @@
         padding: 0.3em 0.5em;
         line-height: 1.25rem;
         padding-left: 0;
-        // white-space: nowrap;
       }
       .formGrp {
-        margin-bottom: 1rem;
         display: flex;
         align-items: center;
-
+        margin-bottom: 0.25rem;
         .v-field__input {
-          height: rem(40);
+          height: rem(44);
           input {
-            margin: 0;
+            height: auto;
           }
         }
         .v-label--clickable {
           margin: 0;
         }
       }
+
       .tilde {
         margin: 0.5rem;
       }

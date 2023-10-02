@@ -272,17 +272,24 @@
       }
       .v-input {
         border-radius: 0.5rem;
-        border: 1px solid lighten($gray3, 20);
-        background: $gray;
         &.v-radio-group {
-          border: none;
           background: unset;
+          .v-input__control {
+            border: none;
+          }
+        }
+        .v-input__control {
+          margin-top: 0.25rem;
+          border: 1px solid lighten($gray3, 20);
+          border-radius: 0.5rem;
+        }
+        .v-messages {
+          min-height: unset;
         }
       }
       .checkGrp {
-        .v-input {
+        .v-input__control {
           border: none;
-          background: unset;
         }
       }
     }

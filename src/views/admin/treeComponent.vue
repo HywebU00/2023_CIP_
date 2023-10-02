@@ -43,7 +43,6 @@
                             <v-autocomplete
                               variant="solo"
                               single-line
-                              hide-details
                               density="compact"
                               :items="['1990', '1991', '1992']"
                             ></v-autocomplete>
@@ -52,7 +51,6 @@
                               variant="solo"
                               density="compact"
                               single-line
-                              hide-details
                               :items="['1990', '1991', '1992']"
                             ></v-autocomplete>
                           </div>
@@ -64,14 +62,12 @@
                               variant="solo"
                               density="compact"
                               single-line
-                              hide-details
                             ></v-text-field>
                             <span class="tilde">~</span>
                             <v-text-field
                               variant="solo"
                               single-line
                               density="compact"
-                              hide-details
                             ></v-text-field>
                           </div>
                         </v-col>
@@ -98,7 +94,6 @@
                               variant="solo"
                               single-line
                               density="compact"
-                              hide-details
                               :items="['主管會報', '主管會報', '主管會報']"
                             ></v-autocomplete>
                           </div>
@@ -107,17 +102,14 @@
                             <v-checkbox
                               density="compact"
                               label="繼續追蹤"
-                              hide-details
                             ></v-checkbox>
                             <v-checkbox
                               density="compact"
                               label="建議解除列管"
-                              hide-details
                             ></v-checkbox>
                             <v-checkbox
                               density="compact"
                               label="解除列管"
-                              hide-details
                             ></v-checkbox>
                           </div>
                           <div class="d-flex formGrp">
@@ -125,7 +117,6 @@
                             <v-text-field
                               variant="solo"
                               single-line
-                              hide-details
                               density="compact"
                             ></v-text-field>
                           </div>
@@ -137,14 +128,12 @@
                               variant="solo"
                               density="compact"
                               single-line
-                              hide-details
                             ></v-text-field>
                             <span class="tilde">~</span>
                             <v-text-field
                               variant="solo"
                               single-line
                               density="compact"
-                              hide-details
                             ></v-text-field>
                           </div>
                           <div class="d-flex formGrp">
@@ -152,8 +141,8 @@
                             <v-text-field
                               variant="solo"
                               single-line
-                              hide-details
                               density="compact"
+                              error-messages="11111"
                             ></v-text-field>
                           </div>
                           <div class="d-flex formGrp">
@@ -162,7 +151,6 @@
                               variant="solo"
                               single-line
                               density="compact"
-                              hide-details
                             ></v-text-field>
                           </div>
                           <div class="d-flex formGrp">
@@ -171,7 +159,6 @@
                               variant="solo"
                               single-line
                               density="compact"
-                              hide-details
                             ></v-text-field>
                           </div>
                         </v-col>
@@ -238,7 +225,7 @@
                       <v-text-field
                         variant="solo"
                         single-line
-                        hide-details
+                        error-messages="測試測試"
                         density="compact"
                       ></v-text-field
                     ></v-col>
@@ -260,7 +247,6 @@
                         color="secondary"
                         variant="solo"
                         single-line
-                        hide-details
                         density="compact"
                         :items="['布農族', '阿美族', '卑南族']"
                       ></v-autocomplete>
@@ -282,7 +268,6 @@
                       <v-text-field
                         variant="solo"
                         single-line
-                        hide-details
                         type="email"
                         id="mail"
                         density="compact"
@@ -304,7 +289,6 @@
                       <v-text-field
                         variant="solo"
                         single-line
-                        hide-details
                         density="compact"
                         type="phone"
                       ></v-text-field>
@@ -322,21 +306,9 @@
                       >
                     </v-col>
                     <v-col class="checkGrp" id="list">
-                      <v-checkbox
-                        density="compact"
-                        hide-details
-                        label="中文"
-                      ></v-checkbox>
-                      <v-checkbox
-                        density="compact"
-                        hide-details
-                        label="英文"
-                      ></v-checkbox>
-                      <v-checkbox
-                        density="compact"
-                        hide-details
-                        label="日文"
-                      ></v-checkbox>
+                      <v-checkbox density="compact" label="中文"></v-checkbox>
+                      <v-checkbox density="compact" label="英文"></v-checkbox>
+                      <v-checkbox density="compact" label="日文"></v-checkbox>
                     </v-col>
                   </v-row>
                   <v-row class="d-flex formGrp">
@@ -347,7 +319,6 @@
                       <v-text-field
                         variant="solo"
                         single-line
-                        hide-details
                         density="compact"
                       ></v-text-field>
                     </v-col>
@@ -360,7 +331,6 @@
                       <v-textarea
                         placeholder="請輸入文字"
                         variant="solo"
-                        hide-details
                         density="compact"
                         auto-grow
                         rows="6"
@@ -375,7 +345,7 @@
                       <label for="">單選 </label>
                     </v-col>
                     <v-col>
-                      <v-radio-group inline hide-details color="secondary">
+                      <v-radio-group inline color="secondary">
                         <v-radio label="是" value="true"></v-radio>
                         <v-radio label="否" value="false"></v-radio>
                       </v-radio-group>
@@ -395,7 +365,6 @@
                             single-line
                             density="compact"
                             placeholder="輸入地址"
-                            hide-details
                             :items="['台北市', '新北市', '基隆市']"
                           ></v-autocomplete>
                         </v-col>
@@ -407,7 +376,6 @@
                             color="secondary"
                             density="compact"
                             placeholder="輸入地址"
-                            hide-details
                             :items="['台北市', '新北市', '基隆市']"
                           ></v-autocomplete>
                         </v-col>
@@ -415,7 +383,6 @@
                           <v-text-field
                             variant="solo"
                             single-line
-                            hide-details
                             density="compact"
                           ></v-text-field>
                         </v-col>
@@ -436,7 +403,6 @@
                             single-line
                             density="compact"
                             placeholder="輸入地址"
-                            hide-details
                             :items="['台北市', '新北市', '基隆市']"
                           ></v-autocomplete>
                         </v-col>
@@ -448,7 +414,6 @@
                             color="secondary"
                             density="compact"
                             placeholder="輸入地址"
-                            hide-details
                             :items="['台北市', '新北市', '基隆市']"
                           ></v-autocomplete>
                         </v-col>
@@ -478,7 +443,6 @@
                           <v-text-field
                             variant="solo"
                             single-line
-                            hide-details
                             density="compact"
                           ></v-text-field
                         ></v-col>
@@ -505,7 +469,6 @@
                           <v-text-field
                             variant="solo"
                             single-line
-                            hide-details
                             density="compact"
                           ></v-text-field
                         ></v-col>

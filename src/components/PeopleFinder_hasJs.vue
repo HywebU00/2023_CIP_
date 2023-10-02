@@ -104,15 +104,14 @@ const doSubmit = function () {
                 </v-col>
                 <v-col>
                   <v-row class="d-flex align-center">
-                    <v-col cols="12" class="d-flex align-center"
+                    <v-col cols="12" class="d-flex align-start"
                       ><v-text-field
                         variant="solo"
                         single-line
-                        hide-details
                         class="w-100 mr-3"
                         density="compact"
                       ></v-text-field>
-                      <v-btn class="">查詢</v-btn>
+                      <v-btn class="mt-1">查詢</v-btn>
                     </v-col>
                   </v-row>
                 </v-col>
@@ -126,7 +125,6 @@ const doSubmit = function () {
                     <v-col cols="12" lg="3" md="4">
                       <v-radio-group
                         inline
-                        hide-details
                         color="secondary"
                         v-model="formData.listType"
                       >
@@ -141,7 +139,6 @@ const doSubmit = function () {
                         :model-value="formData.listValue"
                         :items="formData.deptList"
                         density="compact"
-                        hide-details
                         item-title="deptName"
                         item-value="deptID"
                       >
@@ -160,7 +157,6 @@ const doSubmit = function () {
                     color="secondary"
                     variant="solo"
                     single-line
-                    hide-details
                     density="compact"
                     :items="['流程一', '流程二', '流程三']"
                   ></v-autocomplete>
@@ -174,7 +170,6 @@ const doSubmit = function () {
                   <v-text-field
                     variant="solo"
                     single-line
-                    hide-details
                     density="compact"
                   ></v-text-field>
                 </v-col>
@@ -292,7 +287,7 @@ const doSubmit = function () {
                       <label for="type">資訊單位/審核人員 </label>
                     </v-col>
                     <v-col>
-                      <v-radio-group inline hide-details color="secondary">
+                      <v-radio-group inline color="secondary">
                         <v-radio label="許小傑" value="true"></v-radio>
                         <v-radio label="邱大發" value="false"></v-radio>
                       </v-radio-group>

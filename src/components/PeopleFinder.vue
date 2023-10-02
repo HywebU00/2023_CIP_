@@ -44,15 +44,14 @@ export default {
                 </v-col>
                 <v-col>
                   <v-row class="d-flex align-center">
-                    <v-col cols="12" class="d-flex align-center"
+                    <v-col cols="12" class="d-flex align-start"
                       ><v-text-field
                         variant="solo"
                         single-line
-                        hide-details
                         class="w-100 mr-3"
                         density="compact"
                       ></v-text-field>
-                      <v-btn class="">查詢</v-btn>
+                      <v-btn class="mt-1">查詢</v-btn>
                     </v-col>
                   </v-row>
                 </v-col>
@@ -64,7 +63,7 @@ export default {
                 <v-col>
                   <v-row>
                     <v-col cols="12" lg="3" md="4">
-                      <v-radio-group inline hide-details color="secondary">
+                      <v-radio-group inline color="secondary">
                         <v-radio label="單位" value="true"></v-radio>
                         <v-radio label="專案群組" value="false"></v-radio>
                       </v-radio-group>
@@ -75,7 +74,6 @@ export default {
                         color="secondary"
                         variant="solo"
                         single-line
-                        hide-details
                         density="compact"
                         :items="['布農族', '阿美族', '卑南族']"
                       ></v-autocomplete>
@@ -93,7 +91,6 @@ export default {
                     color="secondary"
                     variant="solo"
                     single-line
-                    hide-details
                     density="compact"
                     :items="['流程一', '流程二', '流程三']"
                   ></v-autocomplete>
@@ -107,7 +104,6 @@ export default {
                   <v-text-field
                     variant="solo"
                     single-line
-                    hide-details
                     density="compact"
                   ></v-text-field>
                 </v-col>
@@ -213,7 +209,7 @@ export default {
                       <label for="type">資訊單位/審核人員 </label>
                     </v-col>
                     <v-col>
-                      <v-radio-group inline hide-details color="secondary">
+                      <v-radio-group inline color="secondary">
                         <v-radio label="許小傑" value="true"></v-radio>
                         <v-radio label="邱大發" value="false"></v-radio>
                       </v-radio-group>

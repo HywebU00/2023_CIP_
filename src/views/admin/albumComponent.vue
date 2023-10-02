@@ -32,8 +32,8 @@
                 <v-expansion-panels v-model="panel">
                   <v-expansion-panel>
                     <v-expansion-panel-title
-                      hide-actions
                       @click.stop="panelsHandle"
+                      hide-actions
                     >
                       <v-row>
                         <v-col cols="12" md="">
@@ -42,7 +42,6 @@
                             <v-autocomplete
                               variant="solo"
                               single-line
-                              hide-details
                               density="compact"
                               :items="['1990', '1991', '1992']"
                             ></v-autocomplete>
@@ -51,7 +50,6 @@
                               variant="solo"
                               density="compact"
                               single-line
-                              hide-details
                               :items="['1990', '1991', '1992']"
                             ></v-autocomplete>
                           </div>
@@ -63,14 +61,12 @@
                               variant="solo"
                               density="compact"
                               single-line
-                              hide-details
                             ></v-text-field>
                             <span class="tilde">~</span>
                             <v-text-field
                               variant="solo"
                               single-line
                               density="compact"
-                              hide-details
                             ></v-text-field>
                           </div>
                         </v-col>
@@ -79,7 +75,7 @@
                           md="3"
                           class="d-flex justify-md-end justify-center align-center btnList"
                         >
-                          <v-btn class="submit">查詢</v-btn>
+                          <v-btn>查詢</v-btn>
                           <v-btn
                             class="searchMoreBtn"
                             @click.stop="this.panel = 0"
@@ -97,7 +93,6 @@
                               variant="solo"
                               single-line
                               density="compact"
-                              hide-details
                               :items="['主管會報', '主管會報', '主管會報']"
                             ></v-autocomplete>
                           </div>
@@ -106,17 +101,14 @@
                             <v-checkbox
                               density="compact"
                               label="繼續追蹤"
-                              hide-details
                             ></v-checkbox>
                             <v-checkbox
                               density="compact"
                               label="建議解除列管"
-                              hide-details
                             ></v-checkbox>
                             <v-checkbox
                               density="compact"
                               label="解除列管"
-                              hide-details
                             ></v-checkbox>
                           </div>
                           <div class="d-flex formGrp">
@@ -124,7 +116,6 @@
                             <v-text-field
                               variant="solo"
                               single-line
-                              hide-details
                               density="compact"
                             ></v-text-field>
                           </div>
@@ -136,14 +127,12 @@
                               variant="solo"
                               density="compact"
                               single-line
-                              hide-details
                             ></v-text-field>
                             <span class="tilde">~</span>
                             <v-text-field
                               variant="solo"
                               single-line
                               density="compact"
-                              hide-details
                             ></v-text-field>
                           </div>
                           <div class="d-flex formGrp">
@@ -151,7 +140,6 @@
                             <v-text-field
                               variant="solo"
                               single-line
-                              hide-details
                               density="compact"
                             ></v-text-field>
                           </div>
@@ -161,7 +149,6 @@
                               variant="solo"
                               single-line
                               density="compact"
-                              hide-details
                             ></v-text-field>
                           </div>
                           <div class="d-flex formGrp">
@@ -170,13 +157,12 @@
                               variant="solo"
                               single-line
                               density="compact"
-                              hide-details
                             ></v-text-field>
                           </div>
                         </v-col>
                         <v-col cols="12" class="pt-0">
                           <div class="d-flex btnList justify-center">
-                            <v-btn class="submit">查詢</v-btn>
+                            <v-btn>查詢</v-btn>
                             <v-btn class="searchMoreBtn">進階搜尋</v-btn>
                           </div>
                           <div class="d-flex justify-center">
