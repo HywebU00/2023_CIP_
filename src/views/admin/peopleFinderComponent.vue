@@ -171,14 +171,16 @@
             <PeopleFinder />
           </v-container>
           <!-- Pagination start -->
-          <div class="text-center">
-            <v-pagination
-              v-model="page"
-              :length="5"
-              rounded="circle"
-              color="primary"
-            ></v-pagination>
-          </div>
+          <v-row>
+            <v-col class="">
+              <v-pagination
+                v-model="page"
+                :length="5"
+                rounded="circle"
+                color="primary"
+              ></v-pagination>
+            </v-col>
+          </v-row>
           <!-- Pagination end -->
         </div>
       </v-card>
@@ -208,6 +210,9 @@ export default {
   created() {
     ps.setTopNavPageTiltle("帳號管理");
   },
+  mounted() {
+    this.removeIndexBg();
+  },
   methods: {
     panelsHandle() {
       if (this.panel == 0) {
@@ -218,6 +223,16 @@ export default {
     },
     open() {
       this.panel = 1;
+    },
+    removeIndexBg() {
+      const hasImg = document
+        .querySelector(".content")
+        .classList.contains("mpImg");
+      if (hasImg) {
+        document.querySelector(".content").classList.remove("mpImg");
+      } else {
+        return;
+      }
     },
   },
   components: {

@@ -334,3 +334,67 @@
     color: $defaultPrimary;
   }
 }
+
+.mpPage {
+  .v-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    padding: 1em 3rem;
+  }
+  .v-list {
+    background: unset;
+    a {
+      color: $aLinkColor;
+      font-weight: 600;
+      &:hover {
+        color: $thirdColor;
+      }
+    }
+  }
+  .linkCard {
+    padding: 0em 3rem;
+  }
+}
+.commonToolCard {
+  &.v-card {
+    padding: 0em 3em;
+    border-radius: rem(40) !important;
+  }
+  .title {
+    white-space: nowrap;
+  }
+  display: flex;
+  align-items: center;
+  .v-list {
+    background: unset;
+    margin-left: 1rem;
+    .v-list-item {
+      min-height: auto;
+      padding-inline-start: 0.25rem !important;
+    }
+  }
+}
+.linkCard {
+  display: flex;
+  align-items: center;
+  &.v-card {
+    border-radius: rem(16) !important;
+  }
+
+  .v-list {
+    margin-left: 1.5rem;
+    .v-list-item {
+      min-height: auto;
+      padding-inline-end: 0.25rem !important;
+      padding-inline-start: 0.25rem !important;
+    }
+  }
+  .linkBtn {
+    margin: 0.5rem 0.25rem 0.5rem 0.25rem;
+    height: 2.75rem !important;
+
+    .v-btn__content {
+      font-weight: 700;
+    }
+  }
+}

@@ -4,7 +4,7 @@ $theme-config: (
     GradientBg: $defaultGradient,
     loginCard: $defaultGradient,
     mainBg: $defaultGradientBg,
-    // mainBg: url('@/assets/default_indexBg.jpg') no-repeat bottom center,
+    mainImg: url('@/assets/default_indexBg.jpg') no-repeat bottom center,
     theadColor: $defaultTheadColor,
     tbodyColor: $defaultTbodyColor,
     messageColor: $defaultLight,
@@ -19,6 +19,7 @@ $theme-config: (
     GradientBg: $greenGradient,
     loginCard: $greenGradient,
     mainBg: $greenGradientBg,
+    mainImg: url('@/assets/default_indexBg.jpg') no-repeat bottom center,
     theadColor: $greenTheadColor,
     tbodyColor: $greenTbodyColor,
     messageColor: $greenLight,
@@ -33,6 +34,7 @@ $theme-config: (
     GradientBg: $blueGradient,
     loginCard: $blueGradient,
     mainBg: $blueGradientBg,
+    mainImg: url('@/assets/default_indexBg.jpg') no-repeat bottom center,
     theadColor: $blueTheadColor,
     tbodyColor: $blueTbodyColor,
     messageColor: $blueLight,
@@ -48,6 +50,7 @@ $theme-config: (
     GradientBg: $redGradient,
     loginCard: linear-gradient(to bottom, #bf4571 0%, #8e2a4d 100%),
     mainBg: $redGradientBg,
+    mainImg: url('@/assets/default_indexBg.jpg') no-repeat bottom center,
     theadColor: $redTheadColor,
     tbodyColor: $redTbodyColor,
     messageColor: $redLight,
@@ -61,6 +64,7 @@ $theme-config: (
     class: 'dark',
     GradientBg: #000,
     loginCard: rgb(35, 35, 35),
+    mainImg: #000,
     mainBg: #000,
     iconColor: #8c8c8c,
     infoColor: $defaultLight,
@@ -71,6 +75,7 @@ $theme-config: (
   $class: map-get($value, class);
   $GradientBg: map-get($value, GradientBg);
   $mainBg: map-get($value, mainBg);
+  $mainImg: map-get($value, mainImg);
   $loginCard: map-get($value, loginCard);
   $messageColor: map-get($value, messageColor);
   $theadColor: map-get($value, theadColor);
@@ -82,6 +87,9 @@ $theme-config: (
   .v-theme--#{$class} {
     .content {
       background: $mainBg;
+      &.mpImg {
+        background: $mainImg;
+      }
     }
     .navDrawer {
       > .v-navigation-drawer__content {
@@ -173,6 +181,7 @@ $theme-config: (
           background: $GradientBg;
         }
       }
+
       .filterList {
         .formContent {
           .item {
@@ -184,7 +193,15 @@ $theme-config: (
         }
       }
     }
+    .mpPage {
+      .linkCard {
+        .linkBtn {
+          background: $GradientBg;
 
+          color: #fff;
+        }
+      }
+    }
     //table style
     .v-table {
       .v-table__wrapper {

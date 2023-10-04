@@ -221,7 +221,6 @@
                 </v-col>
                 <v-col>
                   <v-autocomplete
-                    id="type"
                     color="secondary"
                     variant="solo"
                     error-messages=""
@@ -231,7 +230,6 @@
                   ></v-autocomplete>
                 </v-col>
               </v-row>
-
               <v-row class="d-flex formGrp">
                 <v-col cols="12" md="2" class="">
                   <label for="mail"
@@ -348,7 +346,6 @@
                   <v-row>
                     <v-col cols="6" md="3">
                       <v-autocomplete
-                        id="type"
                         color="secondary"
                         variant="solo"
                         single-line
@@ -360,7 +357,6 @@
                     </v-col>
                     <v-col cols="6" md="3">
                       <v-autocomplete
-                        id="type"
                         variant="solo"
                         single-line
                         color="secondary"
@@ -389,7 +385,6 @@
                   <v-row>
                     <v-col cols="12" md="6">
                       <v-autocomplete
-                        id="type"
                         color="secondary"
                         variant="solo"
                         single-line
@@ -401,7 +396,6 @@
                     </v-col>
                     <v-col cols="12" md="6">
                       <v-autocomplete
-                        id="type"
                         variant="solo"
                         single-line
                         color="secondary"
@@ -501,6 +495,9 @@ export default {
   created() {
     ps.setTopNavPageTiltle("帳號管理");
   },
+  mounted() {
+    this.removeIndexBg();
+  },
   methods: {
     panelsHandle() {
       if (this.panel == 0) {
@@ -511,6 +508,16 @@ export default {
     },
     open() {
       this.panel = 1;
+    },
+    removeIndexBg() {
+      const hasImg = document
+        .querySelector(".content")
+        .classList.contains("mpImg");
+      if (hasImg) {
+        document.querySelector(".content").classList.remove("mpImg");
+      } else {
+        return;
+      }
     },
   },
   components: {},

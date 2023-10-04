@@ -555,6 +555,9 @@ export default {
   created() {
     ps.setTopNavPageTiltle("帳號管理");
   },
+  mounted() {
+    this.removeIndexBg();
+  },
   methods: {
     panelsHandle() {
       if (this.panel == 0) {
@@ -565,6 +568,16 @@ export default {
     },
     open() {
       this.panel = 1;
+    },
+    removeIndexBg() {
+      const hasImg = document
+        .querySelector(".content")
+        .classList.contains("mpImg");
+      if (hasImg) {
+        document.querySelector(".content").classList.remove("mpImg");
+      } else {
+        return;
+      }
     },
   },
   components: {

@@ -1,0 +1,64 @@
+.mpPage {
+  .scrollContent {
+    background: unset;
+    box-shadow: none;
+  }
+
+  .pageContent {
+    .scrollContent {
+      padding-bottom: 2rem;
+      margin-bottom: 0;
+    }
+    .title {
+      color: $defaultPrimary;
+      text-shadow: unset;
+      display: block;
+      margin: 0;
+      font-size: 1.25em;
+      position: relative;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      span.icon {
+        background: #000;
+        height: 20px;
+        width: 5px;
+        display: block;
+        position: relative;
+        margin-right: 0.75rem;
+        overflow: hidden;
+        &::before {
+          content: '';
+          height: 4px;
+          width: 5px;
+          background: red;
+          left: 0px;
+          top: 4px;
+          position: absolute;
+        }
+        &::after {
+          content: '';
+          height: 4px;
+          width: 5px;
+          background: red;
+          left: 0px;
+          bottom: 4px;
+          position: absolute;
+        }
+      }
+    }
+    .moreBtn {
+      text-transform: lowercase;
+      .v-btn__content {
+        font-size: 1.25em;
+        font-weight: 700;
+        > span {
+          font-size: 1rem;
+        }
+        .icon {
+          margin-left: 0.25rem;
+        }
+      }
+    }
+  }
+}
