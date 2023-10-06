@@ -87,9 +87,9 @@ export default {
       <v-card class="scrollContent">
         <div class="">
           <!-- 常用功能 start -->
-          <v-row>
-            <v-col>
-              <v-card class="commonToolCard d-flex">
+          <v-row class="commonToolSection">
+            <v-col class="pb-2">
+              <v-card class="d-flex align-center">
                 <h3 class="title">
                   <span class="icon"></span>
                   常用功能
@@ -122,36 +122,74 @@ export default {
           </v-row>
           <!-- 常用功能 end -->
           <!-- 每日族語 start -->
-          <v-row>
-            <v-col>
-              <v-card class="languageCard">
+          <v-row class="languageSection">
+            <v-col class="pt-1 pb-2">
+              <v-card>
                 <h3 class="title">
                   <span class="icon"></span>
                   每日族語
                 </h3>
-                <v-list class="d-flex">
+                <v-list class="d-md-flex d-block justify-space-between">
                   <v-list-item>
-                    <v-list-item-content>
-                      <!-- 列表项的文本内容 -->
-                      <v-list-item-title
-                        >Ikor no pafilongan,o mamianip to ko
-                        malingday.</v-list-item-title
-                      >
-                      <v-list-item-subtitle
-                        >年假過後，農人準備插秧了。</v-list-item-subtitle
-                      >
-                    </v-list-item-content>
+                    <!-- 列表项的文本内容 -->
+                    <v-list-item-title
+                      >Ikor no pafilongan,o mamianip to ko
+                      malingday.</v-list-item-title
+                    >
+                    <v-list-item-subtitle
+                      >年假過後，農人準備插秧了。</v-list-item-subtitle
+                    >
+                  </v-list-item>
+                  <v-list-item class="btnList">
+                    <v-chip variant="elevated"> 阿美族 </v-chip>
                   </v-list-item>
                 </v-list>
-                <v-chip variant="elevated"> 阿美族 </v-chip>
               </v-card>
             </v-col>
           </v-row>
           <!-- 每日族語 end -->
           <!-- 經費填報系統 start -->
-          <v-row>
-            <v-col v-for="item in 3" :key="item">
-              <v-card class="systemCard">
+          <v-row class="systemSection mx-0">
+            <v-col class="pt-1 pb-2" cols="12" md="4">
+              <v-card>
+                <h3 class="title">
+                  <span class="icon"></span>
+                  經費結報系統
+                </h3>
+                <v-list>
+                  <v-list-item v-for="i in 3" :key="i">
+                    <v-list-item-content>
+                      <!-- 列表项的文本内容 -->
+                      <v-list-item-title class="d-flex justify-space-between">
+                        <p>代辦代辦代辦</p>
+                        <span>15</span>
+                      </v-list-item-title>
+                    </v-list-item-content>
+                  </v-list-item>
+                </v-list>
+              </v-card>
+            </v-col>
+            <v-col class="pt-1 pb-2" cols="12" md="4">
+              <v-card>
+                <h3 class="title">
+                  <span class="icon"></span>
+                  經費結報系統
+                </h3>
+                <v-list>
+                  <v-list-item v-for="i in 3" :key="i">
+                    <v-list-item-content>
+                      <!-- 列表项的文本内容 -->
+                      <v-list-item-title class="d-flex justify-space-between">
+                        <p>代辦代辦代辦</p>
+                        <span>15</span>
+                      </v-list-item-title>
+                    </v-list-item-content>
+                  </v-list-item>
+                </v-list>
+              </v-card>
+            </v-col>
+            <v-col class="pt-1 pb-2" cols="12" md="4">
+              <v-card>
                 <h3 class="title">
                   <span class="icon"></span>
                   經費結報系統
@@ -172,62 +210,96 @@ export default {
           </v-row>
           <!-- 經費填報系統 end-->
           <!-- 案件填報 start -->
-          <v-row>
-            <v-col cols="12">
-              <v-card class="systemCard">
+          <v-row class="caseSection">
+            <v-col class="pt-1 pb-2" cols="12">
+              <v-card>
                 <h3 class="title">
                   <span class="icon"></span>
                   案件填報
                 </h3>
-                <v-list class="d-flex">
-                  <v-list-item v-for="i in 3" :key="i">
-                    <v-list-item-content>
-                      <!-- 列表项的文本内容 -->
-                      <v-list-item-title class="d-flex justify-space-between">
-                        <p>代辦代辦代辦</p>
-                        <span>15</span>
-                      </v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list>
+                <v-row class="cardList">
+                  <template v-for="i in 10" :key="i">
+                    <v-col class="card" cols="6" md="4" lg="2">
+                      <v-card class="d-flex justify-space-between">
+                        <h4>電子表單</h4>
+                        <span><span class="num">15</span>件</span>
+                      </v-card>
+                    </v-col>
+                  </template>
+                </v-row>
               </v-card>
             </v-col>
           </v-row>
           <!-- 案件填報 end -->
           <!-- 線上申請 start -->
-          <v-row>
-            <v-col cols="12">
-              <v-card class="systemCard">
+          <v-row class="applySection">
+            <v-col class="pt-1 pb-2" cols="12">
+              <v-card>
                 <h3 class="title">
                   <span class="icon"></span>
                   線上申請
                 </h3>
-                <v-list class="d-flex">
-                  <v-list-item v-for="i in 3" :key="i">
-                    <v-list-item-content>
-                      <!-- 列表项的文本内容 -->
-                      <v-list-item-title class="d-flex justify-space-between">
-                        <p>代辦代辦代辦</p>
-                        <span>15</span>
-                      </v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list>
+                <v-row class="cardList">
+                  <template v-for="i in 10" :key="i">
+                    <v-col class="card" cols="6" md="4" lg="2">
+                      <v-card class="d-flex justify-space-between">
+                        <h4>電子表單</h4>
+                        <span><span class="num">15</span>件</span>
+                      </v-card>
+                    </v-col>
+                  </template>
+                </v-row>
               </v-card>
             </v-col>
           </v-row>
           <!-- 線上申請 end -->
-
+          <!-- 最新公告 start -->
+          <v-row class="newsSection">
+            <v-col class="pt-1 pb-2" cols="12">
+              <v-card>
+                <h3 class="title">
+                  <span class="icon"></span>
+                  最新公告
+                </h3>
+                <v-row class="cardList">
+                  <v-col cols="12" md="6">
+                    <v-card class="newCard">
+                      <h4>資訊科通報112年度ISMS 文件改版</h4>
+                      <div class="d-flex info">
+                        <span>人事公告</span>
+                        <time>112/06/18</time>
+                      </div>
+                    </v-card>
+                  </v-col>
+                  <v-col cols="12" md="6">
+                    <v-card class="newCard">
+                      <h4>
+                        透過中文輸入軟體「嘸蝦米試用版 V7.0.8版本」可繞過Windows
+                        Vista與Windows7密碼鎖定功能
+                        透過中文輸入軟體「嘸蝦米試用版 V7.0.8版本」可繞過Windows
+                        Vista與Windows7密碼鎖定功能
+                      </h4>
+                      <div class="d-flex info">
+                        <span>人事公告</span>
+                        <time>112/06/18</time>
+                      </div>
+                    </v-card>
+                  </v-col>
+                </v-row>
+              </v-card>
+            </v-col>
+          </v-row>
+          <!-- 最新公告 end -->
           <!-- 會內網站連結 start -->
-          <v-row>
-            <v-col cols="12">
-              <v-card class="linkCard d-flex">
+          <v-row class="linkSection">
+            <v-col class="pt-1 pb-2" cols="12">
+              <v-card class="">
                 <h3 class="title">
                   <span class="icon"></span>
                   會內網站連結
                 </h3>
                 <v-list class="d-flex">
-                  <v-list-item v-for="i in 3" :key="i">
+                  <v-list-item v-for="i in 10" :key="i">
                     <!-- 列表项的文本内容 -->
                     <v-list-item-title class="d-flex justify-space-between">
                       <a href="javascript:;">
@@ -236,10 +308,6 @@ export default {
                     </v-list-item-title>
                   </v-list-item>
                 </v-list>
-                <v-btn class="moreBtn ml-auto" variant="text">
-                  <span class="pb-1">more</span>
-                  <span class="material-icons-round icon"> fast_forward </span>
-                </v-btn>
               </v-card>
             </v-col>
           </v-row>
@@ -247,5 +315,10 @@ export default {
         </div>
       </v-card>
     </div>
+    <v-footer class="footer">
+      <v-row>
+        <v-col class="text-center"> 2023 © 原住民委員會版權所有</v-col>
+      </v-row>
+    </v-footer>
   </div>
 </template>
