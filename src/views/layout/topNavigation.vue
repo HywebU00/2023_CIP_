@@ -155,8 +155,13 @@
       <!-- 暗黑模式 start -->
       <div class="darkBtn">
         <button @click="toggleDarkTheme()">
-          <span class="material-icons-round icon"> light_mode </span>
-          <!-- <span class="material-icons-round"> dark_mode </span> -->
+          <span
+            v-if="this.themeDark === false"
+            class="material-icons-round icon"
+          >
+            light_mode
+          </span>
+          <span v-else class="material-icons-round icon"> dark_mode </span>
         </button>
       </div>
       <!-- 暗黑模式 end -->
@@ -309,6 +314,8 @@ export default {
       let th = this.$vuetify.theme.global;
       th.name === `dark` ? (th.name = `default`) : (th.name = `dark`);
       this.createCookie("Theme", `${th.name}`, 356);
+      this.themeDark = !this.themeDark;
+      console.log(this.themeDark);
     },
     changeTheme(color) {
       let th = this.$vuetify.theme.global;
@@ -382,6 +389,10 @@ export default {
       this.theme = this.readCookie("Theme") || null;
       if (this.theme == null) {
         this.theme = "default";
+        this.themeDark = false;
+      }
+      if (this.theme == "dark") {
+        this.themeDark = true;
       }
 
       this.changeTheme(this.theme);

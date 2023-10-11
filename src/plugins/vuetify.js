@@ -119,6 +119,7 @@ export default createVuetify({
           light: "#fc590f",
           submit: "#fefefe",
           thead: "#695f5f",
+          tbody: "#f7f7f5",
           cancel: "#91746c",
           import: "#fefefe",
           export: "#91746c",
