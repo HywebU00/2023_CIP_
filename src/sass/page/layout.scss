@@ -211,6 +211,9 @@
   .v-list-item__prepend {
     width: 1.5rem;
     margin-right: 0.5rem;
+    > .v-icon {
+      opacity: 1;
+    }
   }
   .v-list-item__append {
     width: 1.5rem;
@@ -463,7 +466,7 @@ button.navBtn {
     }
     :nth-child(3) {
       button {
-        background-image: linear-gradient(to bottom, #fe5d98, #f3688f, #e67289, #d97b85, #cb8284, #c88980, #c3907f, #bd9781, #bba381, #b4b087, #a9bd94, #9cc9a8);
+        background-image: linear-gradient(to bottom, #c74f7c, #b6ddbf);
       }
     }
     :nth-child(4) {

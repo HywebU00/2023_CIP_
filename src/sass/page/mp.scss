@@ -24,7 +24,6 @@
       align-items: center;
       white-space: nowrap;
       span.icon {
-        background: #000;
         height: 20px;
         width: 5px;
         display: block;
@@ -136,6 +135,7 @@
       padding: 0 rem(6);
     }
   }
+  .systemSection,
   .caseSection,
   .applySection {
     .cardList {
@@ -144,13 +144,34 @@
         padding: 0.25rem;
       }
       .v-card {
+        h4 {
+          color: $defaultPrimary;
+          + div {
+            display: flex;
+            align-items: center;
+          }
+        }
         padding: 1rem;
-        // margin-right: -1rem;
+        height: 100%;
+        align-items: center;
         border-radius: rem(10) !important;
         position: relative;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         .v-card__underlay {
           display: none;
+        }
+        span {
+          text-align: center;
+          color: $defaultPrimary;
+          font-weight: 600;
+        }
+        .num {
+          margin: 0 0.25rem;
+          color: $defaultLight;
+
+          font-size: 2.25rem;
+          font-family: serif;
+          font-weight: bold;
         }
       }
     }
@@ -263,6 +284,52 @@
       padding: 0.35rem;
       background: $defaultPrimary;
       color: #fff;
+    }
+  }
+}
+.systemSectionTooltip.v-tooltip {
+  > .v-overlay__content {
+    border-radius: rem(16) !important;
+    background-color: rgba(51, 25, 25, 0.8);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    max-width: 300px !important;
+  }
+  .cardList {
+    margin: 0.5rem -0.25rem;
+    .card {
+      padding: 0.25rem;
+      max-width: 300px;
+    }
+    .v-card {
+      h4 {
+        color: $defaultPrimary;
+        white-space: nowrap;
+        + div {
+          display: flex;
+          align-items: center;
+        }
+      }
+      padding: 0 1rem;
+      height: 100%;
+      align-items: center;
+      border-radius: rem(10) !important;
+      position: relative;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      .v-card__underlay {
+        display: none;
+      }
+      span {
+        text-align: center;
+        color: $defaultPrimary;
+        font-weight: 600;
+      }
+      .num {
+        margin: 0 0.25rem;
+        color: $defaultLight;
+        font-size: 2rem;
+        font-family: serif;
+        font-weight: bold;
+      }
     }
   }
 }

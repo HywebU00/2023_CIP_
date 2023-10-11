@@ -150,61 +150,140 @@ export default {
           <!-- 每日族語 end -->
           <!-- 經費填報系統 start -->
           <v-row class="systemSection mx-0">
-            <v-col class="pt-1 pb-2" cols="12" md="4">
+            <v-col class="pt-1 pb-2" md="4">
               <v-card>
                 <h3 class="title">
                   <span class="icon"></span>
-                  經費結報系統
+                  公文系統
                 </h3>
-                <v-list>
-                  <v-list-item v-for="i in 3" :key="i">
-                    <v-list-item-content>
-                      <!-- 列表项的文本内容 -->
-                      <v-list-item-title class="d-flex justify-space-between">
-                        <p>代辦代辦代辦</p>
-                        <span>15</span>
-                      </v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list>
+                <v-row class="cardList">
+                  <template v-for="i in 1" :key="i">
+                    <v-col cols="12" class="card">
+                      <a href="javascript:;">
+                        <v-card class="d-flex justify-space-between">
+                          <h4>待辦</h4>
+                          <div><span class="num">15</span><span>件</span></div>
+                        </v-card>
+                        <v-tooltip
+                          class="systemSectionTooltip"
+                          activator="parent"
+                          location="bottom"
+                        >
+                          <v-row class="cardList">
+                            <template v-for="i in 5" :key="i">
+                              <v-col class="card">
+                                <v-card class="d-flex justify-space-between">
+                                  <h4>待辦</h4>
+                                  <div>
+                                    <span class="num">15</span><span>件</span>
+                                  </div>
+                                </v-card>
+                              </v-col>
+                            </template>
+                          </v-row>
+                        </v-tooltip>
+                      </a>
+                    </v-col>
+                  </template>
+                </v-row>
               </v-card>
             </v-col>
-            <v-col class="pt-1 pb-2" cols="12" md="4">
+            <v-col class="pt-1 pb-2" md="4">
               <v-card>
                 <h3 class="title">
                   <span class="icon"></span>
-                  經費結報系統
+                  差勤系統
                 </h3>
-                <v-list>
-                  <v-list-item v-for="i in 3" :key="i">
-                    <v-list-item-content>
-                      <!-- 列表项的文本内容 -->
-                      <v-list-item-title class="d-flex justify-space-between">
-                        <p>代辦代辦代辦</p>
-                        <span>15</span>
-                      </v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list>
+                <v-row class="cardList">
+                  <template v-for="i in 1" :key="i">
+                    <v-col cols="12" class="card">
+                      <a href="javascript:;">
+                        <v-card class="d-flex justify-space-between">
+                          <h4>待辦</h4>
+                          <div><span class="num">15</span><span>件</span></div>
+                        </v-card>
+                        <v-tooltip
+                          class="systemSectionTooltip"
+                          activator="parent"
+                          location="bottom"
+                        >
+                          <v-row class="cardList">
+                            <v-col class="card">
+                              <v-card class="d-flex justify-space-between">
+                                <h4>待辦</h4>
+                                <div>
+                                  <span class="num">15</span><span>件</span>
+                                </div>
+                              </v-card>
+                            </v-col>
+                            <v-col class="card">
+                              <v-card class="d-flex justify-space-between">
+                                <h4>待簽收</h4>
+                                <div>
+                                  <span class="num">220</span><span>件</span>
+                                </div>
+                              </v-card>
+                            </v-col>
+                            <v-col class="card">
+                              <v-card class="d-flex justify-space-between">
+                                <h4>待辦理</h4>
+                                <div>
+                                  <span class="num">320</span><span>件</span>
+                                </div>
+                              </v-card>
+                            </v-col>
+                            <v-col class="card">
+                              <v-card class="d-flex justify-space-between">
+                                <h4>問卷填報</h4>
+                                <div>
+                                  <span class="num">280</span><span>件</span>
+                                </div>
+                              </v-card>
+                            </v-col>
+                          </v-row>
+                        </v-tooltip>
+                      </a>
+                    </v-col>
+                  </template>
+                </v-row>
               </v-card>
             </v-col>
-            <v-col class="pt-1 pb-2" cols="12" md="4">
+            <v-col class="pt-1 pb-2" md="4">
               <v-card>
                 <h3 class="title">
                   <span class="icon"></span>
-                  經費結報系統
+                  經費填報系統
                 </h3>
-                <v-list>
-                  <v-list-item v-for="i in 3" :key="i">
-                    <v-list-item-content>
-                      <!-- 列表项的文本内容 -->
-                      <v-list-item-title class="d-flex justify-space-between">
-                        <p>代辦代辦代辦</p>
-                        <span>15</span>
-                      </v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list>
+                <v-row class="cardList">
+                  <template v-for="i in 1" :key="i">
+                    <v-col cols="12" class="card">
+                      <a href="javascript:;">
+                        <v-card class="d-flex justify-space-between">
+                          <h4>待辦</h4>
+                          <div><span class="num">15</span><span>件</span></div>
+                        </v-card>
+                        <v-tooltip
+                          class="systemSectionTooltip"
+                          activator="parent"
+                          location="bottom"
+                        >
+                          <v-row class="cardList">
+                            <template v-for="i in 5" :key="i">
+                              <v-col class="card">
+                                <v-card class="d-flex justify-space-between">
+                                  <h4>待辦</h4>
+                                  <div>
+                                    <span class="num">15</span><span>件</span>
+                                  </div>
+                                </v-card>
+                              </v-col>
+                            </template>
+                          </v-row>
+                        </v-tooltip>
+                      </a>
+                    </v-col>
+                  </template>
+                </v-row>
               </v-card>
             </v-col>
           </v-row>
@@ -218,11 +297,23 @@ export default {
                   案件填報
                 </h3>
                 <v-row class="cardList">
-                  <template v-for="i in 10" :key="i">
+                  <template v-for="i in 3" :key="i">
                     <v-col class="card" cols="6" md="4" lg="2">
                       <v-card class="d-flex justify-space-between">
                         <h4>電子表單</h4>
-                        <span><span class="num">15</span>件</span>
+                        <div><span class="num">15</span><span>件</span></div>
+                      </v-card>
+                    </v-col>
+                    <v-col class="card" cols="6" md="4" lg="2">
+                      <v-card class="d-flex justify-space-between">
+                        <h4>待簽收</h4>
+                        <div><span class="num">30</span><span>件</span></div>
+                      </v-card>
+                    </v-col>
+                    <v-col class="card" cols="6" md="4" lg="2">
+                      <v-card class="d-flex justify-space-between">
+                        <h4>領物單</h4>
+                        <div><span class="num">6</span><span>件</span></div>
                       </v-card>
                     </v-col>
                   </template>
@@ -240,11 +331,23 @@ export default {
                   線上申請
                 </h3>
                 <v-row class="cardList">
-                  <template v-for="i in 10" :key="i">
+                  <template v-for="i in 3" :key="i">
                     <v-col class="card" cols="6" md="4" lg="2">
                       <v-card class="d-flex justify-space-between">
                         <h4>電子表單</h4>
-                        <span><span class="num">15</span>件</span>
+                        <div><span class="num">15</span><span>件</span></div>
+                      </v-card>
+                    </v-col>
+                    <v-col class="card" cols="6" md="4" lg="2">
+                      <v-card class="d-flex justify-space-between">
+                        <h4>待簽收</h4>
+                        <div><span class="num">30</span><span>件</span></div>
+                      </v-card>
+                    </v-col>
+                    <v-col class="card" cols="6" md="4" lg="2">
+                      <v-card class="d-flex justify-space-between">
+                        <h4>領物單</h4>
+                        <div><span class="num">6</span><span>件</span></div>
                       </v-card>
                     </v-col>
                   </template>
@@ -262,7 +365,7 @@ export default {
                   最新公告
                 </h3>
                 <v-row class="cardList">
-                  <v-col cols="12" md="6">
+                  <v-col md="6">
                     <v-card class="newCard">
                       <h4>資訊科通報112年度ISMS 文件改版</h4>
                       <div class="d-flex info">
@@ -271,7 +374,7 @@ export default {
                       </div>
                     </v-card>
                   </v-col>
-                  <v-col cols="12" md="6">
+                  <v-col md="6">
                     <v-card class="newCard">
                       <h4>
                         透過中文輸入軟體「嘸蝦米試用版 V7.0.8版本」可繞過Windows

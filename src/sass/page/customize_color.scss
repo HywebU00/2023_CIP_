@@ -19,7 +19,7 @@ $theme-config: (
     GradientBg: $greenGradient,
     loginCard: $greenGradient,
     mainBg: $greenGradientBg,
-    mainImg: url('@/assets/default_indexBg.jpg') no-repeat bottom center,
+    mainImg: url('@/assets/green_indexBg.jpg') no-repeat bottom center,
     theadColor: $greenTheadColor,
     tbodyColor: $greenTbodyColor,
     messageColor: $greenLight,
@@ -34,7 +34,7 @@ $theme-config: (
     GradientBg: $blueGradient,
     loginCard: $blueGradient,
     mainBg: $blueGradientBg,
-    mainImg: url('@/assets/default_indexBg.jpg') no-repeat bottom center,
+    mainImg: url('@/assets/blue_indexBg.jpg') no-repeat bottom center,
     theadColor: $blueTheadColor,
     tbodyColor: $blueTbodyColor,
     messageColor: $blueLight,
@@ -50,7 +50,7 @@ $theme-config: (
     GradientBg: $redGradient,
     loginCard: linear-gradient(to bottom, #bf4571 0%, #8e2a4d 100%),
     mainBg: $redGradientBg,
-    mainImg: url('@/assets/default_indexBg.jpg') no-repeat bottom center,
+    mainImg: url('@/assets/red_indexBg.jpg') no-repeat bottom center,
     theadColor: $redTheadColor,
     tbodyColor: $redTbodyColor,
     messageColor: $redLight,
@@ -62,12 +62,13 @@ $theme-config: (
   ),
   dark: (
     class: 'dark',
-    GradientBg: #000,
+    GradientBg: linear-gradient(to bottom, #c1c1c1 0%, #808080 100%),
     loginCard: rgb(35, 35, 35),
     mainImg: #000,
     mainBg: #000,
     iconColor: #8c8c8c,
     infoColor: $defaultLight,
+    messageColor: $defaultLight,
   ),
 );
 
@@ -194,11 +195,31 @@ $theme-config: (
       }
     }
     .mpPage {
+      .pageContent {
+        .title {
+          span.icon {
+            background: $primary;
+            &::before,
+            &::after {
+              background: $light;
+            }
+          }
+        }
+      }
       .linkSection {
         .linkBtn {
           background: $GradientBg;
 
           color: #fff;
+        }
+      }
+      .newsSection {
+        .newCard {
+          &::before,
+          &::after {
+            background-color: $primary;
+            border: 5px solid $light;
+          }
         }
       }
     }
@@ -320,6 +341,37 @@ $theme-config: (
         }
       }
     }
+    &.hidden .userInfo {
+      button {
+        span {
+          color: #fff;
+        }
+      }
+      &:hover {
+        button {
+          span {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .userInfo {
+      ul > li {
+        color: #000;
+      }
+      button {
+        span {
+          color: #000;
+        }
+      }
+      &:hover {
+        button {
+          span {
+            color: #000;
+          }
+        }
+      }
+    }
     &.v-theme--dark {
       background: rgb(35 35 35);
       .v-list-item__content {
@@ -327,6 +379,49 @@ $theme-config: (
           filter: invert(1);
         }
       }
+    }
+  }
+  .navTitle {
+    .userLoginCard {
+      .userLoginCardBtn {
+        background: rgb(70, 70, 70);
+        .material-icons-round {
+          background: rgb(70, 70, 70);
+        }
+      }
+    }
+  }
+  .v-text-field {
+    .v-field {
+      background: rgba(255, 255, 255, 10%);
+    }
+  }
+  .fontBtnContainer,
+  .colorBtnContainer {
+    button {
+      border-color: rgb(80, 80, 80);
+      background: linear-gradient(to bottom, #939393 0%, #505050 100%);
+      color: #fff;
+    }
+  }
+  .formGrp {
+    label {
+      color: #fff;
+    }
+  }
+  .filterList {
+    .selectItem {
+      .v-field__field {
+        .v-field__input input {
+          &::placeholder {
+            color: #fff;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .iconImg {
+      filter: contrast(0);
     }
   }
   .functionList {
@@ -351,10 +446,163 @@ $theme-config: (
   .webSearch .v-field__append-inner .v-icon {
     color: #fff;
   }
+  .page {
+    .searchGrp {
+      .btnList {
+        button {
+          background: linear-gradient(to bottom, #6a6a6a 0%, #9a9a9a 100%);
+          .v-btn__content {
+            color: #fff;
+          }
+        }
+        .searchMoreBtn {
+          background: $defaultGradient;
+        }
+      }
+      .searchList {
+        .v-expansion-panel {
+          background: rgba(255, 255, 255, 10%);
+        }
+      }
+    }
+    .closeSearchMoreBtn {
+      background-color: #7e7e7e !important;
+    }
+  }
   .infoBtnContainer {
     li {
       div {
         color: #fff;
+      }
+    }
+  }
+  .mpPage {
+    .pageContent {
+      .title {
+        color: #fff;
+        span.icon {
+          background: #ccc;
+          &::before {
+            background: #fc590f;
+          }
+          &::after {
+            background: #fc590f;
+          }
+        }
+      }
+      .systemSection,
+      .caseSection,
+      .applySection {
+        .cardList {
+          .v-card {
+            h4 {
+              color: #fff;
+            }
+            span {
+              color: #fff;
+            }
+            .num {
+              color: $defaultLight;
+            }
+          }
+        }
+      }
+      .newsSection {
+        .newCard {
+          h4 {
+            color: #fff;
+          }
+          .info {
+            color: #ccc;
+          }
+          &::before {
+            background: #6a6a6a;
+            border: 5px solid $defaultLight;
+          }
+          &::after {
+            background: #6a6a6a;
+            border: 5px solid $defaultLight;
+          }
+        }
+      }
+    }
+    .v-card {
+      background-color: rgba(255, 255, 255, 10%);
+    }
+    .footer {
+      .v-col {
+        background: rgb(40, 40, 40);
+      }
+    }
+    .commonToolSection {
+      .v-list {
+        .v-list-item {
+          p {
+            color: #9a9a9a;
+          }
+        }
+      }
+    }
+    .languageSection {
+      .v-list-item-title {
+        color: #fff;
+      }
+      .v-list-item-subtitle {
+        color: #ccc;
+      }
+      .btnList {
+        .v-chip {
+          background: #df419d;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.systemSectionTooltip.v-tooltip {
+    > .v-overlay__content {
+      background-color: rgba(100, 100, 100, 0.6);
+      .v-card {
+        h4 {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.dialogCard {
+    .v-card {
+      .formGrp {
+        label {
+          color: #fff;
+        }
+        .v-field,
+        .v-field__field {
+          background: rgb(40, 40, 40);
+        }
+      }
+      .infoGrp {
+        span {
+          color: #fff;
+        }
+      }
+    }
+    .v-card-actions {
+      .v-btn {
+        &.submit {
+          background: $defaultGradient !important;
+          .v-btn__content {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &.peopleFinderCard {
+    .v-card-actions {
+      .v-btn.submit {
+        background: $defaultGradient !important;
+        .v-btn__content {
+          color: #fff;
+        }
       }
     }
   }
