@@ -578,9 +578,9 @@ main {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  ::-webkit-scrollbar {
-    display: none;
-  }
+  // ::-webkit-scrollbar {
+  //   display: none;
+  // }
   .header,
   .main {
     margin-left: rem(252);
