@@ -53,7 +53,7 @@ export default {
       desserts: [
         {
           name: "首頁",
-          link: "",
+          link: "https://hywebu00.github.io/2023_CIP_/#/ui/mp",
           note: "",
           // https://hywebu00.github.io/2023_CIP_/#/ui/mp
         },

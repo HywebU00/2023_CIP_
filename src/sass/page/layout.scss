@@ -20,7 +20,7 @@
   }
 }
 html {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 //手機版本切換
 .mobileSearchBtn {
@@ -160,7 +160,7 @@ html {
       + .v-list {
         width: rem(220);
         margin: 0 auto;
-        padding: 0;
+        padding: 0 0.25rem 0 0.5rem;
         overflow-y: scroll;
       }
     }
@@ -258,7 +258,7 @@ html {
       background: $defaultThird;
     }
     &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px $defaultBg;
+      // box-shadow: inset 0 0 5px $defaultBg;
       border-radius: 0;
       background: $defaultBg;
       border-radius: 5px;
@@ -514,11 +514,28 @@ button.navBtn {
     overflow-y: scroll;
     max-height: rem(300);
     margin: 1rem;
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+      padding-left: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 100px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: $defaultThird;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px $defaultBg;
+      border-radius: 0;
+      background: $defaultBg;
+      border-radius: 5px;
+    }
   }
   li {
     display: flex;
     border-bottom: #ccc 1px solid;
     align-items: center;
+    margin-right: 0.5rem;
     &:first-child {
       margin-top: 0rem;
     }

@@ -298,6 +298,34 @@
                   </span>
                 </a>
               </li>
+              <li>
+                <a href="#">
+                  <div>
+                    <span class="title"
+                      >您有一則最新指派案件，立即查看與填報
+                      您有一則最新指派案件，立即查看與填報</span
+                    >
+                    <span class="time">111/06/30</span>
+                  </div>
+                  <span class="arrow_icon">
+                    <img src="~@/assets/info_arrow.png" alt="" />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div>
+                    <span class="title"
+                      >您有一則最新指派案件，立即查看與填報
+                      您有一則最新指派案件，立即查看與填報</span
+                    >
+                    <span class="time">111/06/30</span>
+                  </div>
+                  <span class="arrow_icon">
+                    <img src="~@/assets/info_arrow.png" alt="" />
+                  </span>
+                </a>
+              </li>
             </ul>
           </v-card>
         </v-menu>

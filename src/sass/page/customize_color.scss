@@ -8,6 +8,7 @@ $theme-config: (
     theadColor: $defaultTheadColor,
     tbodyColor: $defaultTbodyColor,
     messageColor: $defaultLight,
+    scrollbarColor: $defaultPrimary,
     //////////////////////////////
     primary: $defaultPrimary,
     light: $defaultLight,
@@ -23,6 +24,7 @@ $theme-config: (
     theadColor: $greenTheadColor,
     tbodyColor: $greenTbodyColor,
     messageColor: $greenLight,
+    scrollbarColor: $greenSecondary,
     //////////////////////////////
     primary: $greenPrimary,
     light: $greenLight,
@@ -38,6 +40,7 @@ $theme-config: (
     theadColor: $blueTheadColor,
     tbodyColor: $blueTbodyColor,
     messageColor: $blueLight,
+    scrollbarColor: $blueSecondary,
     //////////////////////////////
     primary: $bluePrimary,
     light: $blueLight,
@@ -54,6 +57,7 @@ $theme-config: (
     theadColor: $redTheadColor,
     tbodyColor: $redTbodyColor,
     messageColor: $redLight,
+    scrollbarColor: $redSecondary,
     //////////////////////////////
     primary: $redPrimary,
     light: $redLight,
@@ -71,6 +75,7 @@ $theme-config: (
     tbodyColor: rgb(50, 50, 50),
     infoColor: $defaultLight,
     messageColor: $defaultLight,
+    scrollbarColor: #8c8c8c,
   ),
 );
 
@@ -87,6 +92,7 @@ $theme-config: (
   $light: map-get($value, light);
   $secondary: map-get($value, secondary);
   $third: map-get($value, third);
+  $scrollbarColor: map-get($value, scrollbarColor);
   .v-theme--#{$class} {
     .content {
       background: $mainBg;
@@ -121,7 +127,13 @@ $theme-config: (
           }
         }
       }
+      .text-navText {
+        &::-webkit-scrollbar-thumb {
+          background: lighten($scrollbarColor, 50);
+        }
+      }
     }
+
     .userInfo {
       background: $GradientBg;
       &:hover {
@@ -170,6 +182,11 @@ $theme-config: (
       }
     }
     .infoBtnContainer {
+      ul {
+        &::-webkit-scrollbar-thumb {
+          background: lighten($scrollbarColor, 30);
+        }
+      }
       li {
         div {
           &::before {
@@ -184,7 +201,6 @@ $theme-config: (
           background: $GradientBg;
         }
       }
-
       .filterList {
         .formContent {
           .item {
@@ -193,6 +209,11 @@ $theme-config: (
           .functionBtnGrp > span {
             border-right: 1px solid $third;
           }
+        }
+      }
+      .pageContent {
+        &::-webkit-scrollbar-thumb {
+          background: lighten($scrollbarColor, 30);
         }
       }
     }
@@ -380,6 +401,11 @@ $theme-config: (
         img {
           filter: invert(1);
         }
+      }
+    }
+    .text-navText {
+      &::-webkit-scrollbar-track {
+        background: unset;
       }
     }
   }
