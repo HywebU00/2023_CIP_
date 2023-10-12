@@ -180,17 +180,29 @@
           <v-card class="fontBtnContainer" min-width="100">
             <ul class="d-flex">
               <li>
-                <button role="button" @click="fontSizeChange('small')">
+                <button
+                  role="button"
+                  @click="fontSizeChange('small')"
+                  :class="[{ active: this.fontSize === 'small' }]"
+                >
                   小
                 </button>
               </li>
               <li>
-                <button role="button" @click="fontSizeChange('medium')">
+                <button
+                  role="button"
+                  @click="fontSizeChange('medium')"
+                  :class="[{ active: this.fontSize === 'medium' }]"
+                >
                   中
                 </button>
               </li>
               <li>
-                <button role="button" @click="fontSizeChange('large')">
+                <button
+                  role="button"
+                  @click="fontSizeChange('large')"
+                  :class="[{ active: this.fontSize === 'large' }]"
+                >
                   大
                 </button>
               </li>
@@ -207,27 +219,35 @@
           location="bottom"
         >
           <template v-slot:activator="{ props }">
-            <button v-bind="props">
+            <button v-bind="props" @click="changeThemeActive">
               <span class="material-icons-round icon"> palette </span>
             </button>
           </template>
-          <v-card class="colorBtnContainer" min-width="100">
+          <v-card class="colorBtnContainer" ref="el" min-width="100">
             <ul class="d-flex">
               <li>
                 <button
-                  class="default active"
                   @click="changeTheme('default')"
+                  :class="['default', { active: this.theme === 'default' }]"
                 ></button>
               </li>
               <li>
-                <button class="green" @click="changeTheme('green')"></button>
+                <button
+                  @click="changeTheme('green')"
+                  :class="['green', { active: this.theme === 'green' }]"
+                ></button>
               </li>
-              <li><button class="red" @click="changeTheme('red')"></button></li>
               <li>
                 <button
-                  class="blue"
+                  @click="changeTheme('red')"
+                  :class="['red', { active: this.theme === 'red' }]"
+                ></button>
+              </li>
+              <li>
+                <button
                   color="primary"
                   @click="changeTheme('blue')"
+                  :class="['blue', { active: this.theme === 'blue' }]"
                 ></button>
               </li>
             </ul>
@@ -301,6 +321,7 @@ export default {
     userLoginCard: false,
     ////////////////////////
     fontSizeMenu: false,
+    fontSize: "",
     colorMenu: false,
     infoMenu: false,
     searchMenu: false,
@@ -315,16 +336,16 @@ export default {
       th.name === `dark` ? (th.name = `default`) : (th.name = `dark`);
       this.createCookie("Theme", `${th.name}`, 356);
       this.themeDark = !this.themeDark;
-      console.log(this.themeDark);
+      if (this.themeDark === false) {
+        this.theme = "default";
+      }
     },
     changeTheme(color) {
       let th = this.$vuetify.theme.global;
       th.name = color;
       this.theme = color;
-      this.changeThemeActive();
       this.createCookie("Theme", `${color}`, 356);
     },
-    changeThemeActive() {},
     fontSizeChange(targetSize) {
       this.createCookie("FontSize", `${targetSize}`, 356);
       this.changeFontSizeClass(targetSize);
@@ -351,14 +372,17 @@ export default {
         case "small":
           body.classList.remove("largeSize", "mediumSize");
           body.classList.add("smallSize");
+          this.fontSize = "small";
           break;
         case "medium":
           body.classList.remove("smallSize", "largeSize");
           body.classList.add("mediumSize");
+          this.fontSize = "medium";
           break;
         case "large":
           body.classList.remove("smallSize", "mediumSize");
           body.classList.add("largeSize");
+          this.fontSize = "large";
           break;
       }
       this.getFontSizeText(targetName);
@@ -382,6 +406,7 @@ export default {
       if (this.cookie == null) {
         this.cookie = "medium";
       }
+      this.fontSize = this.cookie;
       body.classList.add(`${this.cookie}Size`);
       this.getFontSizeText(this.cookie);
     },
@@ -394,7 +419,6 @@ export default {
       if (this.theme == "dark") {
         this.themeDark = true;
       }
-
       this.changeTheme(this.theme);
     },
     //桌機與手機版本header 切換
