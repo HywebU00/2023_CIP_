@@ -8,7 +8,7 @@ $theme-config: (
     theadColor: $defaultTheadColor,
     tbodyColor: $defaultTbodyColor,
     messageColor: $defaultLight,
-    scrollbarColor: $defaultPrimary,
+    scrollbarColor: #bf5f46,
     //////////////////////////////
     primary: $defaultPrimary,
     light: $defaultLight,
@@ -129,7 +129,7 @@ $theme-config: (
       }
       .text-navText {
         &::-webkit-scrollbar-thumb {
-          background: lighten($scrollbarColor, 50);
+          background: lighten($scrollbarColor, 35);
         }
       }
     }
@@ -213,7 +213,7 @@ $theme-config: (
       }
       .pageContent {
         &::-webkit-scrollbar-thumb {
-          background: lighten($scrollbarColor, 30);
+          background: lighten($scrollbarColor, 10);
         }
       }
     }
@@ -313,6 +313,15 @@ $theme-config: (
       }
     }
 
+    &.isSmallScreen {
+      .navDrawer {
+        .drawerBtn {
+          &:hover {
+            background: lighten($scrollbarColor, 30);
+          }
+        }
+      }
+    }
     //v-dialog Btn style
     &.v-dialog {
       .v-card-actions {
