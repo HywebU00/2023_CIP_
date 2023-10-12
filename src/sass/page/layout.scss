@@ -1,7 +1,4 @@
 * {
-  html {
-    overflow: hidden;
-  }
   ul {
     list-style: none;
     padding-left: 0;
@@ -21,6 +18,9 @@
       outline: 2px solid lighten($defaultThird, 30);
     }
   }
+}
+html {
+  overflow: hidden;
 }
 //手機版本切換
 .mobileSearchBtn {
