@@ -1,4 +1,7 @@
 * {
+  html {
+    overflow: hidden;
+  }
   ul {
     list-style: none;
     padding-left: 0;
@@ -578,9 +581,7 @@ main {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  // ::-webkit-scrollbar {
-  //   display: none;
-  // }
+
   .header,
   .main {
     margin-left: rem(252);
