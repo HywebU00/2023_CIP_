@@ -36,7 +36,7 @@
     .drawerBtn {
       top: 0.5rem;
       right: 1.5rem;
-      // box-shadow: unset;
+      z-index: 1;
       width: rem(48);
       height: rem(48);
       border-radius: 10px !important;
@@ -158,11 +158,11 @@
         width: rem(220);
         margin: 0 auto;
         padding: 0;
+        overflow-y: scroll;
       }
     }
     .v-list {
       flex-grow: 1;
-      overflow-y: scroll;
       .v-list-item--nav:not(:only-child) {
         margin-bottom: 0;
       }
@@ -578,6 +578,9 @@ main {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  ::-webkit-scrollbar {
+    display: none;
+  }
   .header,
   .main {
     margin-left: rem(252);
