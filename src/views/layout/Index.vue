@@ -53,7 +53,7 @@
           </v-list>
         </v-list-group>
         <!-- 案件管理 start -->
-        <v-list-group value="我的首頁">
+        <v-list-group value="我的首頁" v-for="i in 5" :key="i">
           <template v-slot:activator="{ props }">
             <v-list-item
               v-bind="props"
