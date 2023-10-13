@@ -40,7 +40,8 @@ $theme-config: (
     theadColor: $blueTheadColor,
     tbodyColor: $blueTbodyColor,
     messageColor: $blueLight,
-    scrollbarColor: $blueSecondary,
+    scrollbarColor: #0e4c80,
+    //$blueSecondary,
     //////////////////////////////
     primary: $bluePrimary,
     light: $blueLight,
@@ -641,6 +642,16 @@ $theme-config: (
           color: #fff;
         }
       }
+    }
+  }
+  .treeviewBlock {
+    .item > div {
+      &:hover {
+        background: rgba(255, 255, 255, 10%);
+      }
+    }
+    .treeTitle {
+      color: #fff;
     }
   }
 }
