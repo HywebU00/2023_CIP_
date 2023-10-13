@@ -43,7 +43,6 @@ html {
       width: rem(48);
       height: rem(48);
       border-radius: 10px !important;
-      // background-color: lighten($defaultLight, 30);
       background: #fff;
       transition: 0.5s all;
       span {
@@ -258,7 +257,6 @@ html {
       background: $defaultThird;
     }
     &::-webkit-scrollbar-track {
-      // box-shadow: inset 0 0 5px $defaultBg;
       border-radius: 0;
       background: $defaultBg;
       border-radius: 5px;
@@ -270,7 +268,6 @@ html {
   background: #ccc;
   border-radius: 0.5rem;
   padding: rem(10);
-  // margin: 1rem 1.5rem 1.5rem 1.5rem;
   margin: 1rem;
   min-height: rem(60);
   overflow: hidden;
@@ -313,7 +310,6 @@ html {
     }
     .v-list-group {
       .v-list-item {
-        // padding: 0 1rem;
         border-radius: 50%;
         height: 3rem;
         width: 3rem;
@@ -617,7 +613,6 @@ main {
   .main {
     padding: 0 2rem;
     flex-grow: 1;
-    // overflow-x: scroll;
   }
   height: 100vh;
   width: 100vw;
@@ -710,7 +705,6 @@ main {
         border-radius: 0.5rem 0 0 0.5rem;
         width: 0;
         overflow: hidden;
-        // margin-right: rem(-260);
         ul {
           padding-right: 1.5rem;
         }
