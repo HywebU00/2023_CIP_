@@ -402,14 +402,44 @@ export default {
                   會內網站連結
                 </h3>
                 <v-list class="d-flex">
-                  <v-list-item v-for="i in 10" :key="i">
-                    <!-- 列表项的文本内容 -->
-                    <v-list-item-title class="d-flex justify-space-between">
-                      <a href="javascript:;">
-                        <v-btn class="linkBtn"> 原住民人口資料庫 </v-btn>
-                      </a>
-                    </v-list-item-title>
-                  </v-list-item>
+                  <template v-for="i in 5" :key="i">
+                    <v-list-item>
+                      <!-- 列表项的文本内容 -->
+                      <v-list-item-title class="d-flex justify-space-between">
+                        <a href="javascript:;">
+                          <v-btn class="linkBtn"> 原住民人口資料庫 </v-btn>
+                        </a>
+                      </v-list-item-title>
+                    </v-list-item>
+                    <v-list-item>
+                      <v-list-item-title class="d-flex justify-space-between">
+                        <a href="javascript:;">
+                          <v-btn class="linkBtn"> 原住民人 </v-btn>
+                        </a>
+                      </v-list-item-title>
+                    </v-list-item>
+                    <v-list-item>
+                      <v-list-item-title class="d-flex justify-space-between">
+                        <a href="javascript:;">
+                          <v-btn class="linkBtn"> 原住民 </v-btn>
+                        </a>
+                      </v-list-item-title>
+                    </v-list-item>
+                    <v-list-item>
+                      <v-list-item-title class="d-flex justify-space-between">
+                        <a href="javascript:;">
+                          <v-btn class="linkBtn"> 原住民原住民 </v-btn>
+                        </a>
+                      </v-list-item-title>
+                    </v-list-item>
+                    <v-list-item>
+                      <v-list-item-title class="d-flex justify-space-between">
+                        <a href="javascript:;">
+                          <v-btn class="linkBtn"> 原住民人口資料庫 </v-btn>
+                        </a>
+                      </v-list-item-title>
+                    </v-list-item>
+                  </template>
                 </v-list>
               </v-card>
             </v-col>

@@ -85,9 +85,17 @@
     .v-card {
       padding: 0em 2em;
       border-radius: rem(40) !important;
+      @include screen('mobile') {
+        flex-wrap: wrap;
+        border-radius: rem(16) !important;
+        padding: 1em 2rem;
+      }
     }
     .title {
       white-space: nowrap;
+      @include screen('mobile') {
+        width: 100%;
+      }
     }
     display: flex;
     align-items: center;
