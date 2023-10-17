@@ -459,6 +459,14 @@ $theme-config: (
     .iconImg {
       filter: contrast(0);
     }
+    .v-btn-group {
+      button.v-btn--active {
+        background: #fff;
+        > .v-btn__overlay {
+          opacity: 0;
+        }
+      }
+    }
   }
   .functionList {
     .icon,

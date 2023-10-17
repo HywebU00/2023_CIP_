@@ -159,9 +159,9 @@
             v-if="this.themeDark === false"
             class="material-icons-round icon"
           >
-            light_mode
+            dark_mode
           </span>
-          <span v-else class="material-icons-round icon"> dark_mode </span>
+          <span v-else class="material-icons-round icon"> light_mode </span>
         </button>
       </div>
       <!-- 暗黑模式 end -->
