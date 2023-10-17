@@ -107,12 +107,6 @@
       <!-- 單一遷入系統暨會內入口網 -->
       <v-menu>
         <template v-slot:activator="{ props }">
-          <!-- <v-btn
-            color="bright"
-            v-bind="props"
-            icon="mdi-open-in-new"
-            size="small"
-          ></v-btn> -->
           <button class="navBtn" v-bind="props">
             <span class="material-icons-round icon"> launch </span>
           </button>
@@ -156,7 +150,7 @@
       <div class="darkBtn">
         <button @click="toggleDarkTheme()">
           <span
-            v-if="this.themeDark === false"
+            v-if="this.themeDark === true"
             class="material-icons-round icon"
           >
             dark_mode
@@ -364,7 +358,7 @@ export default {
       th.name === `dark` ? (th.name = `default`) : (th.name = `dark`);
       this.createCookie("Theme", `${th.name}`, 356);
       this.themeDark = !this.themeDark;
-      if (this.themeDark === false) {
+      if (this.themeDark === true) {
         this.theme = "default";
       }
     },
@@ -372,6 +366,7 @@ export default {
       let th = this.$vuetify.theme.global;
       th.name = color;
       this.theme = color;
+      this.themeDark = false;
       this.createCookie("Theme", `${color}`, 356);
     },
     fontSizeChange(targetSize) {
