@@ -40,8 +40,8 @@ html {
       top: 0.5rem;
       right: 1.5rem;
       z-index: 1;
-      width: rem(48);
-      height: rem(48);
+      width: rem(40);
+      height: rem(40);
       border-radius: 10px !important;
       background: #fff;
       transition: 0.5s all;
@@ -172,7 +172,7 @@ html {
     .v-list-item {
       height: rem(50);
       font-weight: 500;
-      padding: 0.5rem 1rem;
+      padding: 0.25rem 0.75rem;
       border-radius: 0.5rem;
       z-index: 1;
       .v-list-item-title {
@@ -183,9 +183,11 @@ html {
       }
       + .v-list-group__items {
         .v-list-item {
-          height: rem(45);
-          min-height: unset;
+          // height: rem(36);
+          height: unset;
+          min-height: rem(36);
           margin-bottom: 0px;
+          padding-inline-start: 1rem !important;
           .v-list-item-title {
             font-size: em(15);
             line-height: rem(16);
@@ -228,11 +230,11 @@ html {
     position: absolute;
     display: flex;
     justify-content: center;
-    right: -30px;
+    right: -20px;
     top: calc(50vh - 60px);
     background: $defaultBg;
-    width: rem(60);
-    height: rem(60);
+    width: rem(40);
+    height: rem(40);
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.15) 2px 0px 3px;
     z-index: -1;
@@ -240,7 +242,8 @@ html {
       transition: 0.5s all;
       margin-left: 0.5rem;
       color: $defaultPrimary;
-      font-size: 3rem;
+      font-size: 2rem;
+      margin-right: 0.25rem;
       transform: rotate(180deg);
     }
   }
@@ -431,6 +434,9 @@ button.navBtn {
   }
   .v-field__input {
     height: rem(35);
+    input {
+      padding: 0 1rem;
+    }
   }
   .v-field__append-inner {
     .v-icon {

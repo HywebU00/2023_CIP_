@@ -27,7 +27,8 @@ $boxShadow: rgba(51, 64, 76, 0.2) 0px 8px 24px;
 
 //mediaquery
 $screen-lg: 1400px !default; //電腦
-$screen-md-max: 992px !default; //平板
+// $screen-md-max: 992px !default; //平板
+$screen-md-max: 960px !default; //平板
 $screen-sm-max: 768px !default; //手機
 $screen-xs-max: 576px !default; //極小尺寸 - hyui
 $screen-xs-mobile-max: 320px !default; //極小尺寸 - flex

@@ -108,7 +108,8 @@
       <v-menu>
         <template v-slot:activator="{ props }">
           <button class="navBtn" v-bind="props">
-            <span class="material-icons-round icon"> launch </span>
+            <span class="material-icons-round icon"> menu </span>
+            <!-- <span class="material-icons-round icon"> launch </span> -->
           </button>
         </template>
         <v-list>

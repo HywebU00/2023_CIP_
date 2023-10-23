@@ -1,0 +1,25 @@
+.v-field__input {
+  height: 38px;
+
+  padding: 0.5rem;
+  position: relative;
+  input {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.v-field--error {
+  border: 1px solid red;
+}
+.v-input__details {
+  min-height: unset;
+}
+.v-input {
+  position: relative;
+}
+.v-messages {
+  // position: absolute;
+  // bottom: -12px;
+  min-height: unset;
+}

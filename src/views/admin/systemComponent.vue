@@ -24,168 +24,7 @@
     </div>
     <div class="pageContent">
       <h3>交辦案件管理－交辦清單</h3>
-      <div class="functionGrp">
-        <v-container>
-          <v-row>
-            <v-col class="searchGrp">
-              <v-form class="searchList">
-                <v-expansion-panels v-model="panel">
-                  <v-expansion-panel>
-                    <v-expansion-panel-title
-                      @click.stop="panelsHandle"
-                      hide-actions
-                    >
-                      <v-row>
-                        <v-col cols="12" md="">
-                          <div class="d-flex formGrp">
-                            <label class="formTitle" for="">年度 :</label>
-                            <v-autocomplete
-                              variant="solo"
-                              single-line
-                              density="compact"
-                              :items="['1990', '1991', '1992']"
-                            ></v-autocomplete>
-                            <span class="tilde">~</span>
-                            <v-autocomplete
-                              variant="solo"
-                              density="compact"
-                              single-line
-                              :items="['1990', '1991', '1992']"
-                            ></v-autocomplete>
-                          </div>
-                        </v-col>
-                        <v-col cols="12" md="">
-                          <div class="d-flex formGrp">
-                            <label class="formTitle" for="">控管編號 :</label>
-                            <v-text-field
-                              variant="solo"
-                              density="compact"
-                              single-line
-                            ></v-text-field>
-                            <span class="tilde">~</span>
-                            <v-text-field
-                              variant="solo"
-                              single-line
-                              density="compact"
-                            ></v-text-field>
-                          </div>
-                        </v-col>
-                        <v-col
-                          cols="12"
-                          md="3"
-                          class="d-flex justify-md-end justify-center align-center btnList"
-                        >
-                          <v-btn>查詢</v-btn>
-                          <v-btn
-                            class="searchMoreBtn"
-                            @click.stop="this.panel = 0"
-                            >進階搜尋</v-btn
-                          >
-                        </v-col>
-                      </v-row>
-                    </v-expansion-panel-title>
-                    <v-expansion-panel-text>
-                      <v-row>
-                        <v-col cols="12" md="6" class="py-0 py-md-3">
-                          <div class="d-flex formGrp">
-                            <label class="formTitle" for="">類別 :</label>
-                            <v-autocomplete
-                              variant="solo"
-                              single-line
-                              density="compact"
-                              :items="['主管會報', '主管會報', '主管會報']"
-                            ></v-autocomplete>
-                          </div>
-                          <div class="d-flex formGrp">
-                            <label class="formTitle" for="">案件狀態 :</label>
-                            <v-checkbox
-                              density="compact"
-                              label="繼續追蹤"
-                            ></v-checkbox>
-                            <v-checkbox
-                              density="compact"
-                              label="建議解除列管"
-                            ></v-checkbox>
-                            <v-checkbox
-                              density="compact"
-                              label="解除列管"
-                            ></v-checkbox>
-                          </div>
-                          <div class="d-flex formGrp">
-                            <label class="formTitle" for="">交辦事項 :</label>
-                            <v-text-field
-                              variant="solo"
-                              single-line
-                              density="compact"
-                            ></v-text-field>
-                          </div>
-                        </v-col>
-                        <v-col cols="12" md="6" class="py-0 py-md-3">
-                          <div class="d-flex formGrp">
-                            <label class="formTitle" for=""> 控管編號 :</label>
-                            <v-text-field
-                              variant="solo"
-                              density="compact"
-                              single-line
-                            ></v-text-field>
-                            <span class="tilde">~</span>
-                            <v-text-field
-                              variant="solo"
-                              single-line
-                              density="compact"
-                            ></v-text-field>
-                          </div>
-                          <div class="d-flex formGrp">
-                            <label class="formTitle" for="">辦理單位 :</label>
-                            <v-text-field
-                              variant="solo"
-                              single-line
-                              density="compact"
-                            ></v-text-field>
-                          </div>
-                          <div class="d-flex formGrp">
-                            <label class="formTitle" for="">管制代號 :</label>
-                            <v-text-field
-                              variant="solo"
-                              single-line
-                              density="compact"
-                            ></v-text-field>
-                          </div>
-                          <div class="d-flex formGrp">
-                            <label class="formTitle" for="">辦理情形 :</label>
-                            <v-text-field
-                              variant="solo"
-                              single-line
-                              density="compact"
-                            ></v-text-field>
-                          </div>
-                        </v-col>
-                        <v-col cols="12" class="pt-0">
-                          <div class="d-flex btnList justify-center">
-                            <v-btn>查詢</v-btn>
-                            <v-btn class="searchMoreBtn">進階搜尋</v-btn>
-                          </div>
-                          <div class="d-flex justify-center">
-                            <v-btn
-                              class="closeSearchMoreBtn"
-                              elevation="0"
-                              @click="open"
-                            >
-                              <span class="material-icons-round">
-                                expand_less
-                              </span>
-                            </v-btn>
-                          </div>
-                        </v-col>
-                      </v-row>
-                    </v-expansion-panel-text>
-                  </v-expansion-panel>
-                </v-expansion-panels>
-              </v-form>
-            </v-col>
-          </v-row>
-        </v-container>
-      </div>
+
       <v-card class="scrollContent">
         <div class="">
           <!-- tabsContent start -->
@@ -200,6 +39,10 @@
           <v-card-text>
             <v-window v-model="tab">
               <v-window-item value="one">
+                <!--這是 v-data-table-server -->
+                <DataTable />
+              </v-window-item>
+              <v-window-item value="two">
                 <div class="btnGroup left mb-2">
                   <v-btn color="export" elevation="0">匯出報表</v-btn>
                   <v-btn color="import" elevation="0">匯入報表</v-btn>
@@ -241,10 +84,6 @@
                     </tr>
                   </tbody>
                 </v-table>
-              </v-window-item>
-              <v-window-item value="two">
-                <h4>v-data-table-server</h4>
-                <DataTable />
               </v-window-item>
               <v-window-item value="three"> Three </v-window-item>
               <v-window-item value="three"> 4 </v-window-item>

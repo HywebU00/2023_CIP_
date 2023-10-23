@@ -6,6 +6,8 @@
 // Customize the font size for body text
 
 // https://next.vuetifyjs.com/features/sass-variables/`
-// @use 'vuetify' with (
-//   $color-pack: false
-// );
+@use 'vuetify' with (
+  $color-pack: false
+);
+
+@import 'form.scss';

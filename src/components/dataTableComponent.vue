@@ -19,11 +19,41 @@
         <td class="">{{ item.columns.title }}</td>
         <td class="">{{ item.columns.password }}</td>
         <td>{{ item.columns.status }}</td>
-        <td class="d-flex justify-end align-center">
+        <td>
           <div class="btnGroup">
             <v-btn elevation="0" color="cancel" size="small">刪除</v-btn>
             <v-btn elevation="0" color="submit" size="small">新增</v-btn>
           </div>
+        </td>
+        <td class="d-flex justify-center align-center">
+          <v-menu>
+            <template v-slot:activator="{ props }">
+              <v-btn
+                class="iconBtn"
+                icon="mdi-cog"
+                color="success"
+                v-bind="props"
+                size="small"
+              />
+            </template>
+            <v-list class="btnListGroupContainer">
+              <v-list-item>
+                <v-btn block size="small" color="import">檢視</v-btn>
+              </v-list-item>
+              <v-list-item>
+                <v-btn block size="small" color="export">修改</v-btn>
+              </v-list-item>
+              <v-list-item>
+                <v-btn block size="small" color="submit">複製樹</v-btn>
+              </v-list-item>
+              <v-list-item>
+                <v-btn block size="small" color="cancel">刪除</v-btn>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+          <!-- <div class="btnGroup">
+            <v-btn icon="mdi-cog" color="success" v-bind="props" size="small" />
+          </div> -->
         </td>
       </tr>
     </template>
@@ -142,6 +172,13 @@ export default {
         title: "動作",
         key: "iron",
         align: "start",
+        sortable: false,
+        width: 100,
+      },
+      {
+        title: "功能",
+        key: "function",
+        align: "center",
         sortable: false,
         width: 100,
       },

@@ -13,6 +13,21 @@
     justify-content: center;
   }
 }
+.iconBtn {
+  &.v-btn--icon {
+    &.v-btn--density-default {
+      width: calc(var(--v-btn-height));
+      height: calc(var(--v-btn-height));
+    }
+  }
+}
+.btnListGroupContainer {
+  .v-list-item--density-default {
+    &.v-list-item--one-line {
+      min-height: unset;
+    }
+  }
+}
 .page {
   display: flex;
   flex-direction: column;
@@ -157,17 +172,13 @@
       .v-expansion-panel-title {
         padding: 1rem 1.5rem;
         font-size: 1em;
-        .formGrp {
-          margin-bottom: 0rem;
-        }
-        // .v-messages {
-        //   min-height: unset;
-        //   position: absolute;
-        //   bottom: -1px;
-        //   margin-bottom: 0.2rem;
-        // }
-      }
 
+        @include screen('notebook') {
+          > .v-row {
+            display: block;
+          }
+        }
+      }
       .v-expansion-panel-title--active {
         .btnList {
           display: none !important;
@@ -177,71 +188,39 @@
         .btnList {
           margin-bottom: 0.5rem;
         }
-        .formGrp {
-          align-items: flex-start;
+        .v-expansion-panel-text__wrapper {
+          padding-top: 0;
         }
-      }
-
-      .formTitle {
-        max-width: rem(250);
-        padding: 0.3em 0.5em;
-        line-height: 1.25rem;
-        padding-left: 0;
       }
       .formGrp {
         display: flex;
         align-items: center;
-        margin-bottom: 1.25rem;
-        .v-field__input {
-          height: rem(44);
-          input {
-            height: auto;
-          }
-        }
+        white-space: nowrap;
         .v-label--clickable {
           margin: 0;
         }
       }
-
-      .tilde {
-        margin: 0.5rem;
-      }
-      .btnGrp {
-        margin-left: auto;
-        margin-right: 0;
-      }
-      .v-field__input {
-        height: rem(44);
-        input {
-          margin-top: 0;
-        }
-      }
-      @include screen('tablet') {
-        padding: 0.25rem;
-        .formGrp {
-          width: 100%;
-          flex-wrap: wrap;
-          label {
-            width: 100%;
-            margin-bottom: 0.25rem;
-            max-width: unset;
-          }
-          .group {
-            margin-left: 0.25rem;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            padding: 0 0.25rem;
-            select,
-            input {
-              width: 100%;
+      .checkGrp {
+        display: flex;
+        @include screen('tablet') {
+          .v-checkbox {
+            .v-selection-control {
+              line-height: unset;
             }
           }
         }
-        .btnGrp {
-          width: 100%;
-        }
       }
+      .tilde {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .formGrp {
+      padding: 0.25rem;
+    }
+    .formTitle {
+      max-width: 120px;
     }
   }
   .filterList {
@@ -374,6 +353,9 @@
     align-items: center;
     font-weight: 400;
     color: $defaultPrimary;
+    a {
+      color: $defaultPrimary;
+    }
     button {
       margin-left: auto;
     }

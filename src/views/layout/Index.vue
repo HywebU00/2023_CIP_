@@ -69,7 +69,10 @@
             </template>
             <v-list-item title="特殊派車" value="特殊派車"> </v-list-item>
             <v-list-item title="派車回報" value="派車回報"> </v-list-item>
-            <v-list-item title="車輛基本資料" value="車輛基本資料">
+            <v-list-item
+              title="車輛基本資料車輛基本資料"
+              value="車輛基本資料車輛基本資料"
+            >
             </v-list-item>
           </v-list>
         </v-list-group>

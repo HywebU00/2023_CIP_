@@ -9,26 +9,37 @@
   select {
     padding: 0 0.25rem;
   }
-  .v-field__input {
-    height: rem(44);
-    position: relative;
-    input {
-      height: auto;
+  &.v-row {
+    > div {
+      padding: 0.5rem;
+      .v-row {
+        > div {
+          padding: 0.5rem;
+        }
+      }
     }
   }
-  .v-field--error {
-    border: 1px solid red;
-  }
-  .v-input__details {
-    min-height: unset;
-  }
-  .v-input {
-    position: relative;
-  }
-  .v-messages {
-    position: absolute;
-    bottom: -12px;
-  }
+  // .v-field__input {
+  //   height: rem(44);
+  //   padding: 0.5rem;
+  //   position: relative;
+  //   input {
+  //     height: auto;
+  //   }
+  // }
+  // .v-field--error {
+  //   border: 1px solid red;
+  // }
+  // .v-input__details {
+  //   min-height: unset;
+  // }
+  // .v-input {
+  //   position: relative;
+  // }
+  // .v-messages {
+  //   position: absolute;
+  //   bottom: -12px;
+  // }
 }
 .infoGrp {
   span {

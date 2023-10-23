@@ -42,6 +42,7 @@ export default createVuetify({
           import: "#331919",
           export: "#91746c",
           cardBg: "#f7f7f5",
+          success: "#331919",
           // customActiveColor:
           // background: "#fff",
           // surface: "#212121",
@@ -64,6 +65,7 @@ export default createVuetify({
           import: "#331919",
           export: "#91746c",
           cardBg: "#f7f7f5",
+          success: "#331919",
           // customActiveColor:
           // background: "#fff",
           // surface: "#212121"
@@ -86,6 +88,7 @@ export default createVuetify({
           import: "#331919",
           export: "#91746c",
           cardBg: "#f7f7f5",
+          success: "#331919",
           // customActiveColor:
           // background: "#fff",
           // surface: "#212121"
@@ -108,6 +111,7 @@ export default createVuetify({
           import: "#331919",
           export: "#91746c",
           cardBg: "#f7f7f5",
+          success: "#331919",
         },
       },
       dark: {
@@ -123,6 +127,7 @@ export default createVuetify({
           cancel: "#91746c",
           import: "#fefefe",
           export: "#91746c",
+          success: "#fefefe",
         },
       },
     },
