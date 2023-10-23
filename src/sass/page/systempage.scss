@@ -57,7 +57,7 @@
       flex-grow: 1;
       margin: 0 auto;
       margin-bottom: 1.5rem;
-      padding: 1rem;
+      padding: 0.5rem;
       border-radius: 1rem !important;
       @include screen('tablet') {
         padding: 0;
@@ -135,6 +135,7 @@
     .v-expansion-panels {
       box-shadow: unset;
     }
+
     .v-container {
       max-width: 100%;
       width: 100%;
@@ -172,13 +173,21 @@
       .v-expansion-panel-title {
         padding: 1rem 1.5rem;
         font-size: 1em;
-
-        @include screen('notebook') {
-          > .v-row {
-            display: block;
+        .formGrp {
+          margin-bottom: 0rem;
+        }
+        .v-row {
+          > div {
+            padding-top: 0.5rem;
+            padding-bottom: 0.25rem;
           }
         }
+        .v-messages {
+          position: absolute;
+          bottom: -12px;
+        }
       }
+
       .v-expansion-panel-title--active {
         .btnList {
           display: none !important;
@@ -188,39 +197,71 @@
         .btnList {
           margin-bottom: 0.5rem;
         }
-        .v-expansion-panel-text__wrapper {
-          padding-top: 0;
+        .formGrp {
+          align-items: flex-start;
         }
+      }
+
+      .formTitle {
+        max-width: rem(250);
+        padding: 0.3em 0.5em;
+        line-height: 1.25rem;
+        padding-left: 0;
       }
       .formGrp {
         display: flex;
         align-items: center;
-        white-space: nowrap;
+        margin-bottom: 1rem;
+        .v-field__input {
+          height: rem(38);
+          input {
+            height: auto;
+          }
+        }
         .v-label--clickable {
           margin: 0;
         }
       }
-      .checkGrp {
-        display: flex;
-        @include screen('tablet') {
-          .v-checkbox {
-            .v-selection-control {
-              line-height: unset;
+
+      .tilde {
+        margin: 0.5rem;
+      }
+      .btnGrp {
+        margin-left: auto;
+        margin-right: 0;
+      }
+      .v-field__input {
+        height: rem(44);
+        input {
+          margin-top: 0;
+        }
+      }
+      @include screen('tablet') {
+        padding: 0.25rem;
+        .formGrp {
+          width: 100%;
+          flex-wrap: wrap;
+          label {
+            width: 100%;
+            margin-bottom: 0.25rem;
+            max-width: unset;
+          }
+          .group {
+            margin-left: 0.25rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 0.25rem;
+            select,
+            input {
+              width: 100%;
             }
           }
         }
+        .btnGrp {
+          width: 100%;
+        }
       }
-      .tilde {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-    .formGrp {
-      padding: 0.25rem;
-    }
-    .formTitle {
-      max-width: 120px;
     }
   }
   .filterList {
@@ -344,7 +385,6 @@
   }
 }
 .treeviewBlock {
-  margin-top: 1rem;
   ul {
     padding-left: 1rem;
   }

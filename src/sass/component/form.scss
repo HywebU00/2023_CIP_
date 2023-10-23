@@ -19,27 +19,6 @@
       }
     }
   }
-  // .v-field__input {
-  //   height: rem(44);
-  //   padding: 0.5rem;
-  //   position: relative;
-  //   input {
-  //     height: auto;
-  //   }
-  // }
-  // .v-field--error {
-  //   border: 1px solid red;
-  // }
-  // .v-input__details {
-  //   min-height: unset;
-  // }
-  // .v-input {
-  //   position: relative;
-  // }
-  // .v-messages {
-  //   position: absolute;
-  //   bottom: -12px;
-  // }
 }
 .infoGrp {
   span {
@@ -54,7 +33,6 @@ input:-internal-autofill-selected {
 
 .formContainer {
   margin-bottom: 1rem;
-  margin-top: 1rem;
   .formTitle {
     max-width: 200px;
     flex: 0 0 200px;
@@ -105,6 +83,7 @@ input:-internal-autofill-selected {
       label {
         max-width: calc(100% - 2rem);
         flex-basis: fit-content;
+        margin-left: 0.25rem;
       }
     }
     .info {
@@ -126,8 +105,126 @@ input:-internal-autofill-selected {
   .formGrp.v-row {
     margin-top: 0.25rem;
   }
+  .v-radio-group {
+    label {
+      margin-left: 0rem;
+    }
+  }
+
+  .dataForm {
+    .infoTitle {
+      padding-right: 1.25rem;
+      color: $defaultPrimary;
+      font-weight: 500;
+      margin-left: -0.5rem;
+      display: flex;
+      justify-content: flex-end;
+      color: $dark;
+      position: relative;
+      min-height: 2.75rem;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        left: 8px;
+        background-color: $secondaryColor;
+        height: 2px;
+        bottom: -2px;
+        width: calc(100% - 24px);
+      }
+      @include screen('notebook') {
+        width: 100%;
+        max-width: unset;
+        flex-basis: auto;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 0;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .infoText {
+      margin: 0 0.75rem;
+      @include screen('tablet') {
+        margin: 0;
+      }
+    }
+
+    .infoGrp,
+    .formGrp {
+      margin: 0 0.25rem;
+      @include screen('tablet') {
+        flex-wrap: wrap;
+      }
+      label,
+      .infoTitle > span {
+        margin-right: 0;
+        @include screen('tablet') {
+          text-align: left;
+          margin: 0;
+        }
+      }
+
+      border-bottom: 2px solid $gray;
+      position: relative;
+      margin-bottom: 0.25rem;
+      margin-top: 0.2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include screen('tablet') {
+        &:after {
+          display: none;
+        }
+      }
+
+      .formGrp {
+        padding-bottom: 0;
+        border-bottom: 0;
+        padding: 0;
+        &:after {
+          display: none;
+        }
+      }
+      .v-field__field,
+      .v-field {
+        box-shadow: none;
+        background: $gray;
+        border-radius: 0.5rem;
+      }
+      .v-input {
+        border-radius: 0.5rem;
+        &.v-radio-group {
+          background: unset;
+          .v-input__control {
+            border: none;
+          }
+        }
+        .v-input__control {
+          margin-top: 0.25rem;
+          border: 1px solid lighten($gray3, 20);
+          border-radius: 0.5rem;
+        }
+      }
+      .checkGrp {
+        .v-input__control {
+          border: none;
+        }
+      }
+    }
+    .formGrp_2 {
+      margin-top: 1rem;
+      &::after {
+        display: none;
+      }
+    }
+  }
 }
 .textEdit {
+  margin-bottom: 1rem;
   .fr-box.fr-basic {
     border-radius: 4px;
     box-shadow: 0px 3px 1px -2px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 2px 2px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 1px 5px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
