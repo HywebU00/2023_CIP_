@@ -109,9 +109,9 @@ export default {
               </v-row>
               <!-- 左右兩欄 start -->
               <v-row class="d-flex formGrp formGrp_2">
-                <v-col cols="12" sm="5" class="multipleContent">
+                <v-col cols="12" sm="" class="multipleContent">
                   <v-row>
-                    <v-col class="bg-thead formGrpTitle mb-2 mx-3"
+                    <v-col class="bg-thead formGrpTitle mb-2 mx-2"
                       >應領數</v-col
                     >
                   </v-row>
@@ -129,7 +129,7 @@ export default {
                     </v-col>
                   </v-row>
                 </v-col>
-                <v-col cols="12" sm="2" class="btnList">
+                <v-col cols="12" sm="1" class="btnList">
                   <div
                     class="d-flex align-center justify-center flex-sm-column"
                   >
@@ -159,9 +159,9 @@ export default {
                     ></v-btn>
                   </div>
                 </v-col>
-                <v-col cols="12" sm="5" class="multipleContent">
+                <v-col cols="12" sm="" class="multipleContent">
                   <v-row>
-                    <v-col class="bg-thead formGrpTitle mb-2 mx-3"
+                    <v-col class="bg-thead formGrpTitle mb-2 mx-2"
                       >扣領數</v-col
                     >
                   </v-row>
@@ -182,14 +182,14 @@ export default {
               </v-row>
               <!-- 左右兩欄 end -->
               <v-row class="d-flex formGrp formGrp_2">
-                <v-col cols="12" sm="5" class="multipleContent">
+                <v-col cols="12" sm="" class="multipleContent">
                   <v-row>
-                    <v-col class="bg-thead formGrpTitle mb-2 mx-3"
+                    <v-col class="bg-thead formGrpTitle mb-2 mx-2"
                       >單位決行人員</v-col
                     >
                   </v-row>
                   <v-row class="d-flex formGrp">
-                    <v-col class="list multipleContent" cols="12">
+                    <v-col class="list multipleContent" cols="12" sm="">
                       <select multiple="multiple" class="w-100 h-100">
                         <option
                           v-for="(item, index) in 6"
@@ -201,6 +201,11 @@ export default {
                       </select>
                     </v-col>
                   </v-row>
+                </v-col>
+                <v-col cols="12" sm="1" class="btnList">
+                  <div
+                    class="d-flex align-center justify-center flex-sm-column"
+                  ></div>
                 </v-col>
                 <v-col>
                   <v-row class="d-flex formGrp">

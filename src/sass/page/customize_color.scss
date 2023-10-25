@@ -326,7 +326,7 @@ $theme-config: (
     &.v-dialog {
       .v-card-actions {
         .v-btn {
-          margin: 1rem;
+          margin: 0 1rem 0.5rem 0;
           @include screen('tablet') {
             min-width: 78px;
           }
@@ -663,7 +663,88 @@ $theme-config: (
       }
     }
     .treeTitle {
+      a {
+        color: #fff;
+      }
       color: #fff;
+    }
+  }
+  .textEdit {
+    .fr-toolbar,
+    .fr-element,
+    .fr-second-toolbar {
+      background-color: rgba(100, 100, 100, 0.3);
+      color: #fff;
+    }
+
+    .fr-toolbar .fr-command.fr-btn {
+      color: #fff;
+    }
+    .fr-box.fr-basic .fr-wrapper {
+      background: none;
+    }
+    .fr-box.fr-basic {
+      .fr-element {
+        color: #fff;
+      }
+      p {
+        span {
+          color: #fff !important;
+        }
+      }
+    }
+    .fr-desktop .fr-command:hover:not(.fr-table-cell) {
+      background: #5b5b5b;
+    }
+    .fr-dropdown-list {
+      background-color: #5b5b5b;
+    }
+
+    .fr-command.fr-btn + .fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li a.fr-active {
+      color: #000;
+    }
+    .fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active {
+      background-color: #5b5b5b;
+    }
+    .fr-toolbar {
+      .fr-command.fr-btn svg path {
+        fill: #fff;
+      }
+    }
+    textarea.fr-code {
+      background-color: rgba(100, 100, 100, 0.3);
+      color: #fff;
+    }
+  }
+  .hyUpload {
+    background-color: rgba(100, 100, 100, 0.3);
+    border: unset !important;
+    .textInfo {
+      color: #9a9a9a;
+    }
+  }
+  .dataForm {
+    color: #fff;
+    p {
+      span {
+        color: #fff !important;
+      }
+    }
+  }
+  //動態表單
+  .tableForm {
+    table {
+      color: #fff;
+      border-color: #5b5b5b;
+      input,
+      textarea {
+        background-color: #505050;
+        border: 0px;
+      }
+      input[type='button'] {
+        background-color: #ccc;
+        color: #000;
+      }
     }
   }
 }

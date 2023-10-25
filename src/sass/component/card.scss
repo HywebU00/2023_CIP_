@@ -304,8 +304,18 @@
   }
 }
 .peopleFinderCard {
+  .v-card-text {
+    padding-top: 0 !important;
+    .v-container {
+      padding-top: 0;
+    }
+  }
   .multipleContent {
+    .formGrpTitle {
+      max-width: rem(516);
+    }
     select {
+      max-width: rem(516);
       border: 1px solid lighten($gray3, 20);
       option {
         height: rem(43);
@@ -329,6 +339,13 @@
     }
     i {
       font-size: 1.75rem;
+    }
+  }
+  .treeviewBlock {
+    .item {
+      > div {
+        padding: 0.25rem;
+      }
     }
   }
   option:checked {

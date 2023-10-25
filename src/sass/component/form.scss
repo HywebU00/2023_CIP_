@@ -118,6 +118,7 @@ input:-internal-autofill-selected {
       font-weight: 500;
       margin-left: -0.5rem;
       display: flex;
+      text-align: end;
       justify-content: flex-end;
       color: $dark;
       position: relative;
@@ -271,6 +272,123 @@ input:-internal-autofill-selected {
     span {
       display: block;
       margin-bottom: 0.5rem;
+    }
+  }
+}
+.datePicker {
+  margin-bottom: rem(6);
+  .v-field__field {
+    height: rem(44);
+    position: relative;
+    input {
+      height: rem(38);
+      position: absolute;
+      top: 2px;
+      width: 100%;
+      left: 0;
+      padding: 0 0.5rem;
+    }
+  }
+}
+.moveForm {
+  .v-banner--density-default.v-banner--one-line {
+    padding: 0;
+  }
+  .v-banner__content {
+    margin-bottom: 4px;
+  }
+}
+//datepicker套件ＣＳＳ修改
+.dp__range_end,
+.dp__range_start,
+.dp__overlay_cell_active,
+.dp__active_date {
+  background: $defaultPrimary !important;
+  border: 1px solid $defaultPrimary;
+  color: #fff;
+}
+.dp__today {
+  border: 1px solid $defaultPrimary !important;
+}
+//動態表單
+.tableForm {
+  margin-bottom: 1rem;
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+    line-height: 1.5rem;
+    color: $defaultPrimary;
+  }
+  tr {
+    height: rem(46);
+  }
+  td {
+    padding: 0.25rem 0.5rem;
+  }
+  input,
+  textarea {
+    &:focus,
+    &:active,
+    &:focus-visible {
+      outline: none;
+      border: #91746c 1px solid !important;
+    }
+  }
+  input[type='button'] {
+    background: $defaultPrimary;
+    font-size: 1em;
+    padding: 0 0.5rem;
+    color: #fff;
+    margin: 0 0.25rem;
+  }
+  input[type='text'],
+  input[type='number'] {
+    background: #fff;
+    padding: 0 0.25rem;
+
+    border: #ccc 1px solid;
+    border-radius: 0.5rem;
+  }
+  textarea {
+    background: #fff;
+    border: #ccc 1px solid;
+    border-radius: 6px;
+    padding: 0.25rem;
+    width: 100%;
+
+    margin: 0.25rem 0;
+  }
+  .form_content {
+    .check_grp {
+      &.form_inline {
+        display: flex;
+      }
+      label {
+        input {
+          width: 1rem;
+          margin-right: 0.5rem;
+          accent-color: $secondaryColor;
+        }
+        margin-right: 0.5rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .radio_grp {
+      &.form_inline {
+        display: flex;
+      }
+      label {
+        input {
+          width: 1rem;
+          accent-color: $secondaryColor;
+          margin-right: 0.5rem;
+        }
+        display: flex;
+        margin-right: 0.5rem;
+        align-items: center;
+      }
     }
   }
 }

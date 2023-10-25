@@ -339,7 +339,7 @@ export default {
   data: () => ({
     ps,
     theme: "",
-    themeDark: "false",
+    themeDark: false,
     mobileHeader: false,
     userLoginCard: false,
     ////////////////////////
