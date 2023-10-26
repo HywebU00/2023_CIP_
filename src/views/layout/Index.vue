@@ -84,7 +84,7 @@
           <li>Elle Wang</li>
           <li>企劃處</li>
         </ul>
-        <button><span class="material-symbols-rounded"> logout </span></button>
+        <button><span class="material-icons-round"> logout </span></button>
       </div>
       <button class="rounded-circle drawerBtn" @click.stop="ps.clickMenuRail()">
         <span class="material-icons-round">arrow_right</span>
