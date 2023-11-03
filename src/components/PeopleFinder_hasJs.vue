@@ -176,7 +176,7 @@ const doSubmit = function () {
               </v-row>
               <!-- 左右兩欄 start -->
               <v-row class="d-flex formGrp formGrp_2">
-                <v-col cols="12" sm="5" class="multipleContent">
+                <v-col cols="12" sm="" class="multipleContent">
                   <v-row>
                     <v-col class="bg-thead formGrpTitle mb-2 mx-3"
                       >所有人員列表</v-col
@@ -201,7 +201,7 @@ const doSubmit = function () {
                     </v-col>
                   </v-row>
                 </v-col>
-                <v-col cols="12" sm="2" class="btnList">
+                <v-col cols="12" sm="1" class="btnList">
                   <div
                     class="d-flex align-center justify-center flex-sm-column"
                   >
@@ -233,7 +233,7 @@ const doSubmit = function () {
                     ></v-btn>
                   </div>
                 </v-col>
-                <v-col cols="12" sm="5" class="multipleContent">
+                <v-col cols="12" sm="" class="multipleContent">
                   <v-row>
                     <v-col class="bg-thead formGrpTitle mb-2 mx-3"
                       >扣領數</v-col
