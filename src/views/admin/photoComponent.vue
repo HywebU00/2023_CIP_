@@ -322,10 +322,7 @@
                             :id="item.toString()"
                             :value="item"
                           ></v-checkbox>
-                          <v-img
-                            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                            cover
-                          ></v-img>
+                          <v-img src="~@/assets/docks.jpeg" cover></v-img>
                         </div>
                         <div class="info" v-bind="props">
                           <v-card-item>
@@ -656,10 +653,7 @@
                 <v-card class="photoCard">
                   <div class="cardContainer">
                     <div class="img">
-                      <v-img
-                        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                        cover
-                      ></v-img>
+                      <v-img src="~@/assets/docks.jpeg" cover></v-img>
                     </div>
                     <div class="info">
                       <v-card-item>

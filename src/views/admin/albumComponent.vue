@@ -385,10 +385,7 @@
               >
                 <v-card class="albumCard">
                   <div class="cardContainer">
-                    <v-img
-                      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                      cover
-                    ></v-img>
+                    <v-img src="~@/assets/docks.jpeg" cover></v-img>
                     <div class="info">
                       <v-card-item>
                         <v-card-title>排灣族聚餐</v-card-title>

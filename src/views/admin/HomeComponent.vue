@@ -24,8 +24,7 @@ export default {
       },
       {
         id: 3,
-        imageUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Yahoo%21_%282019%29.svg/800px-Yahoo%21_%282019%29.svg.png?20190923130707",
+        imageUrl: "src/assets/Yahoo.png",
         title: "",
       },
 
