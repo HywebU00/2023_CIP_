@@ -24,7 +24,7 @@ export default {
       },
       {
         id: 3,
-        imageUrl: "src/assets/Yahoo.png",
+        imageUrl: "Yahoo.png",
         title: "",
       },
 
@@ -102,7 +102,7 @@ export default {
                         :max-height="40"
                         cover
                         aspect-ratio="16/9"
-                        :src="item.imageUrl"
+                        :src="`src/assets/${item.imageUrl}`"
                       ></v-img>
                       <p v-if="item.title != ''" href="#">{{ item.title }}</p>
                     </a>
@@ -120,6 +120,7 @@ export default {
             </v-col>
           </v-row>
           <!-- 常用功能 end -->
+
           <!-- 每日族語 start -->
           <v-row class="languageSection">
             <v-col class="pt-1 pb-2">
