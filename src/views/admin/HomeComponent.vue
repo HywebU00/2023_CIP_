@@ -1,5 +1,6 @@
 <script>
 import { maskStore, pageStting } from "@/stores/storage.js";
+import ScoreData from "@/assets/Yahoo.png";
 const ps = pageStting();
 export default {
   data: () => ({
@@ -24,7 +25,7 @@ export default {
       },
       {
         id: 3,
-        imageUrl: "Yahoo.png",
+        imageUrl: ScoreData,
         title: "",
       },
 
@@ -102,7 +103,7 @@ export default {
                         :max-height="40"
                         cover
                         aspect-ratio="16/9"
-                        :src="`src/assets/${item.imageUrl}`"
+                        :src="item.imageUrl"
                       ></v-img>
                       <p v-if="item.title != ''" href="#">{{ item.title }}</p>
                     </a>
