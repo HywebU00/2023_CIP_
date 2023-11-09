@@ -438,6 +438,7 @@
                     placeholder="請輸入文字"
                     variant="solo"
                     error-messages=""
+                    hide-details="auto"
                     density="compact"
                     auto-grow
                     rows="6"
@@ -452,12 +453,13 @@
                   <label for="">單選 </label>
                 </v-col>
                 <v-col>
-                  <v-radio-group inline error-messages="" color="secondary">
+                  <v-radio-group inline h color="secondary" hide-details="auto">
                     <v-radio label="是" value="true"></v-radio>
                     <v-radio label="否" value="false"></v-radio>
                   </v-radio-group>
                 </v-col>
               </v-row>
+
               <v-row class="d-flex formGrp">
                 <v-col cols="12" md="2" class="">
                   <label for="">住址</label>
@@ -470,6 +472,7 @@
                         variant="solo"
                         single-line
                         density="compact"
+                        hide-details="auto"
                         placeholder="輸入地址"
                         error-messages=""
                         :items="['台北市', '新北市', '基隆市']"
@@ -482,6 +485,7 @@
                         color="secondary"
                         density="compact"
                         placeholder="輸入地址"
+                        hide-details="auto"
                         error-messages=""
                         :items="['台北市', '新北市', '基隆市']"
                       ></v-autocomplete>
@@ -490,7 +494,7 @@
                       <v-text-field
                         variant="solo"
                         single-line
-                        error-messages=""
+                        hide-details="auto"
                         density="compact"
                       ></v-text-field>
                     </v-col>
@@ -508,9 +512,9 @@
                         color="secondary"
                         variant="solo"
                         single-line
+                        hide-details="auto"
                         density="compact"
                         placeholder="輸入地址"
-                        error-messages=""
                         :items="['台北市', '新北市', '基隆市']"
                       ></v-autocomplete>
                     </v-col>
@@ -519,6 +523,7 @@
                         variant="solo"
                         single-line
                         color="secondary"
+                        hide-details="auto"
                         density="compact"
                         placeholder="輸入地址"
                         error-messages=""
@@ -534,61 +539,63 @@
                   <label for="">按鈕欄位</label>
                 </v-col>
                 <v-col cols="12" md="10">
-                  <v-btn
-                    class="ma-1"
-                    @click="doReport(1)"
-                    elevation="0"
-                    type="button"
-                    text="車輛繳納燃料費及牌照稅明細表"
-                    color="export"
-                  />
-                  <v-btn
-                    class="ma-1"
-                    @click="doReport(2)"
-                    elevation="0"
-                    type="button"
-                    text="車輛繳納保險費明細表"
-                    color="export"
-                  />
-                  <v-btn
-                    @click="doReport(2)"
-                    elevation="0"
-                    type="button"
-                    text="車輛消耗油料暨行駛里程統計表"
-                    color="export"
-                  />
-                  <v-btn
-                    class="ma-1"
-                    @click="doReport(2)"
-                    elevation="0"
-                    type="button"
-                    text="公務汽車加油情形統計表"
-                    color="export"
-                  />
-                  <v-btn
-                    class="ma-1"
-                    @click="doReport(2)"
-                    elevation="0"
-                    type="button"
-                    text="公務汽車每公升平均行駛里程數統計表"
-                    color="export"
-                  />
-                  <v-btn
-                    class="ma-1"
-                    @click="doReport(2)"
-                    elevation="0"
-                    type="button"
-                    text="車輛加油及里程數紀錄表"
-                    color="export"
-                  />
-                  <v-btn
-                    class="ma-1"
-                    @click="doReport(2)"
-                    elevation="0"
-                    type="button"
-                    text="高速公路電子收費表"
-                    color="export"
-                  />
+                  <div class="mb-4">
+                    <v-btn
+                      class="ma-1"
+                      @click="doReport(1)"
+                      elevation="0"
+                      type="button"
+                      text="車輛繳納燃料費及牌照稅明細表"
+                      color="export"
+                    />
+                    <v-btn
+                      class="ma-1"
+                      @click="doReport(2)"
+                      elevation="0"
+                      type="button"
+                      text="車輛繳納保險費明細表"
+                      color="export"
+                    />
+                    <v-btn
+                      @click="doReport(2)"
+                      elevation="0"
+                      type="button"
+                      text="車輛消耗油料暨行駛里程統計表"
+                      color="export"
+                    />
+                    <v-btn
+                      class="ma-1"
+                      @click="doReport(2)"
+                      elevation="0"
+                      type="button"
+                      text="公務汽車加油情形統計表"
+                      color="export"
+                    />
+                    <v-btn
+                      class="ma-1"
+                      @click="doReport(2)"
+                      elevation="0"
+                      type="button"
+                      text="公務汽車每公升平均行駛里程數統計表"
+                      color="export"
+                    />
+                    <v-btn
+                      class="ma-1"
+                      @click="doReport(2)"
+                      elevation="0"
+                      type="button"
+                      text="車輛加油及里程數紀錄表"
+                      color="export"
+                    />
+                    <v-btn
+                      class="ma-1"
+                      @click="doReport(2)"
+                      elevation="0"
+                      type="button"
+                      text="高速公路電子收費表"
+                      color="export"
+                    />
+                  </div>
                 </v-col>
               </v-row>
               <!-- 按鈕列 end -->
@@ -654,6 +661,34 @@
                 </v-col>
               </v-row> -->
               <!-- 按鈕列 end -->
+              <!-- formGrp 資料列表 start -->
+              <v-row class="d-flex formGrp">
+                <v-col cols="12" md="2" class="">
+                  <label for="">資料欄位</label>
+                </v-col>
+                <v-col cols="12" md="10">
+                  <p>
+                    112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。
+                  </p>
+                </v-col>
+              </v-row>
+              <v-row class="d-flex formGrp">
+                <v-col cols="12" md="2" class="">
+                  <label for="">資料欄位</label>
+                </v-col>
+                <v-col cols="12" md="10">
+                  <p>112年公務人員特種考試原住民族考試各等別。</p>
+                </v-col>
+              </v-row>
+              <v-row class="d-flex formGrp">
+                <v-col cols="12" md="2" class="">
+                  <label for="">資料欄位</label>
+                </v-col>
+                <v-col cols="12" md="10">
+                  <p>112年公務人員特種考試原住民族考試各等別。</p>
+                </v-col>
+              </v-row>
+              <!-- formGrp 資料列表 end -->
               <!-- 左右兩欄 start -->
               <v-row class="d-flex formGrp formGrp_2">
                 <v-col cols="12" md="6">

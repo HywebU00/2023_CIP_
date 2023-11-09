@@ -57,6 +57,8 @@ input:-internal-autofill-selected {
     .v-row {
       margin-top: -13px;
       margin-bottom: -13px;
+      margin-bottom: 0.5rem;
+
       .v-col {
         .formGrp {
           margin-bottom: 0;
@@ -104,6 +106,9 @@ input:-internal-autofill-selected {
   }
   .formGrp.v-row {
     margin-top: 0.25rem;
+    p {
+      margin-bottom: 0.5rem;
+    }
   }
   .v-radio-group {
     label {
