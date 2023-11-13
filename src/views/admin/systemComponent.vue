@@ -65,7 +65,7 @@
                   </thead>
                   <tbody>
                     <tr v-for="item in data" :key="item.name">
-                      <td>{{ item.id }}</td>
+                      <th>{{ item.id }}</th>
                       <td>{{ item.name }}</td>
                       <td>{{ item.class }}</td>
                       <td>{{ item.title }}</td>
@@ -85,7 +85,115 @@
                   </tbody>
                 </v-table>
               </v-window-item>
-              <v-window-item value="three"> Three </v-window-item>
+              <v-window-item value="three">
+                <v-table class="cellTable">
+                  <thead>
+                    <tr>
+                      <th class="text-center">選擇</th>
+                      <th class="text-center">管制代號</th>
+                      <th class="text-center">案件名稱</th>
+                      <th class="text-center">填報期限</th>
+                      <th class="text-center">交辦事項</th>
+                      <th class="text-center">主辦單位</th>
+                      <th class="text-center">預定完成日期</th>
+                      <th class="text-center">辦理情形</th>
+                      <th class="text-center">案件狀態</th>
+                      <th class="text-center">審核狀態</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <template v-for="i in 3" :key="i">
+                      <tr class="text-center">
+                        <td rowspan="2">
+                          <v-checkbox></v-checkbox>
+                        </td>
+                        <td rowspan="2">666-01<br />(2023/08/14)</td>
+                        <td rowspan="2">都市原住民發展 都市原住民發展</td>
+                        <td rowspan="2">2023/08/14 <br />14:00</td>
+                        <td rowspan="2">
+                          <p class="mt-1">請回報</p>
+                          <div class="btnGroup">
+                            <v-btn
+                              class="my-1"
+                              color="submit"
+                              elevation="0"
+                              size="small"
+                              >批次下載填報附件</v-btn
+                            >
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-1">教育文化處</p>
+                          <div class="btnGroup ma-1">
+                            <v-btn color="submit" elevation="0" size="small"
+                              >批次下載填報附件</v-btn
+                            >
+                          </div>
+                        </td>
+                        <td>2023/08/14</td>
+                        <td>
+                          <ul>
+                            <li>填報期限：2023/08/14</li>
+                            <li>填報人：翁香珍</li>
+                            <li>
+                              本專案依XXX
+                              辦理修正，並依規定送辦行政院公報，同時於本會網站更新資訊
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <p class="mt-1">持續追蹤</p>
+                          <div class="btnGroup ma-1">
+                            <v-btn color="submit" elevation="0" size="small"
+                              >批次下載填報附件</v-btn
+                            >
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-1">持續追蹤</p>
+                          <div class="btnGroup ma-1s">
+                            <v-btn color="submit" elevation="0" size="small"
+                              >審核歷程</v-btn
+                            >
+                            <v-btn color="cancel" elevation="0" size="small"
+                              >管理者退回</v-btn
+                            >
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>
+                          <p class="mt-1">教育文化處</p>
+                          <div class="btnGroup">
+                            <v-btn
+                              class="ma-1"
+                              color="submit"
+                              elevation="0"
+                              size="small"
+                              >批次下載填報附件</v-btn
+                            >
+                          </div>
+                        </td>
+                        <td>2023/08/14</td>
+                        <td>填報期限：2023/08/14</td>
+                        <td>
+                          <p class="mt-1">持續追蹤</p>
+                          <div class="btnGroup">
+                            <v-btn
+                              color="submit"
+                              class="ma-1"
+                              elevation="0"
+                              size="small"
+                              >批次下載填報附件</v-btn
+                            >
+                          </div>
+                        </td>
+                        <td><p class="mt-1">持續追蹤</p></td>
+                      </tr>
+                    </template>
+                  </tbody>
+                </v-table>
+              </v-window-item>
               <v-window-item value="three"> 4 </v-window-item>
               <v-window-item value="three"> 5 </v-window-item>
             </v-window>
