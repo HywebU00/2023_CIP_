@@ -19,6 +19,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-
+.sass-cache
 
 _albumComponent.vue
