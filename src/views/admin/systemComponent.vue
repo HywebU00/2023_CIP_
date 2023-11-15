@@ -43,7 +43,7 @@
                 <DataTable />
               </v-window-item>
               <v-window-item value="two">
-                <div class="btnGroup left mb-2">
+                <div class="btnGroup right mb-2">
                   <v-btn color="export" elevation="0">匯出報表</v-btn>
                   <v-btn color="import" elevation="0">匯入報表</v-btn>
                   <!-- <v-btn elevation="0">修改狀態</v-btn> -->

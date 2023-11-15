@@ -296,6 +296,243 @@
         </v-container>
       </div>
       <!-- 搜尋列表 end -->
+      <!-- 搜尋列表 start -->
+      <div class="functionGrp">
+        <v-container>
+          <v-row>
+            <v-col class="searchGrp">
+              <v-form class="searchList">
+                <v-expansion-panels v-model="panel1">
+                  <v-expansion-panel>
+                    <v-expansion-panel-title
+                      @click.stop="panelsHandle1"
+                      :hide-actions="true"
+                    >
+                      <v-row>
+                        <v-col class="d-flex">
+                          <v-row class="d-flex formGrp">
+                            <v-col cols="12" md="3">
+                              <label for="">知識樹:</label>
+                            </v-col>
+                            <v-col md="9" cols="12">
+                              <v-row>
+                                <v-col>
+                                  <v-btn
+                                    type="butotn"
+                                    color="import"
+                                    text="..."
+                                    size="small"
+                                  />
+                                  <template>
+                                    <v-chip
+                                      pill
+                                      class="ma-2"
+                                      color="primary"
+                                      label
+                                    >
+                                    </v-chip>
+                                  </template>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                          </v-row>
+                        </v-col>
+                        <v-col> </v-col>
+                        <v-col
+                          cols="12"
+                          lg="3"
+                          class="d-flex justify-lg-end justify-center align-center btnList"
+                        >
+                          <v-btn>查詢</v-btn>
+                          <v-btn
+                            class="searchMoreBtn"
+                            @click.stop="this.panel1 = 0"
+                            >進階搜尋</v-btn
+                          >
+                        </v-col>
+                      </v-row>
+                    </v-expansion-panel-title>
+                    <v-expansion-panel-text>
+                      <v-row class="formGrp">
+                        <!-- 類別start -->
+                        <v-col md="6" cols="12">
+                          <v-row class="d-flex formGrp">
+                            <v-col cols="12" md="3">
+                              <label for="">類別:</label>
+                            </v-col>
+                            <v-col>
+                              <v-row>
+                                <v-col cols="12" md="12">
+                                  <v-autocomplete
+                                    color="secondary"
+                                    variant="solo"
+                                    single-line
+                                    density="compact"
+                                    placeholder="輸入地址"
+                                    error-messages=""
+                                    :items="['台北市', '新北市', '基隆市']"
+                                  ></v-autocomplete>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                          </v-row>
+                        </v-col>
+                        <!-- 類別end -->
+                        <!-- 控管編號start -->
+                        <v-col md="6" cols="12">
+                          <v-row class="d-flex formGrp">
+                            <v-col cols="12" md="3">
+                              <label for="">控管編號:</label>
+                            </v-col>
+                            <v-col>
+                              <v-row>
+                                <v-col>
+                                  <v-text-field
+                                    variant="solo"
+                                    error-messages="錯誤訊息 錯誤訊息"
+                                    single-line
+                                    density="compact"
+                                  ></v-text-field>
+                                </v-col>
+                                <v-col cols="auto tilde">
+                                  <span>~</span>
+                                </v-col>
+                                <v-col>
+                                  <v-text-field
+                                    variant="solo"
+                                    error-messages="錯誤訊息 錯誤訊息"
+                                    single-line
+                                    density="compact"
+                                  ></v-text-field>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                          </v-row>
+                        </v-col>
+                        <!-- 控管編號end -->
+                        <!-- 案件狀態start -->
+                        <v-col md="6" cols="12">
+                          <v-row class="d-flex formGrp">
+                            <v-col cols="12" md="3" class="">
+                              <label for="list">案件狀態:</label>
+                            </v-col>
+                            <v-col class="checkGrp" id="list">
+                              <v-checkbox
+                                density="compact"
+                                hide-details
+                                label="繼續追蹤"
+                              ></v-checkbox>
+                              <v-checkbox
+                                density="compact"
+                                hide-details
+                                label="建議解除列管"
+                              ></v-checkbox>
+                              <v-checkbox
+                                density="compact"
+                                hide-details
+                                label="解除列管"
+                              ></v-checkbox>
+                            </v-col>
+                          </v-row>
+                        </v-col>
+                        <!-- 案件狀態end -->
+                        <!-- 辦理單位start -->
+                        <v-col md="6" cols="12">
+                          <v-row class="d-flex formGrp">
+                            <v-col cols="12" md="3" class="">
+                              <label>辦理單位:</label>
+                            </v-col>
+                            <v-col>
+                              <v-text-field
+                                variant="solo"
+                                single-line
+                                error-messages=""
+                                density="compact"
+                              ></v-text-field>
+                            </v-col>
+                          </v-row>
+                        </v-col>
+                        <!-- 辦理單位end -->
+                        <!-- 交辦事項start -->
+                        <v-col md="6" cols="12">
+                          <v-row class="d-flex formGrp">
+                            <v-col cols="12" md="3" class="">
+                              <label>交辦事項:</label>
+                            </v-col>
+                            <v-col>
+                              <v-text-field
+                                variant="solo"
+                                single-line
+                                error-messages=""
+                                density="compact"
+                              ></v-text-field>
+                            </v-col>
+                          </v-row>
+                        </v-col>
+                        <!-- 交辦事項end -->
+                        <!-- 管制代號start -->
+                        <v-col md="6" cols="12">
+                          <v-row class="d-flex formGrp">
+                            <v-col cols="12" md="3" class="">
+                              <label>管制代號:</label>
+                            </v-col>
+                            <v-col>
+                              <v-text-field
+                                variant="solo"
+                                single-line
+                                error-messages=""
+                                density="compact"
+                              ></v-text-field>
+                            </v-col>
+                          </v-row>
+                        </v-col>
+                        <!-- 管制代號end -->
+                        <!-- 辦理情形start -->
+                        <v-col md="6" cols="12">
+                          <v-row class="d-flex formGrp">
+                            <v-col cols="12" md="3" class="">
+                              <label>辦理情形:</label>
+                            </v-col>
+                            <v-col>
+                              <v-text-field
+                                variant="solo"
+                                single-line
+                                error-messages=""
+                                density="compact"
+                              ></v-text-field>
+                            </v-col>
+                          </v-row>
+                        </v-col>
+                        <!-- 辦理情形end -->
+                      </v-row>
+                      <v-row>
+                        <v-col cols="12" class="pt-0">
+                          <div class="d-flex btnList justify-center">
+                            <v-btn>查詢</v-btn>
+                            <v-btn class="searchMoreBtn">進階搜尋</v-btn>
+                          </div>
+                        </v-col>
+                        <v-col class="d-flex justify-center">
+                          <v-btn
+                            class="closeSearchMoreBtn"
+                            elevation="0"
+                            @click="open1"
+                          >
+                            <span class="material-icons-round">
+                              expand_less
+                            </span>
+                          </v-btn>
+                        </v-col>
+                      </v-row>
+                    </v-expansion-panel-text>
+                  </v-expansion-panel>
+                </v-expansion-panels>
+              </v-form>
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
+      <!-- 搜尋列表 end -->
       <v-card class="scrollContent">
         <div class="">
           <v-container class="formContainer">
@@ -539,7 +776,7 @@
                   <label for="">按鈕欄位</label>
                 </v-col>
                 <v-col cols="12" md="10">
-                  <div class="mb-4">
+                  <div class="mb-2">
                     <v-btn
                       class="ma-1"
                       @click="doReport(1)"
@@ -666,26 +903,24 @@
                 <v-col cols="12" md="2" class="">
                   <label for="">資料欄位</label>
                 </v-col>
-                <v-col cols="12" md="10">
-                  <p>
-                    112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。
-                  </p>
+                <v-col cols="12" md="10" class="mb-2">
+                  112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
                 <v-col cols="12" md="2" class="">
                   <label for="">資料欄位</label>
                 </v-col>
-                <v-col cols="12" md="10">
-                  <p>112年公務人員特種考試原住民族考試各等別。</p>
+                <v-col cols="12" md="10" class="mb-2">
+                  112年公務人員特種考試原住民族考試各等別。
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2">
                   <label for="">資料欄位</label>
                 </v-col>
-                <v-col cols="12" md="10">
-                  <p>112年公務人員特種考試原住民族考試各等別。</p>
+                <v-col cols="12" md="10" class="mb-2">
+                  112年公務人員特種考試原住民族考試各等別。
                 </v-col>
               </v-row>
               <!-- formGrp 資料列表 end -->
@@ -772,6 +1007,7 @@ export default {
     functionGroupToggle: null,
     page: 1,
     panel: 1,
+    panel1: 1,
   }),
   created() {
     ps.setTopNavPageTiltle("帳號管理");
@@ -787,8 +1023,18 @@ export default {
         this.panel = 0;
       }
     },
+    panelsHandle1() {
+      if (this.panel1 == 0) {
+        this.panel1 = 1;
+      } else {
+        this.panel1 = 0;
+      }
+    },
     open() {
       this.panel = 1;
+    },
+    open1() {
+      this.panel1 = 1;
     },
     removeIndexBg() {
       const hasImg = document

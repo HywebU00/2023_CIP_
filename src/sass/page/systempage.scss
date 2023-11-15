@@ -175,7 +175,10 @@
       .v-expansion-panel-title {
         padding: 1rem 1.5rem;
         font-size: 1em;
-
+        label {
+          max-width: 115px;
+          line-height: 1.25rem;
+        }
         @include screen('notebook') {
           > .v-row {
             display: block;
@@ -221,6 +224,10 @@
     }
     .formGrp {
       padding: 0.25rem;
+      label {
+        white-space: wrap;
+        float: left;
+      }
     }
     .formTitle {
       max-width: 120px;

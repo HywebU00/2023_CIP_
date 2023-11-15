@@ -282,7 +282,7 @@
             <v-row class="">
               <!-- 搜尋列 start -->
               <v-col class="d-flex justify-end py-0">
-                <div class="btnGroup left mb-2">
+                <div class="btnGroup mb-2">
                   <v-btn color="export" elevation="0">匯出報表</v-btn>
                   <v-btn color="import" elevation="0">匯入報表</v-btn>
                   <v-btn color="cancel" elevation="0">刪除</v-btn>
