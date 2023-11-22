@@ -177,6 +177,16 @@
 .dialogCard {
   .formContainer {
     margin-top: 0;
+    .formGrp {
+      .v-row {
+        margin-top: unset;
+        margin-bottom: unset;
+        > div {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
   }
 
   .v-card {
@@ -245,8 +255,10 @@
 
       border-bottom: 2px solid $gray;
       position: relative;
-      margin-bottom: 0.25rem;
-      margin-top: 0.2rem;
+      // margin-bottom: 0.25rem;
+      margin-bottom: 0;
+      margin-top: 0;
+      // margin-top: 0.2rem;
 
       &:last-child {
         margin-bottom: 0;
@@ -281,13 +293,10 @@
           }
         }
         .v-input__control {
-          margin-top: 0.25rem;
+          // margin-top: 0.25rem;
           border: 1px solid lighten($gray3, 20);
           border-radius: 0.5rem;
         }
-        // .v-messages {
-        //   min-height: unset;
-        // }
       }
       .checkGrp {
         .v-input__control {

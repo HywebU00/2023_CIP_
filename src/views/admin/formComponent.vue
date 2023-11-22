@@ -430,7 +430,7 @@
                               ></v-checkbox>
                               <v-checkbox
                                 density="compact"
-                                hide-details
+                                hide-details=""
                                 label="解除列管"
                               ></v-checkbox>
                             </v-col>

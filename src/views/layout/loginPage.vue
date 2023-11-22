@@ -86,6 +86,7 @@
                             variant="solo"
                             single-line
                             density="compact"
+                            hide-details="auto"
                           ></v-text-field
                         ></v-col>
                       </v-row>
@@ -104,6 +105,7 @@
                           <v-text-field
                             variant="solo"
                             single-line
+                            hide-details="auto"
                             type="password"
                             placeholder="8 個字元以上要包含數字英文大小寫特殊符號"
                             density="compact"
@@ -125,6 +127,7 @@
                           <v-text-field
                             variant="solo"
                             single-line
+                            hide-details="auto"
                             type="password"
                             density="compact"
                           ></v-text-field>
@@ -144,6 +147,7 @@
                         <v-col>
                           <v-text-field
                             variant="solo"
+                            hide-details="auto"
                             single-line
                             placeholder="請輸入中文姓名"
                             density="compact"
@@ -166,6 +170,7 @@
                             variant="solo"
                             single-line
                             type="email"
+                            hide-details="auto"
                             id="mail"
                             density="compact"
                           ></v-text-field>
@@ -184,10 +189,10 @@
                         </v-col>
                         <v-col>
                           <v-text-field
+                            hide-details="auto"
                             variant="solo"
                             single-line
                             density="compact"
-                            type="phone"
                           ></v-text-field>
                         </v-col>
                       </v-row>
@@ -223,6 +228,7 @@
                         </v-col>
                         <v-col>
                           <v-text-field
+                            hide-details="auto"
                             variant="solo"
                             single-line
                             density="compact"
