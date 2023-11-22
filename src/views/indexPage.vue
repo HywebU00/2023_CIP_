@@ -90,6 +90,12 @@ export default {
           note: "",
           // https://hywebu00.github.io/2023_CIP_/#/ui/tree
         },
+        {
+          name: "登入頁面",
+          link: "https://hywebu00.github.io/2023_CIP_/#/ui-login",
+          note: "",
+          // https://hywebu00.github.io/2023_CIP_/#/ui/tree
+        },
       ],
     };
   },
