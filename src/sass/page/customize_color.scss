@@ -9,6 +9,8 @@ $theme-config: (
     tbodyColor: $defaultTbodyColor,
     messageColor: $defaultLight,
     scrollbarColor: #bf5f46,
+    //rgba(0, 0, 0, 0),
+    //#bf5f46,
     //////////////////////////////
     primary: $defaultPrimary,
     light: $defaultLight,
@@ -215,7 +217,8 @@ $theme-config: (
       }
       .pageContent {
         &::-webkit-scrollbar-thumb {
-          background: lighten($scrollbarColor, 10);
+          background: #331919c2;
+          // background: lighten($scrollbarColor, 10);
         }
       }
     }
@@ -230,6 +233,9 @@ $theme-config: (
             }
           }
         }
+        // &::-webkit-scrollbar-thumb {
+        //   background: rgba(0, 0, 0, 0.6);
+        // }
       }
       .linkSection {
         .linkBtn {
