@@ -66,6 +66,10 @@ const routes = [
     path: "/ui-index",
     component: () => import("@/views/indexPage.vue"),
   },
+  {
+    path: "/ui-login",
+    component: () => import("@/views/layout/loginPage.vue"),
+  },
 ];
 
 export const router = createRouter({

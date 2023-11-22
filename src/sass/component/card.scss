@@ -301,6 +301,9 @@
         display: none;
       }
     }
+    .v-btn {
+      width: rem(150);
+    }
   }
 }
 .peopleFinderCard {
@@ -353,75 +356,114 @@
     color: $defaultPrimary;
   }
 }
+.loginCard {
+  .logoText {
+    margin-top: rem(20);
+    margin-bottom: rem(30);
+    .v-img {
+      width: 171px;
+      margin: 0 auto;
+    }
+  }
+  margin-top: rem(125);
+  padding: rem(20);
+  background: rgba(255, 255, 255, 0.55) !important;
+  width: rem(450);
+  height: rem(488);
+  border-radius: rem(20) !important;
 
-// .mpPage {
-//   .v-card {
-//     background-color: rgba(255, 255, 255, 0.9);
-//     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-//     padding: 1em 3rem;
-//   }
-//   .v-list {
-//     background: unset;
-//     a {
-//       color: $aLinkColor;
-//       font-weight: 600;
-//       &:hover {
-//         color: $thirdColor;
-//       }
-//     }
-//   }
-//   .linkCard {
-//     padding: 0em 3rem;
-//   }
-// }
-// .commonToolSection {
-//   &.v-card {
-//     padding: 0em 3em;
-//     border-radius: rem(40) !important;
-//   }
-//   .title {
-//     white-space: nowrap;
-//   }
-//   display: flex;
-//   align-items: center;
-//   .v-list {
-//     background: unset;
-//     margin-left: 1rem;
-//     .v-list-item {
-//       min-height: auto;
-//       padding-inline-start: 0.25rem !important;
-//     }
-//   }
-// }
-// .linkCard {
-//   display: flex;
-//   align-items: center;
-//   &.v-card {
-//     border-radius: rem(16) !important;
-//   }
+  .v-input__control {
+    height: 43px !important;
 
-//   .v-list {
-//     margin-left: 1.5rem;
-//     .v-list-item {
-//       min-height: auto;
-//       padding-inline-end: 0.25rem !important;
-//       padding-inline-start: 0.25rem !important;
-//     }
-//   }
-//   .linkBtn {
-//     margin: 0.5rem 0.25rem 0.5rem 0.25rem;
-//     height: 2.25rem !important;
-//     box-shadow: none;
-//     &:hover,
-//     &:focus,
-//     &:active {
-//       box-shadow: none;
-//     }
+    .v-field {
+      box-shadow: none !important;
+      border-radius: rem(10) !important;
+    }
+  }
+  .v-field__input {
+    min-height: 43px;
+  }
+  .logo {
+    margin-top: rem(6);
+    .v-img {
+      width: rem(246);
+    }
+    width: rem(300);
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #fff;
+  }
+  .passwordInput,
+  .idInput {
+    margin-bottom: rem(6);
+  }
+  v-field &.v-sheet {
+    padding-top: rem(30);
+  }
+  .v-form {
+    width: rem(300);
+    margin: 0 auto;
+  }
+  .btnList {
+    margin-top: rem(30);
+  }
+  .logInBtn {
+    width: rem(145);
+    height: rem(45) !important;
+    margin-right: 0.75rem;
+    font-size: rem(18);
+    font-weight: 800;
+    letter-spacing: 0.5rem;
+    background: linear-gradient(to bottom, #3a1d1d 0%, #653737 100%) !important;
+  }
+  .signUpBtn {
+    width: rem(145);
+    height: rem(45) !important;
+    font-weight: 800;
+    font-size: rem(18);
+    letter-spacing: 0rem;
+    background: linear-gradient(to bottom, #bf5f46 0%, #d78669 100%) !important;
+  }
+  .dynaImage {
+    max-width: 140px;
+  }
+  .v-field__prepend-inner > .v-icon {
+    color: #a38989;
+    opacity: 1;
+  }
+  .v-label {
+    color: #a38989;
+    opacity: 1;
+  }
 
-//     .v-btn__content {
-//       font-weight: 700;
-//     }
-//   }
-// }
-.albumCard {
+  @include screen('tablet') {
+    width: unset;
+    max-width: rem(450);
+    .v-form {
+      width: unset;
+    }
+  }
+  @include screen('mobile') {
+    .logo {
+      width: unset;
+    }
+    .logInBtn {
+      width: unset;
+    }
+  }
+}
+@keyframes cardMove {
+  from {
+    margin-top: rem(100);
+  }
+  to {
+    margin-top: rem(125);
+    opacity: 1;
+  }
+}
+
+/* The element to apply the animation to */
+.loginCard {
+  margin-top: rem(125);
+  animation-name: cardMove;
+  animation-duration: 1.5s;
 }

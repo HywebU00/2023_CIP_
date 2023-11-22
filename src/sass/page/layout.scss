@@ -73,6 +73,7 @@ html {
     }
     .header {
       margin: 0;
+      z-index: 9;
       padding: 0.5rem 0;
     }
     @include screen('tablet') {
@@ -169,6 +170,10 @@ html {
         margin-bottom: 0;
       }
     }
+    .v-list-group__items {
+      color: #77615b;
+      opacity: 1;
+    }
     .v-list-item {
       height: rem(50);
       font-weight: 500;
@@ -192,7 +197,7 @@ html {
             font-size: em(15);
             line-height: rem(16);
             margin-left: rem(28);
-            font-weight: 400;
+            font-weight: 800;
           }
         }
       }
@@ -353,7 +358,7 @@ html {
   }
 }
 button.navBtn {
-  margin-left: 0.75rem;
+  margin: 0 0.75rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -430,8 +435,25 @@ button.navBtn {
 }
 .webSearch {
   width: rem(200);
+
+  position: relative;
+
+  &:after {
+    position: absolute;
+    background: linear-gradient(135deg, rgb(255, 255, 255) 1%, rgb(244 213 193) 100%);
+    width: rem(205);
+    height: rem(40);
+    content: '';
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: rem(50);
+  }
   .v-text-field .v-field {
     border-radius: rem(50);
+    box-shadow: none;
+  }
+  .v-input {
+    z-index: 666;
   }
   .v-field__input {
     height: rem(35);
@@ -439,9 +461,15 @@ button.navBtn {
       padding: 0 1rem;
     }
   }
+  .v-label {
+    color: $defaultPrimary;
+    opacity: 1;
+  }
   .v-field__append-inner {
     .v-icon {
       color: $defaultPrimary;
+      transform: scale(1.2);
+      font-weight: 900;
       opacity: 1;
     }
   }
@@ -510,6 +538,10 @@ button.navBtn {
 .infoBtnContainer {
   .v-input__control {
     padding: 0.5rem;
+  }
+  .v-label {
+    color: $defaultPrimary;
+    opacity: 1;
   }
   max-width: 300px;
 

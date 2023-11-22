@@ -32,9 +32,9 @@
             <v-tab value="one">基本資料</v-tab>
             <v-tab value="two">中央輪值</v-tab>
             <v-tab value="three">本會輪值</v-tab>
-            <v-tab value="one">基本資料</v-tab>
-            <v-tab value="two">中央輪值</v-tab>
-            <v-tab value="three">本會輪值</v-tab>
+            <v-tab value="four">基本資料</v-tab>
+            <v-tab value="five">中央輪值</v-tab>
+            <v-tab value="six">本會輪值</v-tab>
           </v-tabs>
           <v-card-text>
             <v-window v-model="tab">
@@ -194,8 +194,8 @@
                   </tbody>
                 </v-table>
               </v-window-item>
-              <v-window-item value="three"> 4 </v-window-item>
-              <v-window-item value="three"> 5 </v-window-item>
+              <v-window-item value="four"> 4 </v-window-item>
+              <v-window-item value="five"> 5 </v-window-item>
             </v-window>
           </v-card-text>
           <!-- tabsContent end -->

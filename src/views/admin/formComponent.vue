@@ -50,8 +50,7 @@
                                     variant="solo"
                                     single-line
                                     density="compact"
-                                    placeholder=""
-                                    error-messages=""
+                                    hide-details="auto"
                                     :items="['1990', '1991', '1992']"
                                   ></v-autocomplete>
                                 </v-col>
@@ -65,7 +64,7 @@
                                     single-line
                                     density="compact"
                                     placeholder=""
-                                    error-messages=""
+                                    hide-details="auto"
                                     :items="['1990', '1991', '1992']"
                                   ></v-autocomplete>
                                 </v-col>
@@ -85,6 +84,7 @@
                                     variant="solo"
                                     single-line
                                     density="compact"
+                                    hide-details="auto"
                                   ></v-text-field>
                                 </v-col>
                                 <v-col cols="auto tilde">
@@ -94,6 +94,7 @@
                                   <v-text-field
                                     variant="solo"
                                     single-line
+                                    hide-details="auto"
                                     density="compact"
                                   ></v-text-field>
                                 </v-col>
@@ -106,7 +107,7 @@
                           lg="3"
                           class="d-flex justify-lg-end justify-center align-center btnList"
                         >
-                          <v-btn>查詢</v-btn>
+                          <v-btn class="submit">查詢</v-btn>
                           <v-btn
                             class="searchMoreBtn"
                             @click.stop="this.panel = 0"
@@ -271,7 +272,7 @@
                       <v-row>
                         <v-col cols="12" class="pt-0">
                           <div class="d-flex btnList justify-center">
-                            <v-btn>查詢</v-btn>
+                            <v-btn class="submit">查詢</v-btn>
                             <v-btn class="searchMoreBtn">進階搜尋</v-btn>
                           </div>
                         </v-col>
@@ -343,7 +344,7 @@
                           lg="3"
                           class="d-flex justify-lg-end justify-center align-center btnList"
                         >
-                          <v-btn>查詢</v-btn>
+                          <v-btn class="submit">查詢</v-btn>
                           <v-btn
                             class="searchMoreBtn"
                             @click.stop="this.panel1 = 0"
@@ -508,7 +509,7 @@
                       <v-row>
                         <v-col cols="12" class="pt-0">
                           <div class="d-flex btnList justify-center">
-                            <v-btn>查詢</v-btn>
+                            <v-btn class="submit">查詢</v-btn>
                             <v-btn class="searchMoreBtn">進階搜尋</v-btn>
                           </div>
                         </v-col>

@@ -106,7 +106,7 @@
                           lg="3"
                           class="d-flex justify-lg-end justify-center align-center btnList"
                         >
-                          <v-btn>查詢</v-btn>
+                          <v-btn class="submit">查詢</v-btn>
                           <v-btn
                             class="searchMoreBtn"
                             @click.stop="this.panel = 0"
@@ -271,7 +271,7 @@
                       <v-row>
                         <v-col cols="12" class="pt-0">
                           <div class="d-flex btnList justify-center">
-                            <v-btn>查詢</v-btn>
+                            <v-btn class="submit">查詢</v-btn>
                             <v-btn class="searchMoreBtn">進階搜尋</v-btn>
                           </div>
                         </v-col>

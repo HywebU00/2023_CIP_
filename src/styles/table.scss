@@ -3,3 +3,10 @@
   background-color: lighten(#695f5f, 20);
   color: #fff;
 }
+
+.v-table--density-default > .v-table__wrapper > table > thead > tr > th {
+  height: 40px;
+}
+.v-slide-group__prev {
+  color: #fff;
+}

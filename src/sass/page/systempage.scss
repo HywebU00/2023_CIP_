@@ -125,7 +125,7 @@
     .v-btn__content {
       font-size: em(16);
       color: #fff;
-      text-shadow: $text-shadow;
+      // text-shadow: $text-shadow;
     }
     .v-tabs {
       border-radius: 0px;
@@ -166,15 +166,23 @@
         background-color: $defaultBg;
         border-radius: rem(40);
         box-shadow: $boxShadow;
-
         margin-bottom: 0.5rem;
+        &.v-expansion-panel--active {
+          border-radius: rem(10);
+        }
       }
       .v-expansion-panel-title__overlay {
         opacity: 0;
       }
       .v-expansion-panel-title {
-        padding: 1rem 1.5rem;
-        font-size: 1em;
+        padding: 0.5rem;
+        padding-left: 1rem;
+        font-size: 1.1em;
+        font-weight: 600;
+        &.v-expansion-panel-title--active {
+          padding: 1.4rem;
+        }
+
         label {
           max-width: 115px;
           line-height: 1.25rem;
@@ -224,8 +232,10 @@
     }
     .formGrp {
       padding: 0.25rem;
+      padding-top: 0.4rem;
       label {
         white-space: wrap;
+        font-size: 0.938em;
         float: left;
       }
     }

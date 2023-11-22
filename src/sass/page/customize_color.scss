@@ -98,6 +98,7 @@ $theme-config: (
       background: $mainBg;
       &.mpImg {
         background: $mainImg;
+        background-size: cover;
       }
     }
     .navDrawer {
@@ -115,6 +116,7 @@ $theme-config: (
             background: $secondary;
           }
         }
+
         .v-list-group {
           > .v-list-item {
             &.v-list-item--active {
@@ -285,6 +287,7 @@ $theme-config: (
       .v-table__wrapper {
         > table {
           > thead > tr th {
+            height: rem(40);
             background: $theadColor;
           }
           tbody {
@@ -305,11 +308,15 @@ $theme-config: (
       }
     }
     .v-tabs {
+      margin: 0 1rem;
       .v-btn__content {
         color: $primary;
+        font-weight: bold;
+        font-size: 1.1em;
       }
       .v-tab__slider {
         color: $light;
+        height: 3px;
       }
     }
 
@@ -363,6 +370,9 @@ $theme-config: (
             }
           }
         }
+      }
+      .v-list-group__items {
+        color: #fff;
       }
       .logoImg {
         .logo {
@@ -489,6 +499,14 @@ $theme-config: (
   }
   .webSearch .v-field__append-inner .v-icon {
     color: #fff;
+  }
+  .webSearch {
+    &:after {
+      background: rgb(35, 35, 35);
+    }
+    .v-label {
+      color: #fff;
+    }
   }
   .page {
     .searchGrp {
