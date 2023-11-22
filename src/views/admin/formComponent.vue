@@ -298,7 +298,7 @@
       </div>
       <!-- 搜尋列表 end -->
       <!-- 搜尋列表 start -->
-      <div class="functionGrp">
+      <!-- <div class="functionGrp">
         <v-container>
           <v-row>
             <v-col class="searchGrp">
@@ -355,7 +355,6 @@
                     </v-expansion-panel-title>
                     <v-expansion-panel-text>
                       <v-row class="formGrp">
-                        <!-- 類別start -->
                         <v-col md="6" cols="12">
                           <v-row class="d-flex formGrp">
                             <v-col cols="12" md="3">
@@ -378,8 +377,6 @@
                             </v-col>
                           </v-row>
                         </v-col>
-                        <!-- 類別end -->
-                        <!-- 控管編號start -->
                         <v-col md="6" cols="12">
                           <v-row class="d-flex formGrp">
                             <v-col cols="12" md="3">
@@ -410,8 +407,6 @@
                             </v-col>
                           </v-row>
                         </v-col>
-                        <!-- 控管編號end -->
-                        <!-- 案件狀態start -->
                         <v-col md="6" cols="12">
                           <v-row class="d-flex formGrp">
                             <v-col cols="12" md="3" class="">
@@ -436,8 +431,6 @@
                             </v-col>
                           </v-row>
                         </v-col>
-                        <!-- 案件狀態end -->
-                        <!-- 辦理單位start -->
                         <v-col md="6" cols="12">
                           <v-row class="d-flex formGrp">
                             <v-col cols="12" md="3" class="">
@@ -453,8 +446,6 @@
                             </v-col>
                           </v-row>
                         </v-col>
-                        <!-- 辦理單位end -->
-                        <!-- 交辦事項start -->
                         <v-col md="6" cols="12">
                           <v-row class="d-flex formGrp">
                             <v-col cols="12" md="3" class="">
@@ -470,8 +461,6 @@
                             </v-col>
                           </v-row>
                         </v-col>
-                        <!-- 交辦事項end -->
-                        <!-- 管制代號start -->
                         <v-col md="6" cols="12">
                           <v-row class="d-flex formGrp">
                             <v-col cols="12" md="3" class="">
@@ -487,8 +476,6 @@
                             </v-col>
                           </v-row>
                         </v-col>
-                        <!-- 管制代號end -->
-                        <!-- 辦理情形start -->
                         <v-col md="6" cols="12">
                           <v-row class="d-flex formGrp">
                             <v-col cols="12" md="3" class="">
@@ -504,7 +491,6 @@
                             </v-col>
                           </v-row>
                         </v-col>
-                        <!-- 辦理情形end -->
                       </v-row>
                       <v-row>
                         <v-col cols="12" class="pt-0">
@@ -532,7 +518,7 @@
             </v-col>
           </v-row>
         </v-container>
-      </div>
+      </div> -->
       <!-- 搜尋列表 end -->
       <v-card class="scrollContent">
         <div class="">

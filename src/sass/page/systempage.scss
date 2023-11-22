@@ -164,18 +164,21 @@
     .searchList {
       .v-expansion-panel {
         background-color: $defaultBg;
-        border-radius: rem(40);
+        border-radius: rem(20);
         box-shadow: $boxShadow;
         margin-bottom: 0.5rem;
         &.v-expansion-panel--active {
-          border-radius: rem(10);
+          border-radius: rem(20);
+        }
+        @media (min-width: 1280px) {
+          border-radius: rem(40);
         }
       }
       .v-expansion-panel-title__overlay {
         opacity: 0;
       }
       .v-expansion-panel-title {
-        padding: 0.5rem;
+        padding: 1rem;
         padding-left: 1rem;
         font-size: 1.1em;
         font-weight: 600;
@@ -186,6 +189,9 @@
         label {
           max-width: 115px;
           line-height: 1.25rem;
+        }
+        @media (min-width: 1280px) {
+          padding: 0.5rem;
         }
         @include screen('notebook') {
           > .v-row {
