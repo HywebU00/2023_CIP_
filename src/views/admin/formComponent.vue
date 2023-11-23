@@ -177,7 +177,7 @@
                         <!-- 案件狀態start -->
                         <v-col md="6" cols="12">
                           <v-row class="d-flex formGrp">
-                            <v-col cols="12" md="3" class="">
+                            <v-col cols="12" md="3">
                               <label for="list">案件狀態</label>
                             </v-col>
                             <v-col class="checkGrp" id="list">
@@ -252,7 +252,7 @@
                         </v-col>
                         <!-- 管制代號end -->
                         <!-- 辦理情形start -->
-                        <v-col md="6" cols="12">
+                        <!-- <v-col md="6" cols="12">
                           <v-row class="d-flex formGrp">
                             <v-col cols="12" md="3" class="">
                               <label>辦理情形:</label>
@@ -266,7 +266,7 @@
                               ></v-text-field>
                             </v-col>
                           </v-row>
-                        </v-col>
+                        </v-col> -->
                         <!-- 辦理情形end -->
                       </v-row>
                       <v-row>
@@ -525,7 +525,7 @@
           <v-container class="formContainer">
             <v-form class="formGrid">
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="type"
                     >族名
                     <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
@@ -533,17 +533,18 @@
                     ></label
                   >
                 </v-col>
-                <v-col md="10">
+                <v-col>
+                  <!-- -->
                   <v-text-field
-                    variant="solo"
                     error-messages="錯誤訊息 錯誤訊息"
+                    variant="solo"
                     single-line
                     density="compact"
                   ></v-text-field>
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="type"
                     >族別
                     <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
@@ -563,7 +564,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="mail"
                     >Email
                     <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
@@ -582,7 +583,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="type"
                     >行動電話
                     <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
@@ -600,7 +601,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="list"
                     >多選選單
                     <abbr class="necessary" title="為必填(選)欄位,不能為空白。"
@@ -627,7 +628,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="">交辦事項 </label>
                 </v-col>
                 <v-col>
@@ -640,21 +641,21 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="">編號 </label>
                 </v-col>
                 <v-col cols="6" md="4" class="d-flex align-end">
                   <v-text-field variant="solo" density="compact" />
-                  <span class="mb-2 ml-2 text-primary">字</span>
+                  <span class="mb-3 ml-2 text-primary">字</span>
                 </v-col>
                 <v-col cols="6" md="4" class="d-flex align-end">
-                  <span class="mb-2 mr-2 text-primary">第</span>
+                  <span class="mb-3 mr-2 text-primary">第</span>
                   <v-text-field variant="solo" density="compact" />
-                  <span class="mb-2 ml-2 text-primary">號</span>
+                  <span class="mb-3 ml-2 text-primary">號</span>
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="">文字輸入 </label>
                 </v-col>
                 <v-col>
@@ -673,7 +674,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="">單選 </label>
                 </v-col>
                 <v-col>
@@ -685,7 +686,7 @@
               </v-row>
 
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="">住址</label>
                 </v-col>
                 <v-col>
@@ -726,7 +727,7 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="">兩欄欄位</label>
                 </v-col>
                 <v-col>
@@ -759,11 +760,11 @@
               </v-row>
               <!-- 按鈕列 start -->
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="">按鈕欄位</label>
                 </v-col>
                 <v-col cols="12" md="10">
-                  <div class="mb-2">
+                  <div>
                     <v-btn
                       class="ma-1"
                       @click="doReport(1)"
@@ -887,7 +888,7 @@
               <!-- 按鈕列 end -->
               <!-- formGrp 資料列表 start -->
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="">資料欄位</label>
                 </v-col>
                 <v-col cols="12" md="10" class="mb-2">
@@ -895,18 +896,18 @@
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2" class="">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="">資料欄位</label>
                 </v-col>
-                <v-col cols="12" md="10" class="mb-2">
+                <v-col cols="12" md="10">
                   112年公務人員特種考試原住民族考試各等別。
                 </v-col>
               </v-row>
               <v-row class="d-flex formGrp">
-                <v-col cols="12" md="2">
+                <v-col cols="12" md="2" class="infoTitle">
                   <label for="">資料欄位</label>
                 </v-col>
-                <v-col cols="12" md="10" class="mb-2">
+                <v-col cols="12" md="10">
                   112年公務人員特種考試原住民族考試各等別。
                 </v-col>
               </v-row>
@@ -920,7 +921,7 @@
                     >
                   </v-row>
                   <v-row class="d-flex formGrp" v-for="i in 3" :key="i">
-                    <v-col cols="12" md="3" class="">
+                    <v-col cols="12" md="3">
                       <label for="type"
                         >欄位一
                         <abbr
@@ -972,8 +973,8 @@
           </v-container>
           <v-row>
             <v-col class="btnGroup center mb-2">
-              <v-btn elevation="0" color="submit">送出</v-btn>
-              <v-btn elevation="0" color="cancel">取消</v-btn>
+              <v-btn elevation="0" class="submitBtn" color="submit">送出</v-btn>
+              <v-btn elevation="0" class="cancelBtn" color="cancel">取消</v-btn>
             </v-col>
           </v-row>
         </div>

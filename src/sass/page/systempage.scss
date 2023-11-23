@@ -2,9 +2,10 @@
   display: flex;
   button {
     margin-left: 0.5rem;
-    &:first-child {
-      margin-left: 0;
-    }
+    margin-right: 0.5rem;
+    // &:first-child {
+    //   margin-left: 0;
+    // }
   }
   &.left {
     justify-content: flex-start;
@@ -14,6 +15,10 @@
   }
   &.center {
     justify-content: center;
+  }
+  .submitBtn,
+  .cancelBtn {
+    min-width: rem(120);
   }
 }
 .iconBtn {
@@ -123,7 +128,7 @@
       }
     }
     .v-btn__content {
-      font-size: em(16);
+      // font-size: em(16);
       color: #fff;
       // text-shadow: $text-shadow;
     }
@@ -179,11 +184,12 @@
       }
       .v-expansion-panel-title {
         padding: 1rem;
-        padding-left: 1rem;
-        font-size: 1.1em;
+        padding-right: 1.5rem;
+        font-size: rem(16);
         font-weight: 600;
         &.v-expansion-panel-title--active {
           padding: 1.4rem;
+          // padding-bottom: 0.5rem;
         }
 
         label {
@@ -192,6 +198,7 @@
         }
         @media (min-width: 1280px) {
           padding: 0.5rem;
+          padding-left: 1.5rem;
         }
         @include screen('notebook') {
           > .v-row {
@@ -207,6 +214,7 @@
       .v-expansion-panel-text {
         .btnList {
           margin-bottom: 0.5rem;
+          margin-top: 2rem;
         }
         .v-expansion-panel-text__wrapper {
           padding-top: 0;
@@ -241,7 +249,7 @@
       padding-top: 0.4rem;
       label {
         white-space: wrap;
-        font-size: 0.938em;
+        // font-size: 0.938em;
         float: left;
       }
     }

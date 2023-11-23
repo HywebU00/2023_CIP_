@@ -174,147 +174,155 @@
     }
   }
 }
+
+// .dialogCard
 .dialogCard {
-  .formContainer {
-    margin-top: 0;
-    .formGrp {
-      .v-row {
-        margin-top: unset;
-        margin-bottom: unset;
-        > div {
-          padding-top: 0;
-          padding-bottom: 0;
-        }
+  .v-btn {
+    width: rem(150);
+  }
+}
+.formContainer {
+  margin-top: 0;
+  .formGrp {
+    .v-row {
+      margin-top: unset;
+      margin-bottom: unset;
+      > div {
+        padding-top: 0;
+        padding-bottom: 0;
       }
     }
   }
+}
 
-  .v-card {
-    .v-card-title {
-      .v-container {
-        padding-bottom: 0;
-      }
+.v-card {
+  .v-card-title {
+    .v-container {
+      padding-bottom: 0;
     }
-    .v-card-text {
-      padding-top: 0.25rem;
-      .v-container {
-        padding-top: 0;
-      }
+  }
+  .v-card-text {
+    padding-top: 0.25rem;
+    .v-container {
+      padding-top: 0;
     }
-    .infoTitle {
-      padding-right: 1.25rem;
-      color: $defaultPrimary;
-      font-weight: 500;
-      margin-left: -0.5rem;
-      display: flex;
-      justify-content: flex-end;
-      color: $dark;
-      position: relative;
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        left: 8px;
-        background-color: $secondaryColor;
-        height: 2px;
-        bottom: -2px;
-        width: calc(100% - 24px);
-      }
-      @include screen('notebook') {
-        width: 100%;
-        max-width: unset;
-        flex-basis: auto;
-        padding-left: 1.25rem;
-        justify-content: flex-start;
-        padding-bottom: 0;
-        &::after {
-          display: none;
-        }
-      }
+  }
+  .infoTitle {
+    align-items: center;
+    padding-right: 1.25rem;
+    color: $defaultPrimary;
+    font-weight: 500;
+    margin-left: -0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    color: $dark;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      left: 8px;
+      background-color: $secondaryColor;
+      height: 2px;
+      bottom: -2px;
+      width: calc(100% - 24px);
     }
-    .infoText {
-      margin: 0 0.75rem;
-      @include screen('tablet') {
-        margin: 0;
-      }
-    }
-
-    .infoGrp,
-    .formGrp {
-      @include screen('tablet') {
-        flex-wrap: wrap;
-      }
-      label,
-      .infoTitle > span {
-        margin-right: 0;
-        @include screen('tablet') {
-          text-align: left;
-          margin: 0;
-        }
-      }
-
-      border-bottom: 2px solid $gray;
-      position: relative;
-      // margin-bottom: 0.25rem;
-      margin-bottom: 0;
-      margin-top: 0;
-      // margin-top: 0.2rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      @include screen('tablet') {
-        &:after {
-          display: none;
-        }
-      }
-
-      .formGrp {
-        padding-bottom: 0;
-        border-bottom: 0;
-        padding: 0;
-        &:after {
-          display: none;
-        }
-      }
-      .v-field__field,
-      .v-field {
-        box-shadow: none;
-        background: $gray;
-        border-radius: 0.5rem;
-      }
-      .v-input {
-        border-radius: 0.5rem;
-        &.v-radio-group {
-          background: unset;
-          .v-input__control {
-            border: none;
-          }
-        }
-        .v-input__control {
-          // margin-top: 0.25rem;
-          border: 1px solid lighten($gray3, 20);
-          border-radius: 0.5rem;
-        }
-      }
-      .checkGrp {
-        .v-input__control {
-          border: none;
-        }
-      }
-    }
-    .formGrp_2 {
-      margin-top: 1rem;
+    @include screen('notebook') {
+      width: 100%;
+      max-width: unset;
+      flex-basis: auto;
+      padding-left: 1.25rem;
+      justify-content: flex-start;
+      padding-bottom: 0;
       &::after {
         display: none;
       }
     }
-    .v-btn {
-      width: rem(150);
+  }
+  .infoText {
+    margin: 0 0.75rem;
+    @include screen('tablet') {
+      margin: 0;
     }
   }
+
+  .infoGrp,
+  .formGrp {
+    @include screen('tablet') {
+      flex-wrap: wrap;
+    }
+    // label,
+    .infoTitle > span {
+      margin-right: 0;
+      @include screen('tablet') {
+        text-align: left;
+        margin: 0;
+      }
+    }
+
+    border-bottom: 2px solid $gray;
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    @include screen('tablet') {
+      &:after {
+        display: none;
+      }
+    }
+
+    .formGrp {
+      padding-bottom: 0;
+      border-bottom: 0;
+      padding: 0;
+      &:after {
+        display: none;
+      }
+    }
+    .v-field__field,
+    .v-field {
+      box-shadow: none;
+      background: $gray;
+      border-radius: 0.5rem;
+    }
+    .v-input {
+      border-radius: 0.5rem;
+      &.v-radio-group {
+        background: unset;
+        .v-input__control {
+          border: none;
+        }
+      }
+      .v-input__control {
+        border: 1px solid lighten($gray3, 20);
+        border-radius: 0.5rem;
+      }
+    }
+    // .v-btn {
+    //   width: unset;
+    // }
+    .checkGrp {
+      .v-input__control {
+        border: none;
+      }
+    }
+  }
+  .formGrp_2 {
+    margin-top: 1rem;
+    &::after {
+      display: none;
+    }
+  }
+  // .v-btn {
+  //   width: rem(150);
+  // }
 }
+
 .peopleFinderCard {
   .v-card-text {
     padding-top: 0 !important;
