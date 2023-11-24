@@ -755,6 +755,27 @@ $theme-config: (
       }
     }
   }
+  .v-card .formGrp .v-field__field {
+    background: unset;
+  }
+
+  .v-card .formGrp {
+    .v-input .v-input__control {
+      border: 1px solid #595959;
+    }
+    .v-input.v-radio-group {
+      .v-input__control {
+        border: none;
+      }
+    }
+    .checkGrp {
+      .v-input {
+        .v-input__control {
+          border: none;
+        }
+      }
+    }
+  }
   //動態表單
   .tableForm {
     table {

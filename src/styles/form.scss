@@ -12,6 +12,9 @@
 .v-field--error {
   border: 1px solid red;
 }
+.v-select .v-select__selection:first-child {
+  line-height: 1rem;
+}
 .v-input__details {
   min-height: unset;
 }

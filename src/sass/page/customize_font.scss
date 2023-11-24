@@ -74,7 +74,7 @@ $fontSize-config: (
       font-size: $font-size;
     }
     .v-btn__content {
-      font-size: $v-btn__content;
+      font-size: $v-btn__content * 0.9;
     }
     .page .searchGrp .formGrp label {
       font-size: $font-size;
