@@ -1,1 +1,0 @@
-import{r as e,s as t,x as s}from"./index.73a45fab.js";const a={class:"about1",ref:"pageTitle"},o=s("h1",null,"\u500B\u4EBA\u9996\u9801",-1),_=[o],c={data(){return{}},created(){},mounted(){this.$refs.pageTitle.focus()},methods:{}},l=Object.assign(c,{__name:"MainPage",setup(n){return(r,d)=>(e(),t("div",a,_,512))}});export{l as default};
