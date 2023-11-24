@@ -698,6 +698,7 @@ $theme-config: (
     }
   }
   .textEdit {
+    border: 1px solid #595959;
     .fr-toolbar,
     .fr-element,
     .fr-second-toolbar {
@@ -727,7 +728,12 @@ $theme-config: (
     .fr-dropdown-list {
       background-color: #5b5b5b;
     }
-
+    .fr-box.fr-basic,
+    .fr-toolbar,
+    .fr-box.fr-basic .fr-wrapper,
+    .fr-second-toolbar {
+      background: unset !important;
+    }
     .fr-command.fr-btn + .fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li a.fr-active {
       color: #000;
     }
@@ -777,6 +783,11 @@ $theme-config: (
         .v-input__control {
           border: none;
         }
+      }
+    }
+    .v-input.v-checkbox {
+      .v-input__control {
+        border: none;
       }
     }
   }
