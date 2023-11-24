@@ -531,6 +531,10 @@ $theme-config: (
         .v-expansion-panel {
           background: rgba(255, 255, 255, 10%);
         }
+        .v-input__control .v-field {
+          box-shadow: none;
+          border: 1px solid #595959;
+        }
       }
     }
     .closeSearchMoreBtn {
