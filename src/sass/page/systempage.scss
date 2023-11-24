@@ -241,7 +241,9 @@
       .tilde {
         display: flex;
         justify-content: center;
-        align-items: center;
+        span {
+          padding-top: rem(8);
+        }
       }
     }
     .formGrp {
