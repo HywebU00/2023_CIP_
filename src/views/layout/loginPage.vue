@@ -56,7 +56,7 @@
               class="dialogCard"
               v-model="dialog"
               scrollable
-              max-width="860"
+              max-width="870"
             >
               <template v-slot:activator="{ props }">
                 <v-btn class="signUpBtn" v-bind="props"> 申請帳號 </v-btn>

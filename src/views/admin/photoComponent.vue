@@ -314,7 +314,7 @@
                 class="dialogCard"
                 v-model="dialog"
                 scrollable
-                max-width="1200"
+                max-width="870"
               >
                 <template v-slot:activator="{ props }">
                   <v-col

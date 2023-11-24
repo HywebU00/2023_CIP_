@@ -177,6 +177,14 @@
 
 // .dialogCard
 .dialogCard {
+  .v-card-title {
+    .v-container {
+      display: flex;
+      justify-content: center;
+      font-weight: 600;
+      padding-top: rem(24);
+    }
+  }
   .v-btn {
     width: rem(150);
   }
