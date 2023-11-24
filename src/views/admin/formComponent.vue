@@ -40,7 +40,7 @@
                         <v-col>
                           <v-row class="d-flex formGrp">
                             <v-col cols="12" md="3">
-                              <label for="">年度:</label>
+                              <label for="">年度 :</label>
                             </v-col>
                             <v-col md="9" cols="12">
                               <v-row>
@@ -117,7 +117,7 @@
                       </v-row>
                     </v-expansion-panel-title>
                     <v-expansion-panel-text>
-                      <v-row class="formGrp">
+                      <v-row class="">
                         <!-- 類別start -->
                         <v-col md="6" cols="12">
                           <v-row class="d-flex formGrp">
@@ -180,22 +180,26 @@
                             <v-col cols="12" md="3">
                               <label for="list">案件狀態</label>
                             </v-col>
-                            <v-col class="checkGrp" id="list">
-                              <v-checkbox
-                                density="compact"
-                                hide-details
-                                label="繼續追蹤"
-                              ></v-checkbox>
-                              <v-checkbox
-                                density="compact"
-                                hide-details
-                                label="建議解除列管"
-                              ></v-checkbox>
-                              <v-checkbox
-                                density="compact"
-                                hide-details
-                                label="解除列管"
-                              ></v-checkbox>
+                            <v-col>
+                              <v-row>
+                                <v-col class="checkGrp" id="list">
+                                  <v-checkbox
+                                    density="compact"
+                                    hide-details
+                                    label="繼續追蹤"
+                                  ></v-checkbox>
+                                  <v-checkbox
+                                    density="compact"
+                                    hide-details
+                                    label="建議解除列管"
+                                  ></v-checkbox>
+                                  <v-checkbox
+                                    density="compact"
+                                    hide-details
+                                    label="解除列管"
+                                  ></v-checkbox>
+                                </v-col>
+                              </v-row>
                             </v-col>
                           </v-row>
                         </v-col>
@@ -207,12 +211,16 @@
                               <label>辦理單位:</label>
                             </v-col>
                             <v-col>
-                              <v-text-field
-                                variant="solo"
-                                single-line
-                                error-messages=""
-                                density="compact"
-                              ></v-text-field>
+                              <v-row>
+                                <v-col>
+                                  <v-text-field
+                                    variant="solo"
+                                    single-line
+                                    error-messages=""
+                                    density="compact"
+                                  ></v-text-field
+                                ></v-col>
+                              </v-row>
                             </v-col>
                           </v-row>
                         </v-col>
@@ -224,12 +232,14 @@
                               <label>交辦事項:</label>
                             </v-col>
                             <v-col>
-                              <v-text-field
-                                variant="solo"
-                                single-line
-                                error-messages=""
-                                density="compact"
-                              ></v-text-field>
+                              <v-row>
+                                <v-text-field
+                                  variant="solo"
+                                  single-line
+                                  error-messages=""
+                                  density="compact"
+                                ></v-text-field>
+                              </v-row>
                             </v-col>
                           </v-row>
                         </v-col>
@@ -241,12 +251,16 @@
                               <label>管制代號:</label>
                             </v-col>
                             <v-col>
-                              <v-text-field
-                                variant="solo"
-                                single-line
-                                error-messages=""
-                                density="compact"
-                              ></v-text-field>
+                              <v-row>
+                                <v-col>
+                                  <v-text-field
+                                    variant="solo"
+                                    single-line
+                                    error-messages=""
+                                    density="compact"
+                                  ></v-text-field>
+                                </v-col>
+                              </v-row>
                             </v-col>
                           </v-row>
                         </v-col>
