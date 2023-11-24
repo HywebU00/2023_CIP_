@@ -41,23 +41,23 @@ export default {
       slides: [
         {
           title: "圖說1",
-          img: "src/assets/docks.jpeg",
+          img: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         },
         {
           title: "圖說2",
-          img: "src/assets/docks.jpeg",
+          img: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         },
         {
           title: "圖說3",
-          img: "src/assets/docks.jpeg",
+          img: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         },
         {
           title: "圖說4",
-          img: "src/assets/docks.jpeg",
+          img: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         },
         {
           title: "圖說5",
-          img: "src/assets/docks.jpeg",
+          img: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         },
       ],
     };

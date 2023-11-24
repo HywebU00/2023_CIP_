@@ -180,6 +180,15 @@
   .v-btn {
     width: rem(150);
   }
+  .formContainer {
+    .formGrp,
+    .infoGrp {
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom: 2px solid #f0f0f0;
+      }
+    }
+  }
 }
 .formContainer {
   margin-top: 0;
