@@ -319,6 +319,11 @@
         border: 1px solid lighten($gray3, 20);
         border-radius: 0.5rem;
       }
+      &.v-checkbox {
+        .v-input__control {
+          border: none;
+        }
+      }
     }
     // .v-btn {
     //   width: unset;

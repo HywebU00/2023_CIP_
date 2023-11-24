@@ -247,6 +247,9 @@ input:-internal-autofill-selected {
 }
 .textEdit {
   margin-bottom: 1rem;
+  border: 1px solid lighten($gray3, 20);
+  border-radius: rem(8);
+  overflow: hidden;
   .fr-box.fr-basic {
     border-radius: 4px;
     // box-shadow: 0px 3px 1px -2px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 2px 2px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 1px 5px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
