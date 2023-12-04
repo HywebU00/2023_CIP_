@@ -68,7 +68,7 @@ $greenPrimary: #331919;
 $greenLight: #36e79e;
 $greenSecondary: #1f6a5b; //#852648;
 $greenThird: lighten($greenSecondary, 10);
-$greenTheadColor: #695f5f;
+$greenTheadColor: #b8b1ab; //#695f5f;
 $greenTbodyColor: #f7f7f5;
 
 //側欄背景色__藍色
@@ -79,7 +79,7 @@ $bluePrimary: #331919;
 $blueLight: #00f0ff;
 $blueSecondary: #0786b2;
 $blueThird: lighten($blueSecondary, 10);
-$blueTheadColor: #695f5f;
+$blueTheadColor: #b8b1ab; // #695f5f;
 $blueTbodyColor: #f7f7f5;
 
 //側欄背景色__紅色
@@ -89,5 +89,5 @@ $redPrimary: #331919;
 $redLight: #ff378c;
 $redSecondary: #852648;
 $redThird: lighten($redSecondary, 10);
-$redTheadColor: #695f5f;
+$redTheadColor: #b8b1ab; //#695f5f;
 $redTbodyColor: #f7f7f5;
