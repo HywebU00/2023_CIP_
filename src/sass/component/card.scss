@@ -502,7 +502,8 @@
 
 /* The element to apply the animation to */
 .loginCard {
-  margin-top: rem(125);
+  margin-top: rem(100);
   animation-name: cardMove;
   animation-duration: 1.5s;
+  margin-bottom: rem(30);
 }
