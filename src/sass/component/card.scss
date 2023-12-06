@@ -464,6 +464,7 @@
   }
   .dynaImage {
     max-width: 140px;
+    height: 43px;
   }
   .v-field__prepend-inner > .v-icon {
     color: #a38989;
@@ -503,8 +504,8 @@
 /* The element to apply the animation to */
 .loginCard {
   margin-top: rem(100);
-  animation-name: cardMove;
-  animation-duration: 1.5s;
+  // animation-name: cardMove;
+  // animation-duration: 1.5s;
   @include screen('mobile') {
     margin-top: rem(80);
   }
