@@ -341,7 +341,7 @@ $theme-config: (
         .v-btn {
           margin: 0 1rem 0.5rem 0;
           @include screen('tablet') {
-            min-width: 78px;
+            width: 78px;
           }
           &.submit {
             background: $GradientBg !important;
