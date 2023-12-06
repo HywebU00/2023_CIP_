@@ -58,7 +58,7 @@ $defaultSecondary: #bf5f46;
 $defaultThird: #d78669;
 $defaultGradient: linear-gradient(to bottom, #bf5f46 0%, #d78669 100%);
 $defaultGradientBg: linear-gradient(to right bottom, #e76655, #e7755c, #e78464, #e7916e, #e79e7a, #e6a881, #e4b289, #e3bb93, #e0c49b, #decda5, #ddd5b0, #dcddbc);
-$defaultTheadColor: #b8b1ab; // #695f5f;
+$defaultTheadColor: #695f5f; //#b8b1ab; //;
 $defaultTbodyColor: #f7f7f5;
 
 //側欄背景色__綠色
@@ -68,7 +68,7 @@ $greenPrimary: #331919;
 $greenLight: #36e79e;
 $greenSecondary: #1f6a5b; //#852648;
 $greenThird: lighten($greenSecondary, 10);
-$greenTheadColor: #b8b1ab; //#695f5f;
+$greenTheadColor: #695f5f;
 $greenTbodyColor: #f7f7f5;
 
 //側欄背景色__藍色
@@ -79,7 +79,7 @@ $bluePrimary: #331919;
 $blueLight: #00f0ff;
 $blueSecondary: #0786b2;
 $blueThird: lighten($blueSecondary, 10);
-$blueTheadColor: #b8b1ab; // #695f5f;
+$blueTheadColor: #695f5f;
 $blueTbodyColor: #f7f7f5;
 
 //側欄背景色__紅色
@@ -89,5 +89,5 @@ $redPrimary: #331919;
 $redLight: #ff378c;
 $redSecondary: #852648;
 $redThird: lighten($redSecondary, 10);
-$redTheadColor: #b8b1ab; //#695f5f;
+$redTheadColor: #695f5f;
 $redTbodyColor: #f7f7f5;
