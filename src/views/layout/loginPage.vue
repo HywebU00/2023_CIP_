@@ -62,14 +62,14 @@
                 <v-btn class="signUpBtn" v-bind="props"> 申請帳號 </v-btn>
               </template>
               <v-card class="">
-                <v-card-title>
-                  <v-container>
-                    <span class="text-primary">申請帳號</span>
-                  </v-container>
-                </v-card-title>
-                <v-card-text>
-                  <v-container class="formContainer">
-                    <v-form class="formGrid">
+                <v-form>
+                  <v-card-title>
+                    <v-container>
+                      <span class="text-primary">申請帳號</span>
+                    </v-container>
+                  </v-card-title>
+                  <v-card-text>
+                    <v-container class="formContainer">
                       <v-row class="d-flex formGrp">
                         <v-col cols="12" md="2" class="infoTitle">
                           <label for=""
@@ -330,30 +330,30 @@
                           </v-row>
                         </v-col>
                       </v-row>
-                    </v-form>
-                  </v-container>
-                </v-card-text>
-                <v-card-actions class="justify-center">
-                  <v-btn
-                    class="submit"
-                    elevation="0"
-                    variant="flat"
-                    @click="dialog = false"
-                    rounded="lg"
-                    size="large"
-                    >送出</v-btn
-                  >
-                  <v-btn
-                    elevation="0"
-                    rounded="lg"
-                    variant="flat"
-                    size="large"
-                    color="cancel"
-                    class="cancel"
-                    @click="dialog = false"
-                    >取消</v-btn
-                  >
-                </v-card-actions>
+                    </v-container>
+                  </v-card-text>
+                  <v-card-actions class="justify-center">
+                    <v-btn
+                      class="submit"
+                      elevation="0"
+                      variant="flat"
+                      @click="dialog = false"
+                      rounded="lg"
+                      size="large"
+                      >送出</v-btn
+                    >
+                    <v-btn
+                      elevation="0"
+                      rounded="lg"
+                      variant="flat"
+                      size="large"
+                      color="cancel"
+                      class="cancel"
+                      @click="dialog = false"
+                      >取消</v-btn
+                    >
+                  </v-card-actions>
+                </v-form>
               </v-card>
             </v-dialog>
           </div>

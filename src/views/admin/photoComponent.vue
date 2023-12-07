@@ -352,14 +352,14 @@
                 </template>
                 <!-- 輸入資訊視窗 start -->
                 <v-card class="">
-                  <v-card-title>
-                    <v-container>
-                      <span class="text-primary">照片編輯</span>
-                    </v-container>
-                  </v-card-title>
-                  <v-card-text>
-                    <v-container class="formContainer">
-                      <v-form class="formGrid">
+                  <v-form>
+                    <v-card-title>
+                      <v-container>
+                        <span class="text-primary">照片編輯</span>
+                      </v-container>
+                    </v-card-title>
+                    <v-card-text>
+                      <v-container class="formContainer">
                         <v-row class="d-flex formGrp">
                           <v-col cols="12" md="2" class="infoTitle">
                             <label for="type"
@@ -600,56 +600,56 @@
                             </v-row>
                           </v-col>
                         </v-row>
-                      </v-form>
-                      <div class="infoGrid">
-                        <v-row class="infoGrp">
-                          <v-col cols="12" md="2" class="infoTitle">
-                            <span class="">交辦事項</span>
-                          </v-col>
-                          <v-col>
-                            <p class="infoText">
-                              112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。
-                            </p>
-                          </v-col>
-                        </v-row>
-                        <v-row class="infoGrp">
-                          <v-col cols="12" md="2" class="d-flex infoTitle">
-                            <span class="">承辦人</span>
-                          </v-col>
-                          <v-col> <p class="infoText">周小瑜</p></v-col>
-                        </v-row>
-                        <v-row class="infoGrp">
-                          <v-col cols="12" md="2" class="infoTitle">
-                            <span class="">填報日期</span>
-                          </v-col>
-                          <v-col>
-                            <p class="infoText">112/03/11</p>
-                          </v-col>
-                        </v-row>
-                      </div>
-                    </v-container>
-                  </v-card-text>
-                  <v-card-actions class="justify-center">
-                    <v-btn
-                      class="submit"
-                      elevation="0"
-                      variant="flat"
-                      @click="dialog = false"
-                      rounded="lg"
-                      size="large"
-                      >送出</v-btn
-                    >
-                    <v-btn
-                      elevation="0"
-                      rounded="lg"
-                      variant="flat"
-                      size="large"
-                      color="cancel"
-                      class="cancel"
-                      @click="dialog = false"
-                      >取消</v-btn
-                    >
-                  </v-card-actions>
+                        <div class="infoGrid">
+                          <v-row class="infoGrp">
+                            <v-col cols="12" md="2" class="infoTitle">
+                              <span class="">交辦事項</span>
+                            </v-col>
+                            <v-col>
+                              <p class="infoText">
+                                112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。112年公務人員特種考試原住民族考試各等別、類科及暫定需用名額表1份，請自行下載參閱。
+                              </p>
+                            </v-col>
+                          </v-row>
+                          <v-row class="infoGrp">
+                            <v-col cols="12" md="2" class="d-flex infoTitle">
+                              <span class="">承辦人</span>
+                            </v-col>
+                            <v-col> <p class="infoText">周小瑜</p></v-col>
+                          </v-row>
+                          <v-row class="infoGrp">
+                            <v-col cols="12" md="2" class="infoTitle">
+                              <span class="">填報日期</span>
+                            </v-col>
+                            <v-col>
+                              <p class="infoText">112/03/11</p>
+                            </v-col>
+                          </v-row>
+                        </div>
+                      </v-container>
+                    </v-card-text>
+                    <v-card-actions class="justify-center">
+                      <v-btn
+                        class="submit"
+                        elevation="0"
+                        variant="flat"
+                        @click="dialog = false"
+                        rounded="lg"
+                        size="large"
+                        >送出</v-btn
+                      >
+                      <v-btn
+                        elevation="0"
+                        rounded="lg"
+                        variant="flat"
+                        size="large"
+                        color="cancel"
+                        class="cancel"
+                        @click="dialog = false"
+                        >取消</v-btn
+                      >
+                    </v-card-actions>
+                  </v-form>
                 </v-card>
                 <!-- 輸入資訊視窗 end -->
               </v-dialog>
