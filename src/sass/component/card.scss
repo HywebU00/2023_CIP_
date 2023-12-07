@@ -465,6 +465,9 @@
   .dynaImage {
     max-width: 140px;
     height: 43px;
+    img {
+      object-fit: contain;
+    }
   }
   .v-field__prepend-inner > .v-icon {
     color: #a38989;
