@@ -3,6 +3,7 @@
   button {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+
     // &:first-child {
     //   margin-left: 0;
     // }
@@ -20,6 +21,9 @@
   .cancelBtn {
     min-width: rem(120);
   }
+}
+td > .btnGroup {
+  justify-content: center;
 }
 .iconBtn {
   &.v-btn--icon {

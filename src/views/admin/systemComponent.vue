@@ -72,7 +72,7 @@
                       <td>{{ item.password }}</td>
                       <td>{{ item.status }}</td>
                       <td>
-                        <div class="btnGroup">
+                        <div class="btnGroup left">
                           <v-btn color="cancel" elevation="0" size="small"
                             >刪除</v-btn
                           >
