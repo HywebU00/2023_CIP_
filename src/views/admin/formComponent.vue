@@ -682,10 +682,25 @@
                     auto-grow
                     rows="6"
                     row-height="30"
+                    floating
                     shaped
                     class="mb-2"
                   ></v-textarea>
                 </v-col>
+                <!-- <v-col>
+                  <v-textarea
+                    variant="solo"
+                    error-messages=""
+                    label="請輸入文字"
+                    hide-details="auto"
+                    density="compact"
+                    auto-grow
+                    rows="6"
+                    row-height="30"
+                    shaped
+                    class="mb-2"
+                  ></v-textarea>
+                </v-col> -->
               </v-row>
               <v-row class="d-flex formGrp">
                 <v-col cols="12" md="2" class="infoTitle">

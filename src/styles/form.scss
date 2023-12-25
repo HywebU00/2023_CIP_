@@ -36,3 +36,8 @@
     height: unset;
   }
 }
+label.v-field-label {
+  + textarea.v-field__input {
+    padding-top: 1rem;
+  }
+}
