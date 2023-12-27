@@ -35,9 +35,16 @@
   textarea {
     height: unset;
   }
+  .v-field--active {
+    .v-field-label.v-field-label--floating {
+      top: 2px !important;
+    }
+  }
 }
+
 label.v-field-label {
   + textarea.v-field__input {
     padding-top: 1rem;
+    mask-image: none;
   }
 }
