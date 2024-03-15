@@ -33,6 +33,21 @@ html {
     color: $defaultPrimary;
   }
 }
+.mobileSearchBox {
+  display: flex;
+  align-items: center;
+  .v-field--appended {
+    padding-right: 0;
+  }
+  .v-field {
+    padding: 0.25rem;
+  }
+  .v-btn.btn {
+    border-radius: 0.25rem !important;
+    background-color: #89554a !important;
+    height: 38px;
+  }
+}
 .isSmallScreen {
   .navDrawer {
     position: absolute !important;
@@ -435,9 +450,7 @@ button.navBtn {
 }
 .webSearch {
   width: rem(200);
-
   position: relative;
-
   &:after {
     position: absolute;
     background: linear-gradient(135deg, rgb(255, 255, 255) 1%, rgb(244 213 193) 100%);
@@ -466,6 +479,7 @@ button.navBtn {
     opacity: 1;
   }
   .v-field__append-inner {
+    margin-right: -0.75rem;
     .v-icon {
       color: $defaultPrimary;
       transform: scale(1.2);
@@ -474,7 +488,9 @@ button.navBtn {
     }
   }
 }
-
+.searchBtn {
+  margin-left: 0;
+}
 .fontBtnContainer {
   button {
     width: rem(60);

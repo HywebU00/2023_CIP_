@@ -37,14 +37,27 @@
               </span>
             </button>
           </template>
-          <v-card min-width="300px" class="infoBtnContainer">
+          <v-card
+            min-width="300px"
+            class="infoBtnContainer mobileSearchBox d-flex"
+          >
             <v-text-field
               density="compact"
               variant="solo"
               label="人員查詢"
               single-line
               hide-details
-            ></v-text-field>
+            >
+              <template #append-inner>
+                <v-btn
+                  class="btn"
+                  type="submit"
+                  icon="mdi-magnify"
+                  size="small"
+                >
+                </v-btn>
+              </template>
+            </v-text-field>
           </v-card>
         </v-menu>
       </div>
@@ -141,10 +154,20 @@
           density="compact"
           variant="solo"
           label="搜尋結果"
-          append-inner-icon="mdi-magnify"
           single-line
           hide-details
-        ></v-text-field>
+        >
+          <template #append-inner>
+            <v-btn
+              class="searchBtn"
+              type="submit"
+              size="small"
+              icon="mdi-magnify"
+              variant="text"
+            >
+            </v-btn>
+          </template>
+        </v-text-field>
       </div>
       <!-- 搜尋欄 end -->
       <!-- 暗黑模式 start -->

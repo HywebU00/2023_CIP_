@@ -155,8 +155,6 @@ export default {
       this.isSmallScreen = window.innerWidth < 991;
     },
     menuTarget(newOpened) {
-      // this.opened = newOpened;
-      // console.log(this.opened);
       this.opened = newOpened.slice(-1);
     },
   },
